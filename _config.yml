@@ -38,12 +38,12 @@ social:
   email: lukastaboga@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
+    - https://www.linkedin.com/in/lukas-taboga-5a8040237/
     - https://twitter.com/username # change to your twitter homepage
     - https://github.com/ticodevv # change to your github homepage
     # Uncomment below to add more social links
     - https://app.hackthebox.com/users/1412590
     - https://www.root-me.org/d0nald
-    - https://www.linkedin.com/in/lukas-taboga-5a8040237/
 
 google_site_verification: # fill in to your verification string
 
