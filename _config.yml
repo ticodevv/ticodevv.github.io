@@ -23,7 +23,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://ticodevv.github.io/archives/"
+url: ""
 
 github:
   username: ticodevv # change to your github username
@@ -38,7 +38,7 @@ social:
   email: lukastaboga@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your twitter homepage
+    - https://twitter.com/lukas_taboga # change to your twitter homepage
     - https://github.com/ticodevv # change to your github homepage
     # Uncomment below to add more social links
     - https://www.linkedin.com/in/lukas-taboga-5a8040237/
@@ -74,10 +74,10 @@ theme_mode: # [light | dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: 
+img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: 'https://www.pinterest.com/nelliomario/donald-disney/'
+avatar: 'https://cdn.discordapp.com/attachments/1221550585413894195/1222542402179567637/image.png?ex=66169856&is=66042356&hm=f259494ac168d32ea16247a1a30efe2e3c82aaf1493eb0aca9fc147b61a253cb&'
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -163,7 +163,7 @@ defaults:
     values:
       comments: false
   - scope:
-      path: assets/img/favicon
+      path: ""
       type: tabs # see `site.collections`
     values:
       layout: page
