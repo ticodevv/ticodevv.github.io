@@ -17,13 +17,13 @@ order: 4
 
 ## - Certifications:
 
-<a alt="CompTIA Pentest+" href="https://www.credential.net/995a4499-244b-4d6f-ae17-b17b25cb4152?username=lukastaboga538471#gs.678uln"><img alt="CompTIA Pentest+" src="/assets/img/THM-AO5E9WNZHY ( CompTIA Pentest+ ).png" height="100" width="75"/></a>
-<a alt="Web Fundamentals" href="https://www.credential.net/7914fcf6-c3da-4877-a643-f6623db4c2d5?username=lukastaboga538471"><img alt="Web Fundamentals" src="/assets/img/THM-BAX5KZS4JT ( Web Fundamentals Learning ).png" height="100" width="75"/></a>
-<a alt="Complete Beginner" href="https://www.credential.net/1f0ee56c-54df-472e-bfda-e13a20139343?username=lukastaboga538471"><img alt="Complete Beginner" src="/assets/img/THM-BMJMADOCLF ( Beginner Learning ).png" height="100" width="75"/></a>
-<a alt="Red Teaming" href="https://www.credential.net/dc1172ca-66bc-4e4f-80a5-077294234f64?username=lukastaboga538471"><img alt="Red Teaming" src="/assets/img/THM-BY3TQPYQV3 ( Red Teaming).png" height="100" width="75"/></a>
-<a alt="Jr Penetration Tester" href="https://www.credential.net/0400ec5e-e0fa-4699-b67d-6c55844b4f5b?username=lukastaboga538471"><img alt="Jr Penetration Tester" src="/assets/img/THM-GVZCJDBZHP ( Jr Penetration Tester Learning ).png" height="100" width="75"/></a>
-<a alt="Pre Security" href="https://www.credential.net/997f15a9-7044-4e2b-b0c0-282da9b545aa?username=lukastaboga538471#gs.6y7r80"><img alt="Pre Security" src="/assets/img/THM-MIVMFOSAU6 ( Pre Security  ).png" height="100" width="75"/></a>
-<a alt="Introduction to Cyber Security" href="https://www.credential.net/47ac8a1e-8b1a-48ee-ac46-d6e45977f23b?username=lukastaboga538471#gs.6y7vkm"><img alt="Introduction to Cyber Security" src="/assets/img/THM-WRIMK9QQGG ( Introduction to Cyber Security ).png" height="100" width="75"/></a>
+<a alt="CompTIA Pentest+" href="https://www.credential.net/995a4499-244b-4d6f-ae17-b17b25cb4152?username=lukastaboga538471#gs.678uln"><img alt="CompTIA Pentest+" src="/assets/img/THM-AO5E9WNZHY(CompTIA Pentest+).png" height="100" width="75"/></a>
+<a alt="Web Fundamentals" href="https://www.credential.net/7914fcf6-c3da-4877-a643-f6623db4c2d5?username=lukastaboga538471"><img alt="Web Fundamentals" src="/assets/img/THM-BAX5KZS4JT(Web Fundamentals Learning).png" height="100" width="75"/></a>
+<a alt="Complete Beginner" href="https://www.credential.net/1f0ee56c-54df-472e-bfda-e13a20139343?username=lukastaboga538471"><img alt="Complete Beginner" src="/assets/img/THM-BMJMADOCLF(Beginner Learning).png" height="100" width="75"/></a>
+<a alt="Red Teaming" href="https://www.credential.net/dc1172ca-66bc-4e4f-80a5-077294234f64?username=lukastaboga538471"><img alt="Red Teaming" src="/assets/img/THM-BY3TQPYQV3(Red Teaming).png" height="100" width="75"/></a>
+<a alt="Jr Penetration Tester" href="https://www.credential.net/0400ec5e-e0fa-4699-b67d-6c55844b4f5b?username=lukastaboga538471"><img alt="Jr Penetration Tester" src="/assets/img/THM-GVZCJDBZHP(Jr Penetration Tester Learning).png" height="100" width="75"/></a>
+<a alt="Pre Security" href="https://www.credential.net/997f15a9-7044-4e2b-b0c0-282da9b545aa?username=lukastaboga538471#gs.6y7r80"><img alt="Pre Security" src="/assets/img/THM-MIVMFOSAU6(Pre Security).png" height="100" width="75"/></a>
+<a alt="Introduction to Cyber Security" href="https://www.credential.net/47ac8a1e-8b1a-48ee-ac46-d6e45977f23b?username=lukastaboga538471#gs.6y7vkm"><img alt="Introduction to Cyber Security" src="/assets/img/THM-WRIMK9QQGG(Introduction to Cyber Security).png" height="100" width="75"/></a>
 
 ## - Contact:
 
