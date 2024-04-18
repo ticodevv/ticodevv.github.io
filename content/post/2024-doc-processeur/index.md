@@ -1,5 +1,5 @@
 ---
-title: "Hard System Processeur"
+title: "Processeur"
 description: documentation - Hard System
 slug: Processeur
 date: 2024-04-01  00:00:00+0000

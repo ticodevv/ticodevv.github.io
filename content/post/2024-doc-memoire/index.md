@@ -1,5 +1,5 @@
 ---
-title: "Hard System Memoire"
+title: "Memoire"
 description: documentation - Hard System
 slug: memoire
 date: 2024-04-01  00:00:00+0000

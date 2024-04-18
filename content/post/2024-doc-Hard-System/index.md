@@ -1,11 +1,11 @@
 ---
-title: "Hard System Introduction"
-description: documentation - Hard System
-slug: Hard-System
+title: "HardWare Introduction"
+description: documentation - HardWare
+slug: hardWare
 date: 2024-04-01  00:00:00+0000
 image: info.jpeg
 categories:
-    - Hard System
+    - hardWare
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 # Introduction
