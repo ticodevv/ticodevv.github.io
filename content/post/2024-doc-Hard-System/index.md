@@ -15,15 +15,15 @@ Dans cette documentation nous allons aborder les différents composants d'un ord
 # Plans
 
 1. [LE PROCESSEUR](https://ticodevv.github.io/p/processeur/) 
-    - [Le Binaire](#)
-    - [Les Transistors](#)
-    - [Les Portes logiques](#)
-    - [La Fabrication](#)
+    - [Le Binaire](https://ticodevv.github.io/p/processeur/#le-binaire)
+    - [Les Transistors](https://ticodevv.github.io/p/processeur/#les-transistors)
+    - [Les Portes logiques](https://ticodevv.github.io/p/processeur/#les-portes-logiques)
+    - [La Fabrication](https://ticodevv.github.io/p/processeur/#la-fabrication)
 
-2. [LA MEMOIRE](#)
-    - [Differences et Fabrication](#)
+2. [LA MEMOIRE](https://ticodevv.github.io/p/memoire/)
+    - [Differences et Fabrication](https://ticodevv.github.io/p/memoire/#les-diff%C3%A9rents-types-de-m%C3%A9moire)
 
-3. [LE SYSTEM D'EXPLOITATION](#)
-    - [Fonctionnement et Utilité de l'OS ](#)
-    - [Les Differents Noyaux](#)
+3. [LE SYSTEM D'EXPLOITATION](https://ticodevv.github.io/p/systeme-exploitation/#le-syst%C3%A8me-dexploitation)
+    - [Fonctionnement et Utilité de l'OS ](https://ticodevv.github.io/p/systeme-exploitation/#fonctionnement-et-utilit%C3%A9-de-los)
+    - [Les Differents Noyaux](https://ticodevv.github.io/p/systeme-exploitation/#les-differents-noyaux)
 
