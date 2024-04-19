@@ -1,7 +1,7 @@
 ---
 title: "HardWare Introduction"
 description: documentation - HardWare
-slug: hardWare
+slug: HardWare
 date: 2024-04-01  00:00:00+0000
 image: info.jpeg
 categories:

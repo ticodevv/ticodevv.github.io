@@ -1,11 +1,11 @@
 ---
 title: "System Exploitation"
-description: documentation - Hard System
+description: documentation - HarWare
 slug: systeme-exploitation
 date: 2024-04-01  00:00:00+0000
 image: os.webp
 categories:
-    - Hard System
+    - hardWare
 tags:
     - Systeme d'Exploitation
     - OS
@@ -44,7 +44,7 @@ Il existe plusieurs types de systèmes d'exploitation, chacun ayant ses propres 
 
 ![iOS et Android](os_phone.jpeg)
 
-3. **Les systèmes d'exploitation serveur** : Les systèmes d'exploitation serveur sont conçus pour les serveurs informatiques. Ils offrent des fonctionnalités avancées pour gérer les ressources et les services d'un serveur. Les principaux systèmes d'exploitation serveur sont Windows Server, Linux et Unix.
+3. **Les systèmes d'exploitation serveur** : Les systèmes d'exploitation serveur sont conçus pour les serveurs informatiques. Ils offrent des fonctionnalités avancées pour gérer les ressources et les services d'un serveur. Les principaux systèmes d'exploitation serveur sont Windows Server et les system d'exploitation basé sur Linux.
 
 ![Les 2 OS Serveur](os.png)
 

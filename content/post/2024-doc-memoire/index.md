@@ -1,11 +1,11 @@
 ---
 title: "Memoire"
-description: documentation - Hard System
+description: documentation - HardWare
 slug: memoire
 date: 2024-04-01  00:00:00+0000
 image: memory.webp
 categories:
-    - Hard System
+    - hardWare
 tags:
     - Hardware
     - Memoire

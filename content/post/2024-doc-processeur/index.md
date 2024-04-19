@@ -5,7 +5,7 @@ slug: Processeur
 date: 2024-04-01  00:00:00+0000
 image: proc.jpeg
 categories:
-    - Hard System
+    - hardWare
 tags:
     - Hardware
     - Processeur
