@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OWASP on Blog de Lukas</title><link>https://ticodevv.github.io/tags/owasp/</link><description>Recent content in OWASP on Blog de Lukas</description><generator>Hugo -- gohugo.io</generator><language>fr</language><lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ticodevv.github.io/tags/owasp/index.xml" rel="self" type="application/rss+xml"/><item><title>Juice Shop</title><link>https://ticodevv.github.io/p/juice-shop/</link><pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate><guid>https://ticodevv.github.io/p/juice-shop/</guid><description>&lt;img src="https://ticodevv.github.io/p/juice-shop/JuiceShop_logo.webp" alt="Featured image of post Juice Shop" />&lt;h2 id="introduction">
+&lt;a href="#introduction">#&lt;/a>
+Introduction
+&lt;/h2>&lt;p>C&amp;rsquo;est quoi Juice Shop ?&lt;/p>
+&lt;p>Juice Shop est une application web vulnérable pour l&amp;rsquo;entraînement des testeurs de sécurité. Il est inspiré par les applications modernes qui utilisent des technologies JavaScript lourdes, telles que Angular et Node.js. Juice Shop est conçu pour être utilisé dans des ateliers de formation, des cours de sécurité informatique, des tests de pénétration ou des compétitions de capture du drapeau (CTF).&lt;/p>
+&lt;h2 id="prerequisites">
+&lt;a href="#prerequisites">#&lt;/a>
+Prerequisites
+&lt;/h2>&lt;h3 id="spécifications-minimales-du-système">
+&lt;a href="#sp%c3%a9cifications-minimales-du-syst%c3%a8me">#&lt;/a>
+Spécifications minimales du système
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>RAM&lt;/strong>: 256 MO&lt;/li>
+&lt;li>&lt;strong>CPU&lt;/strong>: 200 millicpu&lt;/li>
+&lt;li>&lt;strong>Espace disque libre&lt;/strong>: 300 Mo&lt;/li>
+&lt;/ul>
+&lt;h3 id="spécifications-système-recommandées">
+&lt;a href="#sp%c3%a9cifications-syst%c3%a8me-recommand%c3%a9es">#&lt;/a>
+Spécifications système recommandées
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>RAM&lt;/strong>: 384 MO&lt;/li>
+&lt;li>&lt;strong>CPU&lt;/strong>: 400 millicpu&lt;/li>
+&lt;li>&lt;strong>Espace disque disponible&lt;/strong>: 800 Mo&lt;/li>
+&lt;/ul>
+&lt;h3 id="logiciels-requis">
+&lt;a href="#logiciels-requis">#&lt;/a>
+Logiciels requis
+&lt;/h3>&lt;ul>
+&lt;li>&lt;strong>Docker&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="installation">
+&lt;a href="#installation">#&lt;/a>
+Installation
+&lt;/h2>&lt;p>Pour l&amp;rsquo;instalation de Juice Shop on va utiliser Docker.&lt;/p>
+&lt;p>Avant tout nous devons installer Docker sur notre machine. Pour cela, on peut suivre les instructions sur le site officiel de Docker : &lt;a class="link" href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener"
+>Docker&lt;/a>&lt;/p>
+&lt;p>Dans un premier temps, on va créer un fichier de configuration &lt;code>myConfig.yml&lt;/code> pour Juice Shop.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">application&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">logo&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">JuiceShopCTF_Logo.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">favicon&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">favicon_ctf.ico&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">showVersionNumber&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">showGitHubLinks&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">welcomeBanner&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">showOnFirstStart&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">challenges&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">showHints&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">safetyOverride&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">hackingInstructor&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">isEnabled&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">ctf&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">showFlagsInNotifications&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Une fois le fichier de configuration créé, on peut lancer Juice Shop avec la commande suivante :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker run -d -e &lt;span class="s2">&amp;#34;NODE_ENV=myConfig&amp;#34;&lt;/span> -v /tmp/myConfig.yml:/juice-shop/config/myConfig.yml -p 3000:3000 --name juice-shop bkimminich/juice-shop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://ticodevv.github.io/p/juice-shop/install.png"
+width="2096"
+height="218"
+srcset="https://ticodevv.github.io/p/juice-shop/install_hu0ec4680e76549d9d40fd5ecd454ce19e_105635_480x0_resize_box_3.png 480w, https://ticodevv.github.io/p/juice-shop/install_hu0ec4680e76549d9d40fd5ecd454ce19e_105635_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="installation via docker"
+class="gallery-image"
+data-flex-grow="961"
+data-flex-basis="2307px"
+>&lt;/p>
+&lt;p>Nous pouvons maintenant accéder à Juice Shop via l&amp;rsquo;adresse &lt;code>http://localhost:3000/&lt;/code> dans notre navigateur.&lt;/p>
+&lt;p>&lt;img src="https://ticodevv.github.io/p/juice-shop/web_site.png"
+width="2880"
+height="1752"
+srcset="https://ticodevv.github.io/p/juice-shop/web_site_hue23c8e917630ee6c50c04d6f14e3ad22_1151227_480x0_resize_box_3.png 480w, https://ticodevv.github.io/p/juice-shop/web_site_hue23c8e917630ee6c50c04d6f14e3ad22_1151227_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="juice shop"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="394px"
+>&lt;/p>
+&lt;p>On peut y voir un drapeau rouge sur le logo de Juice Shop. Donc c&amp;rsquo;est parti pour la chasse aux drapeaux !&lt;/p>
+&lt;h2 id="conclusion">
+&lt;a href="#conclusion">#&lt;/a>
+Conclusion
+&lt;/h2>&lt;p>Voila ! Nous avons installé Juice Shop sur notre machine. On peut maintenant s&amp;rsquo;amuser à tester les différentes vulnérabilités de l&amp;rsquo;application. Tout ça en Local, bien sûr !&lt;/p></description></item></channel></rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Blog de Lukas</title><link>https://ticodevv.github.io/page/</link><description>Recent content in Pages on Blog de Lukas</description><generator>Hugo -- gohugo.io</generator><language>fr</language><lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ticodevv.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Archives</title><link>https://ticodevv.github.io/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://ticodevv.github.io/archives/</guid><description/></item><item><title>Links</title><link>https://ticodevv.github.io/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ticodevv.github.io/links/</guid><description>&lt;h1 id="about-me">
+&lt;a href="#about-me">#&lt;/a>
+About Me
+&lt;/h1>&lt;p>Je suis un étudiant de 20 ans à &lt;a class="link" href="https://www.ynov.com/campus/montpellier" target="_blank" rel="noopener"
+>YNOV CAMPUS MONTPELLIER&lt;/a>, une école spécialisée dans les métiers du numérique . Je suis passioné par les domaines de la Cybersécurité et de l&amp;rsquo;Infrastructure réseaux.&lt;/p>
+&lt;p>&lt;strong>🚨 Je recherche une alternance dans le cadre de mon BACHELOR 3 INFORMATIQUE qui sera un véritable tremplin en vue de mes objectifs futurs.&lt;/strong>&lt;/p>
+&lt;p>En plus de mes compétences théoriques, j&amp;rsquo;ai pu acquérir des compétences techniques notamment grâce à mon stage chez &lt;a class="link" href="https://magewebinformatique.com/" target="_blank" rel="noopener"
+>MAGEWEB INFORMATIQUE SERVICES&lt;/a>. Au sein de ce stage, mes missions sont d&amp;rsquo;effectuer des tests d&amp;rsquo;intrusion dans des environnements virtuels, de créer des logiciels malveillants et de réaliser des projets hardware.
+Cela me permet d&amp;rsquo;explorer ma passion et me conforte dans l&amp;rsquo;idée de poursuivre dans ce domaine.&lt;/p>
+&lt;p>J&amp;rsquo;aime aussi beaucoup faire des CTF, en particulier sur &lt;a class="link" href="https://app.hackthebox.com/users/1412590" target="_blank" rel="noopener"
+>Hack The Box&lt;/a>, &lt;a class="link" href="https://tryhackme.com/p/tabogalukas" target="_blank" rel="noopener"
+>TryHackMe&lt;/a> et &lt;a class="link" href="https://www.root-me.org/d0nald" target="_blank" rel="noopener"
+>Root Me&lt;/a>.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">links&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Ici vous pouvez trouver mon GitHub ainsi voir tous mes projets.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com/ticodevv&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">LinkedIn&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Ici vous pouvez trouver mon LinkedIn ainsi voir mon parcours professionnel.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://www.linkedin.com/in/lukas-taboga-5a8040237/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Twitter&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Ici vous pouvez trouver mon Twitter ainsi voir mes tweets et activité .&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">website&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://twitter.com/lukastaboga&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="certifications">
+&lt;a href="#certifications">#&lt;/a>
+Certifications
+&lt;/h1>&lt;p>En termes de certifications, j&amp;rsquo;ai actuellement &lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547234526/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>CompTIA Pentest+ Learning Path&lt;/a>, &lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547234543/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Web Fundamentals Learning Path&lt;/a>, &lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547230732/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Complete Beginner Learning Path&lt;/a>, &lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547236471/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Red Teaming Learning Path&lt;/a>, &lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547231681/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Jr Penetration Tester Learning Path&lt;/a>, &lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547230783/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Pre Security Learning Path&lt;/a>, &lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547232696/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Introduction to Cyber Security Learning Path&lt;/a>&lt;/p></description></item><item><title>Search</title><link>https://ticodevv.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ticodevv.github.io/search/</guid><description/></item></channel></rss>

