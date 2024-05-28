@@ -12,9 +12,11 @@ comments: false
 
 # About Me
 
-Je suis un étudiant de 20 ans au Campus Montpellier Ynov, une école spécialisée dans les métiers du numérique [Ynov](https://www.ynov.com/campus/montpellier). Pendant mes études là-bas, je me concentre sur la cybersécurité.
+Je suis un étudiant de 20 ans à [YNOV CAMPUS MONTPELLIER](https://www.ynov.com/campus/montpellier), une école spécialisée dans les métiers du numérique . Je suis passioné par les domaines de la Cybersécurité et de l'Infrastructure réseaux.
+Je recherche une alternance dans le cadre de mon BACHELOR 3 INFORMATIQUE qui sera un véritable tremplin en vue de mes objectifs futurs.
 
-En plus de mes études, j'acquiers une précieuse expérience grâce à un stage chez [MAGEWEB INFORMATIQUE SERVICES](https://magewebinformatique.com/). Là-bas, je suis impliqué dans les tests de pénétration et le développement de logiciels malveillants, ce qui me permet d'explorer ma passion pour la sécurité Windows et Active Directory.
+En plus de mes compétences théoriques, j'ai pu acquérir des compétences techniques notamment grâce à mon stage chez [MAGEWEB INFORMATIQUE SERVICES](https://magewebinformatique.com/). Au sein de ce stage, mes missions sont d'effectuer des tests d'intrusion dans des environnements virtuels, de créer des logiciels malveillants et de réaliser des projets hardware. 
+Cela me permet d'explorer ma passion et me conforte dans l'idée de poursuivre dans ce domaine.
 
 J'aime aussi beaucoup faire des CTF, en particulier sur  [Hack The Box](https://app.hackthebox.com/users/1412590), [TryHackMe](https://tryhackme.com/p/tabogalukas) et [Root Me](https://www.root-me.org/d0nald).
 
