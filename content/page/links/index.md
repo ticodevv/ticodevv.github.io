@@ -1,5 +1,5 @@
 ---
-title: Links
+title: whoami
 links:
 menu:
     main: 
@@ -10,7 +10,7 @@ menu:
 comments: false
 ---
 
-# About Me
+# Qui suis-je
 
 Je suis un étudiant de 20 ans à [YNOV CAMPUS MONTPELLIER](https://www.ynov.com/campus/montpellier), une école spécialisée dans les métiers du numérique . Je suis passioné par les domaines de la Cybersécurité et de l'Infrastructure réseaux.
 
@@ -21,23 +21,19 @@ Cela me permet d'explorer ma passion et me conforte dans l'idée de poursuivre d
 
 J'aime aussi beaucoup faire des CTF, en particulier sur  [Hack The Box](https://app.hackthebox.com/users/1412590), [TryHackMe](https://tryhackme.com/p/tabogalukas) et [Root Me](https://www.root-me.org/d0nald).
 
+En termes de certifications, j'ai actuellement j'ai pour projet de passer `OSCP` `CRTP` `CRTE` `CRTO`
 
-```yaml
-links:
-  - title: GitHub
-    description: Ici vous pouvez trouver mon GitHub ainsi voir tous mes projets.
-    website: https://github.com/ticodevv
-    
-  - title:  LinkedIn
-    description: Ici vous pouvez trouver mon LinkedIn ainsi voir mon parcours professionnel.
-    website: https://www.linkedin.com/in/lukas-taboga-5a8040237/
+**TryHackMe**:
+- [CompTIA Pentest+ Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547234526/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y) 
+- [Web Fundamentals Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547234543/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y) 
+- [Complete Beginner Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547230732/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y) 
+- [Red Teaming Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547236471/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y) 
+- [Jr Penetration Tester Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547231681/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y) 
+- [Pre Security Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547230783/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y) 
+- [Introduction to Cyber Security Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547232696/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y)
 
-  - title: Twitter
-    description: Ici vous pouvez trouver mon Twitter ainsi voir mes tweets et activité .
-    website: https://twitter.com/lukastaboga
-```
+N'hésitez pas à laisser des commentaires sur mes articles. Vous pouvez donner votre avis, compléter mes informations, me critiquer (`constructivement, j'espère !`), ou encore corriger mes erreurs.
 
-# Certifications
+Votre participation est essentielle pour m'aider à progresser et à devenir une source d'information plus fiable et plus complète.
 
-En termes de certifications, j'ai actuellement [CompTIA Pentest+ Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547234526/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y), [Web Fundamentals Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547234543/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y), [Complete Beginner Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547230732/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y), [Red Teaming Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547236471/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y), [Jr Penetration Tester Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547231681/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y), [Pre Security Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547230783/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y), [Introduction to Cyber Security Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547232696/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y)
 
