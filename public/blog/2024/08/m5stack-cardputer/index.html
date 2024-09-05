@@ -1,0 +1,1049 @@
+<!doctype html>
+<html class="position-relative" itemscope itemtype="https://schema.org/WebPage" lang="en"
+  data-bs-theme="auto" data-palette="purple">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><script src="/assets/init/bundle.min.aeab7f1c076c477ff3f6cdea64bc5397a7cadfb98cb5b10012c17fca3da5f0ad.js" integrity="sha256-rqt/HAdsR3/z9s3qZLxTl6fK37mMtbEAEsF/yj2l8K0=" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>M5stack Cardputer - </title>
+    <link rel="icon" href="/favicon_hucccd9e706a19cc8586335b155a80c266_43860_16x16_resize_q75_h2_box_2.webp" sizes="16x16" type="image/webp">
+    <link rel="icon" href="/favicon_hucccd9e706a19cc8586335b155a80c266_43860_32x32_resize_q75_h2_box_2.webp" sizes="32x32" type="image/webp">
+    <link rel="icon" href="/favicon_hucccd9e706a19cc8586335b155a80c266_43860_150x150_resize_q75_h2_box_2.webp" sizes="150x150" type="image/webp">
+    <link rel="apple-touch-icon" href="/favicon_hucccd9e706a19cc8586335b155a80c266_43860_180x180_resize_q75_h2_box_2.webp" sizes="180x180" type="image/webp">
+    <link rel="icon" href="/favicon_hucccd9e706a19cc8586335b155a80c266_43860_192x192_resize_q75_h2_box_2.webp" sizes="192x192" type="image/webp">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6f42c1">
+<meta name="keywords" content="Hugo, Bootstrap, Blog Theme" />
+  <meta name="description" content="documentation - M5stack Cardputer" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="M5stack Cardputer">
+  <meta name="twitter:description" content="documentation - M5stack Cardputer">
+<meta property="og:url" content="//localhost:1313/blog/2024/08/m5stack-cardputer/">
+  <meta property="og:title" content="M5stack Cardputer">
+  <meta property="og:description" content="documentation - M5stack Cardputer">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-08-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-08-20T00:00:00+00:00">
+    <meta property="article:tag" content="Hardware">
+    <meta property="article:tag" content="M5stack">
+    <meta property="article:tag" content="Cardputer">
+    <meta property="article:tag" content="ESP32">
+
+  <meta itemprop="name" content="M5stack Cardputer">
+  <meta itemprop="description" content="documentation - M5stack Cardputer">
+  <meta itemprop="datePublished" content="2024-08-20T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-08-20T00:00:00+00:00">
+  <meta itemprop="wordCount" content="936">
+  <meta itemprop="keywords" content="Hardware,M5stack,Cardputer,ESP32">
+  <meta property="og:image" content="//localhost:1313/images/image.png"/>
+  <meta name="twitter:image" content="//localhost:1313/images/image.png"/>
+  <meta property="og:image:alt" content="M5stack Cardputer" />
+  <meta name="twitter:image:alt" content="M5stack Cardputer" />
+  <link rel="manifest" href="/manifest.json">
+
+  
+
+
+<link data-precache rel="stylesheet" href="/assets/main/bundle.min.dc696d543002e67b655ace129a11660646a70a3eb5d3ccb45225ecfdaec61996.css" integrity="sha256-3GltVDAC5ntlWs4SmhFmBkanCj6108y0UiXs/a7GGZY=" crossorigin="anonymous">
+
+    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.81fc6ea2b654c63ccf8e3c859d12072f72f8cbe3f759361479f8b0c00f754e95.css" integrity="sha256-gfxuorZUxjzPjjyFnRIHL3L4y&#43;P3WTYUefiwwA91TpU=" crossorigin="anonymous">
+
+
+</head>
+  <body><header class="mb-4 sticky-top">
+  
+<nav class="top-app-bar shadow navbar navbar-expand-xxl">
+  <div class="container">
+<a class="navbar-brand d-flex align-items-center flex-grow-1 flex-xxl-grow-0 justify-content-xxl-start ms-2 ms-xxl-0 mx-auto me-xxl-2"
+    href="//localhost:1313/">
+    <picture><img class="logo " alt="Logo" src="//localhost:1313/images/image.png?v=8e28e815cea6294f6de693630f6501e6" loading="lazy" width="259" height="194" />
+</picture>
+Blog de Lukas
+</a>
+
+    <div class="offcanvas-xxl offcanvas-end flex-grow-1" data-bs-scroll="true" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
+      <div class="offcanvas-header px-4 pb-0">
+        <div class="offcanvas-title h5" id="navbarMenusLabel">Blog de Lukas</div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navbarMenus" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-4 pt-0 p-xxl-0">
+        <hr class="d-xxl-none">
+        <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto"><li class="nav-item col-6 col-xxl-auto">
+            <a class="nav-link py-2 px-0 px-xxl-2" href="//localhost:1313/news/">
+<span class="menu-icon me-1"><i class="fas fa-fw fa-newspaper"></i></span>News
+            </a>
+          </li>
+          <li class="nav-item col-12 col-xxl-auto dropdown px-0">
+            <a href="#"
+              class="nav-link dropdown-toggle active"
+              id="navbarDropdownBlog" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<span class="menu-icon me-1"><i class="fas fa-fw fa-blog"></i></span>Blog
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog" data-bs-popper="none">
+                <li><h6 class="dropdown-header">Blog Menu Description</h6></li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center text-wrap text-xxl-nowrap"
+                  href="//localhost:1313/archives/">
+                    <span class="dropdown-item-icon me-2 p-2 rounded">
+                      <i class="fas fa-fw fa-file-archive text-primary"></i>
+                    </span>
+                  <div class="dropdown-item-content">
+                    <p class="dropdown-item-title mb-0">Archives</p>
+                  </div></a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center text-wrap text-xxl-nowrap"
+                  href="//localhost:1313/series/">
+                    <span class="dropdown-item-icon me-2 p-2 rounded">
+                      <i class="fas fa-fw fa-columns"></i>
+                    </span>
+                  <div class="dropdown-item-content">
+                    <p class="dropdown-item-title mb-1">Series</p>
+                      <p class="dropdown-item-description mb-0 text-secondary">List of series.</p>
+                  </div></a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center text-wrap text-xxl-nowrap"
+                  href="//localhost:1313/categories/">
+                    <span class="dropdown-item-icon me-2 p-2 rounded">
+                      <i class="fas fa-fw fa-folder text-success"></i>
+                    </span>
+                  <div class="dropdown-item-content">
+                    <p class="dropdown-item-title mb-1">Categories</p>
+                      <p class="dropdown-item-description mb-0 text-secondary">List of categories.</p>
+                  </div></a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center text-wrap text-xxl-nowrap"
+                  href="//localhost:1313/tags/">
+                    <span class="dropdown-item-icon me-2 p-2 rounded">
+                      <i class="fas fa-fw fa-tags"></i>
+                    </span>
+                  <div class="dropdown-item-content">
+                    <p class="dropdown-item-title mb-1">Tags</p>
+                      <p class="dropdown-item-description mb-0 text-secondary">List of tags.</p>
+                  </div></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+    <hr class="d-xxl-none">
+    <form class="search-bar ms-auto my-auto" action="/search/" novalidate>
+      <div class="input-group align-items-center">
+        <span class="btn btn-search disabled position-absolute left-0 border-0 px-1">
+          <i class="fas fa-fw fa-search fa-lg"></i>
+        </span>
+        <input
+          class="my-1 form-control border-white rounded-5 search-input bg-body"
+          name="q"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          required>
+          <span class="search-shortcut position-absolute end-0 top-0 me-2">
+            <kbd class="text-dark bg-white opacity-75 rounded-3 shadow border border-primary py-1 fw-bold">/</kbd>
+          </span>
+      </div>
+    </form><hr class="d-xxl-none">
+        <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
+<li class="nav-item py-2 py-xxl-1 col-12 col-xxl-auto">
+
+
+<nav class="social-links nav justify-content-center flex-row">
+      <a class="nav-link social-link col-6 col-xxl-auto p-1" target="_blank" href="https://github.com/ticodevv" title="GitHub" rel="me">
+        <i class="fa-fw fab fa-github"
+          ></i>
+        <span class="ms-1 d-xxl-none">Github</span>
+      </a>
+  <a class="nav-link social-link col-6 col-xxl-auto p-1" target="_blank" href="/index.xml" title="RSS" rel="me">
+    <i class="fas fa-fw fa-rss"></i>
+    <span class="ms-1 d-xxl-none">RSS</span>
+  </a>
+</nav>
+
+</li>
+<li class="nav-item py-2 py-xxl-1 col-12 col-xxl-auto">
+  <div class="vr d-none d-xxl-flex h-100 mx-xxl-2 text-white"></div>
+  <hr class="d-xxl-none my-2">
+</li>
+<li class="nav-item dropdown col-6 col-xxl-auto">
+    <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="fontSizeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-fw fa-font"></i>
+        <span class="d-xxl-none">Font Size</span>
+    </a>
+    <ul class="font-size-dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="fontSizeDropdown">
+        <li>
+            <button class="font-size-item dropdown-item" data-size="xs">
+                Extra Small
+            </button>
+        </li>
+        <li>
+            <button class="font-size-item dropdown-item" data-size="sm">
+                Small
+            </button>
+        </li>
+        <li>
+            <button class="font-size-item dropdown-item active" data-size="md">
+                Medium
+            </button>
+        </li>
+        <li>
+            <button class="font-size-item dropdown-item" data-size="lg">
+                Large
+            </button>
+        </li>
+        <li>
+            <button class="font-size-item dropdown-item" data-size="xl">
+                Extra Large
+            </button>
+        </li>
+    </ul>
+</li>
+<li class="nav-item dropdown col-6 col-xxl-auto">
+    <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-fw fa-palette"></i>
+        <span class="d-xxl-none">Palette</span>
+    </a>
+    <ul class="palette-dropdown-menu dropdown-menu dropdown-menu-end px-2 row g-2" aria-labelledby="paletteDropdown">
+            <li class="col-4 my-1">
+                <a role="button" id="palette-blue" aria-label="Blue"
+                    class="btn btn-sm w-100 palette text-bg-blue" data-palette="blue">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-blue-gray" aria-label="Blue Gray"
+                    class="btn btn-sm w-100 palette text-bg-blue-gray" data-palette="blue-gray">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-brown" aria-label="Brown"
+                    class="btn btn-sm w-100 palette text-bg-brown" data-palette="brown">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-cyan" aria-label="Cyan"
+                    class="btn btn-sm w-100 palette text-bg-cyan" data-palette="cyan">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-green" aria-label="Green"
+                    class="btn btn-sm w-100 palette text-bg-green" data-palette="green">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-indigo" aria-label="Indigo"
+                    class="btn btn-sm w-100 palette text-bg-indigo" data-palette="indigo">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-orange" aria-label="Orange"
+                    class="btn btn-sm w-100 palette text-bg-orange" data-palette="orange">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-pink" aria-label="Pink"
+                    class="btn btn-sm w-100 palette text-bg-pink" data-palette="pink">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-purple" aria-label="Purple"
+                    class="btn btn-sm w-100 palette text-bg-purple" data-palette="purple">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-red" aria-label="Red"
+                    class="btn btn-sm w-100 palette text-bg-red" data-palette="red">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-teal" aria-label="Teal"
+                    class="btn btn-sm w-100 palette text-bg-teal" data-palette="teal">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-yellow" aria-label="Yellow"
+                    class="btn btn-sm w-100 palette text-bg-yellow" data-palette="yellow">
+                </a>
+            </li>
+    </ul>
+</li>
+<li class="nav-item dropdown col-6 col-xxl-auto">
+    <a class="nav-link px-0 py-2 px-xxl-1" href="#" id="modeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="mode-icon fas fa-fw fa-adjust" id="modeIcon"></i>
+        <span class="d-xxl-none">Mode</span>
+    </a>
+    <ul class="mode-dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="modeDropdown">
+        <li class="mode-item" data-color-mode="light" data-icon="sun">
+            <button class="dropdown-item">
+                <i class="mode-icon fas fa-fw fa-sun"></i> Light
+            </button>
+        </li>
+        <li class="mode-item" data-color-mode="dark" data-icon="moon">
+            <button class="dropdown-item">
+                <i class="mode-icon fas fa-fw fa-moon"></i> Dark
+            </button>
+        </li>
+        <li class="mode-item active" data-color-mode="auto" data-icon="adjust">
+            <button class="dropdown-item">
+                <i class="mode-icon fas fa-fw fa-adjust"></i> Auto
+            </button>
+        </li>
+    </ul>
+</li>
+        </ul>
+      </div>
+    </div>
+    <div class="d-flex">
+      <button class="navbar-toggler order-5 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarMenus"
+        aria-controls="navbarMenus" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-ellipsis-h"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+    <main class="container has-sidebar" data-kind="page"><script data-precache src="/js/main-init.67a549940762c9a1d4ad27ee5bfca1519d8254280646d99b318c71f791c45bc0.js" integrity="sha256-Z6VJlAdiyaHUrSfuW/yhUZ2CVCgGRtmbMYxx95HEW8A=" crossorigin="anonymous"></script>
+
+      <div class="row content"><noscript>
+    <div class="alert alert-danger" role="alert">Your browser does not support JavaScript.</div>
+</noscript>
+
+<div class="content-posts col-xxl-8">
+  <div class="container"><nav class="row card component" aria-label="breadcrumb">
+  <div class="card-body pb-0">
+    <ol class="hbs-breadcrumb breadcrumb flex-nowrap"><li class="breadcrumb-item text-surface"><a href="/">Home</a></li><li class="breadcrumb-item text-surface"><a href="/blog/">Blog</a></li><li class="breadcrumb-item active">M5stack Cardputer</li></ol>
+  </div>
+</nav><div class="post-panel-wrapper position-relative d-flex justify-content-center">
+  <div class="d-flex flex-row justify-content-center rounded-5 border post-panel position-fixed px-3 py-1 surface shadow-1">
+    
+    
+
+    <a class="action btn-reward" role="button" data-bs-toggle="modal" data-bs-target="#rewardModal" title="Buy me a coffee">
+  <i class="fas fa-fw fa-coffee"></i>
+</a>
+    
+    
+  <a class="action action-toc d-none d-xxl-block" href="#postTOC" role="button" title="Contents">
+    <i class="fas fa-fw fa-list-alt"></i>
+  </a>
+<a class="action action-toc d-block d-xxl-none" href="#post-toc-container" role="button" title="Contents">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
+    <a class="action action-copyright" href="#post-copyright" role="button" aria-label="Copyright" title="Copyright">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    <a class="action action-post-comments" href="#post-comments" role="button" aria-label="Comments" title="Comments">
+  <i class="fas fa-fw fa-comments"></i>
+</a>
+    
+<a id="sidebarToggler" class="action action-sidebar-toggler d-none d-xxl-block" role="button" title="Toggle sidebar">
+  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
+</a>
+
+    
+  </div>
+</div><article class="row card component mb-4 post">
+  <div class="card-header ">
+    <h1 class="card-title post-title my-2">M5stack Cardputer</h1>
+  </div>
+  <div class="card-body"><div class="post-meta mb-3">
+  <span class="post-date me-1 mb-1" title="created on 2024-08-20 02:00:00 &#43;0200 CEST.">August 20, 2024</span><span class="post-reading-time me-1 mb-1">5 min read</span><a href="/categories/documentation/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+      <i class="fas fa-fw fa-folder me-1"></i>Documentation</a><a href="/categories/hardware/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+      <i class="fas fa-fw fa-folder me-1"></i>Hardware</a><a href="/tags/cardputer/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Cardputer</a><a href="/tags/esp32/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">ESP32</a><a href="/tags/hardware/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Hardware</a><a href="/tags/m5stack/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">M5stack</a>
+</div>
+
+      <p class="lead mb-3 text-body-emphasis">documentation - M5stack Cardputer</p>
+<div class="mt-2 mb-3 d-block d-xxl-none">
+    <h2 class="text-surface mb-3">Contents</h2>
+    <div id="post-toc-container">
+        </div>
+    <hr class="text-secondary">
+</div><div class="post-content mb-3" data-bs-spy="scroll" data-bs-target="#TableOfContents" tabindex="0">
+        <div id="post-content-body">
+<h2 id="pourquoi-ce-post-" data-numberify>Pourquoi ce post ?<a class="anchor ms-1" href="#pourquoi-ce-post-"></a></h2>
+<p>Je fais ce post car il n’y a pas longtemps, j’ai découvert un projet qui m’a beaucoup plu, et je me suis dit que je devais le partager avec vous. Ce projet est le <a href="https://github.com/7h30th3r0n3/Evil-M5Core2" target="_blank" rel="noopener noreferrer">Evil-M5Core2<i class="fas fa-external-link-square-alt ms-1"></i></a>.</p>
+<p><code>Evil-M5Project est un outil innovant développé pour les tests éthiques et l'exploration des réseaux WiFi. Il exploite la puissance du dispositif M5Core2 pour scanner, surveiller et interagir avec les réseaux WiFi dans un environnement contrôlé. Ce projet est conçu à des fins éducatives, pour aider à comprendre la sécurité et les vulnérabilités des réseaux.</code></p>
+
+<h2 id="quest-ce-que-le-m5stack-cardputer-" data-numberify>Qu&rsquo;est-ce que le M5stack Cardputer ?<a class="anchor ms-1" href="#quest-ce-que-le-m5stack-cardputer-"></a></h2>
+<p>Cardputer est un ordinateur portable de la taille d&rsquo;une carte, parfait pour la cybersécurité. Au cœur de Cardputer se trouve le M5StampS3, une mini carte de développement basée sur la puce ESP32-S3. Cardputer est doté d&rsquo;un puissant processeur double cœur, prend en charge la fonctionnalité Wi-Fi et intègre divers périphériques et capteurs, ce qui le rend idéal pour la vérification fonctionnelle rapide.</p>
+
+<h3 id="caractéristiques" data-numberify>Caractéristiques<a class="anchor ms-1" href="#caractéristiques"></a></h3>
+<ul>
+<li><strong>Microcontrôleur M5StampS3.</strong></li>
+<li><strong>Clavier à 56 touches.</strong></li>
+<li><strong>Écran TFT de 1,14 pouces.</strong></li>
+<li><strong>Haut-parleur de cavité et microphone numérique MEMS SPM1423.</strong></li>
+<li><strong>Tube d&rsquo;émission infrarouge utilisé pour l&rsquo;interaction de contrôle infrarouge.</strong></li>
+<li><strong>Port HY2.0-4P pour connecter et étendre des capteurs I2C.</strong></li>
+<li><strong>Emplacement pour carte Micro SD pour étendre l&rsquo;espace de stockage.</strong></li>
+<li><strong>Les batteries lithium intégrées de 120 mAh et 1400 mAh dans la base offrent une longue autonomie.</strong></li>
+<li><strong>Base avec aimant, compatible avec l&rsquo;expansion de trous Lego.</strong></li>
+</ul>
+
+<h2 id="comment-lutiliser-" data-numberify>Comment l&rsquo;utiliser ?<a class="anchor ms-1" href="#comment-lutiliser-"></a></h2>
+<p>Pour utiliser le Cardputer, il nous faut d&rsquo;abord installer <a href="https://docs.m5stack.com/en/uiflow/m5burner/intro" target="_blank" rel="noopener noreferrer">M5Burner<i class="fas fa-external-link-square-alt ms-1"></i></a>.</p>
+<p>M5Burner est une application qui va nous permettre de flasher le firmware sur notre M5stack. Pour cela, il suffit de télécharger le firmware sur le site de M5stack.</p>
+<p>On arrive sur une page qui ressemble à ça, on choisit notre carte ; pour ma part, c&rsquo;est la M5stack Cardputer.<br>
+<picture><img class="img-fluid " alt="M5Burner" src="/blog/2024/08/m5stack-cardputer/M5Burner.png" loading="lazy" width="2880" height="1750" />
+</picture>
+
+</p>
+<p>Une fois notre carte choisie, il nous reste à choisir le firmware que l&rsquo;on veut flasher sur notre carte.<br>
+Nous en avons plusieurs, pour ma part, j&rsquo;ai choisi le firmware M5Launcher.<br>
+<picture><img class="img-fluid " alt="M5Launcher" src="/blog/2024/08/m5stack-cardputer/m5luncher.png" loading="lazy" width="2446" height="554" />
+</picture>
+
+</p>
+<p>Une fois notre firmware choisi, on va regarder à l&rsquo;aide du gestionnaire de périphériques le port sur lequel est connectée notre carte.<br>
+<picture><img class="img-fluid " alt="Port COM3" src="/blog/2024/08/m5stack-cardputer/perif.png" loading="lazy" width="326" height="576" />
+</picture>
+
+</p>
+<p>Cliquez sur le bouton <code>Burn</code> pour lancer le flashage du firmware sur notre carte.</p>
+<p>On tombe sur cette interface, et on choisit le bon port COM.<br>
+<picture><img class="img-fluid " alt="Choisir le bon port COM" src="/blog/2024/08/m5stack-cardputer/burn.png" loading="lazy" width="1914" height="1025" />
+</picture>
+
+</p>
+<p>Alors là, pourquoi je vous parle de M5Launcher ?</p>
+<p>M5Launcher est un firmware très pratique car il nous permet de lancer plusieurs firmwares sans avoir à les flasher à chaque fois.</p>
+
+<h2 id="installation-de-evil-cardputer" data-numberify>Installation de Evil-Cardputer<a class="anchor ms-1" href="#installation-de-evil-cardputer"></a></h2>
+<p>Voici les <strong>Étapes</strong> :</p>
+<p><picture><img class="img-fluid " alt="Boot sur M5Launcher" src="/blog/2024/08/m5stack-cardputer/Etape1.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+<p><picture><img class="img-fluid " alt="On arrive sur cette interface" src="/blog/2024/08/m5stack-cardputer/Etape2.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+<p><picture><img class="img-fluid " alt="On choisit OTA" src="/blog/2024/08/m5stack-cardputer/Etape3.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+<p><picture><img class="img-fluid " alt="Sélectionne notre réseau" src="/blog/2024/08/m5stack-cardputer/Etape4.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+<p><picture><img class="img-fluid " alt="On tombe sur cette page" src="/blog/2024/08/m5stack-cardputer/Etape5.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+<p><picture><img class="img-fluid " alt="On vient prendre Evil-Cardputer" src="/blog/2024/08/m5stack-cardputer/Etape6.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+<p><picture><img class="img-fluid " alt="OTA Install" src="/blog/2024/08/m5stack-cardputer/Etape7.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+<p><picture><img class="img-fluid " alt="SPIFFS NO" src="/blog/2024/08/m5stack-cardputer/Etape8.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+<p><picture><img class="img-fluid " alt="Installation" src="/blog/2024/08/m5stack-cardputer/Etape9.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+<p><picture><img class="img-fluid " alt="ET voilà ! Bienvenue sur le Evil-Cardputer" src="/blog/2024/08/m5stack-cardputer/Etape10.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+
+<h2 id="ce-nest-pas-fini-" data-numberify>Ce n&rsquo;est pas fini !<a class="anchor ms-1" href="#ce-nest-pas-fini-"></a></h2>
+<p>Il nous reste encore une chose à faire : mettre les fichiers dans la carte SD.</p>
+<p>Une fois la carte SD connectée, nous allons copier tous les fichiers du GitHub.<br>
+<picture><img class="img-fluid " alt="Aller dans SD-Card-File" src="/blog/2024/08/m5stack-cardputer/repo.png" loading="lazy" width="2178" height="584" />
+</picture>
+
+</p>
+<p>On sélectionne tous les fichiers et on les copie dans la carte SD.<br>
+<picture><img class="img-fluid " alt="Copier tout" src="/blog/2024/08/m5stack-cardputer/copy_all.png" loading="lazy" width="1612" height="344" />
+</picture>
+
+</p>
+<p><picture><img class="img-fluid " alt="Copier dans la carte SD" src="/blog/2024/08/m5stack-cardputer/disk.png" loading="lazy" width="2618" height="526" />
+</picture>
+
+</p>
+<p>Si on a tout bien fait, quand on lance le Cardputer et que l&rsquo;on attend quelques secondes, on tombe sur :</p>
+<p><picture><img class="img-fluid " alt="On peut y voir le logo" src="/blog/2024/08/m5stack-cardputer/RUN-EVIL.png" loading="lazy" width="3024" height="4032" />
+</picture>
+
+</p>
+<p>Félicitations, vous avez réussi à installer Evil-Cardputer sur votre M5stack Cardputer.</p>
+
+<h2 id="pourquoi-evil-m5project-" data-numberify>Pourquoi Evil-M5Project ?<a class="anchor ms-1" href="#pourquoi-evil-m5project-"></a></h2>
+<p>Dans ce projet, on peut trouver plusieurs outils pour la cybersécurité, comme par exemple :</p>
+<ul>
+<li>
+<p><strong>Scan des réseaux WiFi</strong> :<br>
+Identifier et afficher les réseaux WiFi à proximité.</p>
+</li>
+<li>
+<p><strong>Clonage de réseau</strong> :<br>
+Vérifier les informations et répliquer les réseaux pour une analyse approfondie.</p>
+</li>
+<li>
+<p><strong>Gestion de portail captif</strong> :<br>
+Créer et gérer un portail captif pour rediriger les utilisateurs vers une page lors de la connexion.</p>
+</li>
+<li>
+<p><strong>Gestion des identifiants</strong> :<br>
+Capturer et gérer les identifiants du portail.</p>
+</li>
+<li>
+<p><strong>Serveur Web distant</strong> :<br>
+Surveiller l&rsquo;appareil à distance via une interface Web simple qui peut fournir des identifiants et télécharger des portails pour stocker des fichiers sur une carte SD.</p>
+</li>
+<li>
+<p><strong>Sniffing de probes</strong> :<br>
+Renifler et stocker les probes à proximité sur une carte SD.</p>
+</li>
+<li>
+<p><strong>Attaque Karma</strong> :<br>
+Tenter une simple attaque Karma sur une probe capturée.</p>
+</li>
+<li>
+<p><strong>Attaque Karma automatisée</strong> :<br>
+Tenter une attaque Karma sur les probes à proximité de manière automatique.</p>
+</li>
+<li>
+<p><strong>Contrôle par Bluetooth</strong> :<br>
+Contrôler l&rsquo;appareil via Bluetooth.</p>
+</li>
+<li>
+<p><strong>Wardriving</strong> :<br>
+Effectuer du wardriving avec une sortie au format Wigle sur carte SD.</p>
+</li>
+<li>
+<p><strong>Beacon Spam</strong> :<br>
+Générer plusieurs SSID autour de vous.</p>
+</li>
+<li>
+<p><strong>Deauther</strong> :<br>
+Envoyer des trames de déauthentification et renifler les handshakes 4-Way ainsi que les PMKID.</p>
+</li>
+<li>
+<p><strong>Sniffing et déauthentification des clients</strong> :<br>
+Renifler les clients connectés au point d&rsquo;accès et les désauthentifier automatiquement tout en reniflant les EAPOL.</p>
+</li>
+<li>
+<p><strong>Détection EAPOL/Deauth</strong> :<br>
+Détecter les paquets de désauthentification, les handshakes 4-Way, les PMKID et les pwnagotchi à proximité.</p>
+</li>
+<li>
+<p><strong>Wall Of Flipper</strong> :<br>
+Détecter et enregistrer les Flipper Zero avec Bluetooth activé à proximité et détecter les SPAM BLE.</p>
+</li>
+<li>
+<p><strong>Envoi de code Tesla avec RFunit</strong> :<br>
+Utiliser RFunit pour envoyer des codes Tesla, imitant les capacités de Flipper Zero.</p>
+</li>
+<li>
+<p><strong>Scan de réseau et de ports</strong> :<br>
+Effectuer des analyses de réseau et de ports pour découvrir des appareils et services, en vérifiant l&rsquo;état des hôtes.</p>
+</li>
+<li>
+<p><strong>Shell SSH</strong> :<br>
+Se connecter à des serveurs SSH directement depuis l&rsquo;appareil, permettant l&rsquo;exécution de commandes via un shell intégré.</p>
+</li>
+<li>
+<p><strong>Web Crawler</strong> :<br>
+Explorer des sites Web pour extraire des informations, en s&rsquo;assurant d&rsquo;avoir l&rsquo;autorisation préalable avant utilisation.</p>
+</li>
+<li>
+<p><strong>PwnGrid</strong> :<br>
+Spammer des visages et des messages sur les appareils pwnagotchi à proximité, provoquant un Denial of Screen PWND.</p>
+</li>
+<li>
+<p><strong>Détecteur de Skimmer</strong> :<br>
+Détecter les skimmers Bluetooth potentiels en utilisant les modules HC-03, HC-05, et HC-06.</p>
+</li>
+<li>
+<p><strong>BadUSB</strong> :<br>
+Simuler des attaques BadUSB en émulant les entrées clavier/souris pour exécuter des scripts ou commandes prédéfinis.</p>
+</li>
+</ul>
+
+<h2 id="conclusion" data-numberify>Conclusion<a class="anchor ms-1" href="#conclusion"></a></h2>
+<p>Je trouve que le M5stack Cardputer est un très bon outil pour la cybersécurité. Il est très pratique et facile d&rsquo;utilisation. Je vous conseille de l&rsquo;essayer si vous êtes intéressé par la cybersécurité. Pas cher et très pratique.</p>
+
+<h2 id="ressources" data-numberify>Ressources<a class="anchor ms-1" href="#ressources"></a></h2>
+<ul>
+<li><a href="https://shop.m5stack.com/products/m5stack-cardputer-kit-w-m5stamps3" target="_blank" rel="noopener noreferrer">Shop M5stack<i class="fas fa-external-link-square-alt ms-1"></i></a></li>
+<li><a href="https://github.com/7h30th3r0n3/Evil-M5Core2" target="_blank" rel="noopener noreferrer">Github 7h30th3r0n3<i class="fas fa-external-link-square-alt ms-1"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title text-surface" id="rewardModalLabel"><i class="fas fa-fw fa-coffee me-1"></i>Buy me a coffee</h5>
+        <a href="#" data-bs-dismiss="modal" class="btn-close" aria-label="Close"></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay me-1"></i>Alipay
+            </a>
+          </li><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin me-1"></i>WeChat
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content text-center show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="//localhost:1313/images/reward/alipay.png" loading="lazy" data-viewer-invisible />
+          </div><div class="tab-pane fade post-reward-content text-center show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="//localhost:1313/images/reward/wechat.png" loading="lazy" data-viewer-invisible />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div></div><div class="card-footer">
+  <div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-prev">
+      <i class="fas fa-fw fa-chevron-down post-prev-icon me-1" data-fa-transform="rotate-90"></i>
+      <a href="/blog/2022/04/readme/">README</a>
+    </div></div>
+</div></article><div class="post-copyright mb-3 row card component" id="post-copyright">
+    <div class="card-header">
+        <h2 class="card-title fs-4 my-2 text-surface">Copyright</h2>
+    </div>
+    <div class="card-body"><a class="d-flex align-items-center flex-column" target="_blank" rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en">
+  <span><i class="fab fa-fw fa-2x fa-creative-commons"></i><i class="fab fa-fw fa-2x fa-creative-commons-by"></i><i class="fab fa-fw fa-2x fa-creative-commons-nc"></i><i class="fab fa-fw fa-2x fa-creative-commons-nd"></i></span>
+  CC BY-NC-ND 4.0 
+</a>
+
+
+    </div>
+</div><section class="related-posts row card component">
+      <div class="card-header">
+        <h2 class="card-title fs-4 my-2 text-surface">
+          Related Posts
+        </h2>
+      </div>
+      <div class="card-body slide px-1">
+        <div class="slide-inner row gx-0"><div class="col-12 col-md-6 col-lg-4 me-2">
+            <div class="post-card card card-body p-0 border-0 surface">
+  
+  <div
+    class="post-card-default-img card-img-top d-flex align-items-center justify-content-center bg-body-secondary mb-1">
+    NO IMAGE
+  </div>
+
+  <a class="post-title" href="/news/2024/08/m5stack-cardputer/">
+    M5stack Cardputer
+  </a>
+  <div class="post-meta mb-0">
+    August 20, 2024
+
+  </div>
+</div>
+
+          </div><div class="col-12 col-md-6 col-lg-4 me-2">
+            <div class="post-card card card-body p-0 border-0 surface">
+  
+  <div
+    class="post-card-default-img card-img-top d-flex align-items-center justify-content-center bg-body-secondary mb-1">
+    NO IMAGE
+  </div>
+
+  <a class="post-title" href="/blog/2022/04/readme/">
+    README
+  </a>
+  <div class="post-meta mb-0">
+    April 17, 2022
+
+  </div>
+</div>
+
+          </div><div class="col-12 col-md-6 col-lg-4 me-2">
+            <div class="post-card card card-body p-0 border-0 surface">
+  
+  <div
+    class="post-card-default-img card-img-top d-flex align-items-center justify-content-center bg-body-secondary mb-1">
+    NO IMAGE
+  </div>
+
+  <a class="post-title" href="/news/2022/04/sejhsbvjhksj/">
+    Sejhsbvjhksj 
+  </a>
+  <div class="post-meta mb-0">
+    April 17, 2022
+
+  </div>
+</div>
+
+          </div></div>
+        <button class="slide-control-left">
+          <i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i>
+          <span class="visually-hidden">Left</span>
+        </button>
+        <button class="slide-control-right">
+          <i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-270"></i>
+          <span class="visually-hidden">Right</span>
+        </button>
+      </div>
+    </section><div class="card component row post-comments" id="post-comments">
+  <div class="card-header">
+    <h2 class="card-title my-2 fs-4 text-surface">Comments</h2>
+  </div>
+  <div class="card-body">
+<div class="giscus"></div>
+
+
+
+</div>
+</div></div>
+</div>
+<aside class="col-xxl-4 sidebar d-flex">
+  <div class="container d-flex flex-column">
+    
+    
+<div class="accordion profile">
+  <div class="accordion-item card row text-center component">
+    <div class="accordion-header card-header border-0" id="profile-header">
+      <a
+        class="accordion-button d-lg-none mb-2 shadow-none p-0 bg-transparent text-surface"
+        role="button" data-bs-toggle="collapse" href="#profile" aria-expanded="true" aria-controls="profile">
+        Profile
+      </a>
+    </div>
+    <div class="card-body collapse accordion-collapse accordion-body d-lg-block show" id="profile" aria-labelledby="profile-header">
+      <div class="col-12 d-flex align-items-center justify-content-center"><picture><img class="profile-avatar rounded-circle " alt="Lukas Taboga" src="//localhost:1313/images/image.png?v=8e28e815cea6294f6de693630f6501e6" loading="lazy" data-viewer-invisible width="259" height="194" />
+</picture>
+</div>
+      <div class="col-12 profile-meta"><div class="profile-name fw-fold fs-lg">Lukas Taboga</div><div class="profile-bio">Un blog sur la sécurité, CTF writeups, des recherches et plus encore.</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>Francais</div><a class="profile-about text-primary" href="/about/"><i class="fas fa-fw fa-user"></i>Qui suis-je ?</a><a class="profile-contact text-primary" href="/contact/"><i class="fas fa-fw fa-question-circle"></i>me contacter</a></div>
+
+
+<nav class="social-links nav justify-content-center mt-1 justify-content-around">
+    <a class="nav-link social-link" href="mailto:lukastaboga@gmail.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope" style="color: #0963ac;"></i>
+    </a>
+      <a class="nav-link social-link" target="_blank" href="https://github.com/ticodevv" title="GitHub" rel="me">
+        <i class="fa-fw fa-2x fab fa-github"
+          ></i>
+      </a>
+      <a class="nav-link social-link" target="_blank" href="https://www.linkedin.com/in/lukas-taboga-5a8040237/" title="LinkedIn" rel="me">
+        <i class="fa-fw fa-2x fab fa-linkedin-in"
+           style="color: #0a66c2;"></i>
+      </a>
+      <a class="nav-link social-link" target="_blank" href="https://twitter.com/razonyang" title="Twitter" rel="me">
+        <i class="fa-fw fa-2x fab fa-twitter"
+           style="color: #1d9bf0;"></i>
+      </a>
+</nav>
+</div>
+  </div>
+</div>
+
+
+<div class="accordion taxonomies-toggle">
+    <div class="row card component accordion-item">
+        <div class="accordion-header card-header border-0">
+            <a
+                class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent"
+                role="button" data-bs-toggle="collapse" href="#taxonomies-toggle" aria-expanded="true" aria-controls="taxonomies-toggle">
+                Taxonomies
+            </a>
+        </div>
+        <div class="card-body collapse accordion-collapse accordion-body d-lg-block show" id="taxonomies-toggle">
+            <ul class="nav nav-pills nav-fill" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="taxonomyCategoriesTab" data-bs-toggle="tab" data-bs-target="#taxonomyCategories" 
+                            type="button" role="tab" aria-controls="taxonomyCategories" aria-selected="true">
+                            Categories
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="taxonomyTagsTab" data-bs-toggle="tab" data-bs-target="#taxonomyTags" 
+                            type="button" role="tab" aria-controls="taxonomyTags" aria-selected="true">
+                            Tags
+                        </button>
+                    </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="taxonomyArchivesTab" data-bs-toggle="tab" data-bs-target="#taxonomyArchives" 
+                        type="button" role="tab" aria-controls="taxonomyArchives" aria-selected="true">
+                        Archives
+                    </button>
+                </li>
+            </ul>
+            
+            <div class="tab-content mt-3">
+                    <div class="tab-pane active" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0">
+                        <a href="/categories/documentation/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="Documentation">
+                            Documentation
+                            <span class="badge badge-sm text-secondary bg-white ms-1">2</span>
+                        </a>
+                        <a href="/categories/hardware/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="Hardware">
+                            Hardware
+                            <span class="badge badge-sm text-secondary bg-white ms-1">2</span>
+                        </a>
+                    </div>
+                    <div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0">
+                        <a href="/tags/esp32/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="ESP32">
+                            ESP32
+                            <span class="badge badge-sm text-secondary bg-white ms-1">2</span>
+                        </a>
+                        <a href="/tags/hardware/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="Hardware">
+                            Hardware
+                            <span class="badge badge-sm text-secondary bg-white ms-1">2</span>
+                        </a>
+                        <a href="/tags/m5stack/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="M5stack">
+                            M5stack
+                            <span class="badge badge-sm text-secondary bg-white ms-1">2</span>
+                        </a>
+                        <a href="/tags/readme/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="README">
+                            README
+                            <span class="badge badge-sm text-secondary bg-white ms-1">2</span>
+                        </a>
+                        <a href="/tags/cardputer/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="Cardputer">
+                            Cardputer
+                            <span class="badge badge-sm text-secondary bg-white ms-1">1</span>
+                        </a>
+                        <a href="/tags/documentation/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="Documentation">
+                            Documentation
+                            <span class="badge badge-sm text-secondary bg-white ms-1">1</span>
+                        </a>
+                    </div>
+                <div class="tab-pane" id="taxonomyArchives" role="tabpanel" aria-labelledby="taxonomyArchivesTab" tabindex="0">
+
+    <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2024">
+    2024 <span class="badge badge-sm text-secondary bg-white ms-1">2</span>
+    </a>
+
+    <a href="/archives/2022/" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2022">
+    2022 <span class="badge badge-sm text-secondary bg-white ms-1">2</span>
+    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="accordion posts-toggle">
+      <div class="row card component accordion-item">
+        <div class="accordion-header card-header border-0">
+          <a
+            class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent"
+            role="button"
+            data-bs-toggle="collapse"
+            href="#posts-toggle"
+            aria-expanded="true"
+            aria-controls="posts-toggle">
+            Posts
+          </a>
+        </div>
+        <div
+          class="card-body collapse accordion-collapse accordion-body d-lg-block show"
+          id="posts-toggle">
+          <ul class="nav nav-pills nav-fill" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="recent-posts-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#recent-posts"
+                  type="button"
+                  role="tab"
+                  aria-controls="recent-posts"
+                  aria-selected="true">
+                  Recent Posts
+                </button>
+              </li>
+          </ul>
+
+          <div class="tab-content mt-3">
+              <div
+                class="tab-pane active"
+                id="recent-posts"
+                role="tabpanel"
+                aria-labelledby="recent-posts-tab"
+                tabindex="0">
+                <ul class="post-list list-unstyled ms-1">
+                    <li class="mb-2">
+  <div class="d-flex">
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+      <a class="post-title" href="/news/2024/08/m5stack-cardputer/">
+        M5stack Cardputer
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          August 20, 2024
+        </span>
+      </div>
+    </div>
+  </div>
+                    </li>
+                    <li class="mb-2">
+  <div class="d-flex">
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+      <a class="post-title" href="/blog/2024/08/m5stack-cardputer/">
+        M5stack Cardputer
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          August 20, 2024
+        </span>
+      </div>
+    </div>
+  </div>
+                    </li>
+                    <li class="mb-2">
+  <div class="d-flex">
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+      <a class="post-title" href="/news/2022/04/sejhsbvjhksj/">
+        Sejhsbvjhksj 
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          April 17, 2022
+        </span>
+      </div>
+    </div>
+  </div>
+                    </li>
+                    <li class="mb-2">
+  <div class="d-flex">
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+      <a class="post-title" href="/blog/2022/04/readme/">
+        README
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          April 17, 2022
+        </span>
+      </div>
+    </div>
+  </div>
+                    </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="accordion post-toc d-none d-lg-block">
+  <div class="accordion-item row mb-4 card component" id="postTOC">
+    <div class="card-header accordion-header">
+      <h2 class="card-title fs-4 my-2 text-surface d-none d-lg-block">Contents</h2>
+      <a class="accordion-button d-lg-none mb-1 collapsed shadow-none p-0 bg-transparent" role="button" data-bs-toggle="collapse" href="#post-toc" aria-expanded="false" aria-controls="post-toc">
+        Contents
+      </a>
+    </div>
+    <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="post-toc">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pourquoi-ce-post-">Pourquoi ce post ?</a></li>
+    <li><a href="#quest-ce-que-le-m5stack-cardputer-">Qu&rsquo;est-ce que le M5stack Cardputer ?</a>
+      <ul>
+        <li><a href="#caractéristiques">Caractéristiques</a></li>
+      </ul>
+    </li>
+    <li><a href="#comment-lutiliser-">Comment l&rsquo;utiliser ?</a></li>
+    <li><a href="#installation-de-evil-cardputer">Installation de Evil-Cardputer</a></li>
+    <li><a href="#ce-nest-pas-fini-">Ce n&rsquo;est pas fini !</a></li>
+    <li><a href="#pourquoi-evil-m5project-">Pourquoi Evil-M5Project ?</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#ressources">Ressources</a></li>
+  </ul>
+</nav>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+  </div>
+</aside>
+
+      </div>
+    </main><footer class="footer mt-auto py-3 text-center container"><div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="offcanvasActionsPanel"
+  aria-labelledby="offcanvasActionsPanelLabel">
+  <div class="offcanvas-header">
+    <div class="offcanvas-title h5" id="offcanvasActionsPanelLabel">
+      <i class="fas fa-fw fa-th-large me-1"></i>
+      Actions
+    </div>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="offcanvasActionsPanel" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
+      <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
+      target="_blank" href="https://twitter.com/intent/tweet?title=404%20Page%20not%20found&url=%2f%2flocalhost%3a1313%2f404.html">
+        <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
+      </a>
+      <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2f%2flocalhost%3a1313%2f404.html">
+        <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
+      </a>
+    </div>
+    <hr class="mb-4"><div class="actions d-flex overflow-auto align-items-center">
+      <a role="button" class="action action-go-back d-flex flex-column align-items-center me-3" href="javascript: window.history.back();">
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i></span> Go back
+      </a>
+      <a role="button" class="action action-reload-page d-flex flex-column align-items-center me-3">
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-redo-alt"></i></span> Reload
+      </a>
+      <a role="button" class="action action-copy-url d-flex flex-column align-items-center me-3">
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-link"></i></span> Copy URL
+      </a>
+    </div>
+  </div>
+</div><div class="row text-center">
+  <div class="col-12 mt-2">
+    <p class="mb-2"></p>
+    <p class="text-secondary mb-2"><small></small></p><div class="copyright mb-2 text-secondary">
+  <small>
+</small>
+</div>
+<div class="powered-by mb-2 text-secondary">
+  <small>
+    Build with ❤️ from the <a class="text-primary" href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a class="text-primary" href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">HBS</a> theme.
+  </small>
+</div>
+
+
+<nav class="social-links nav justify-content-center mb-2 mt-3">
+  <a class="nav-link social-link p-0 me-1 mb-2" target="_blank" href="/index.xml" title="RSS" rel="me">
+    <i class="fas fa-fw fa-2x fa-rss" style="color: #ea6221;"></i>
+  </a>
+</nav>
+</div>
+  <div class="col-12 col-lg-8 offset-0 offset-lg-1"></div>
+</div>
+</footer>
+<script data-precache src="/assets/main/bundle.min.201e1ce5aa21d928e8aefdcb2f2aa779baa925bf77d25f0b8ed731de0b67c1ee.js" integrity="sha256-IB4c5aoh2Sjorv3LLyqnebqpJb930l8Ljtcx3gtnwe4=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.529b67926ad53aa2318e9281e6dab323480cd1d706cd65c17ecf3f7375485d1e.js" integrity="sha256-UptnkmrVOqIxjpKB5tqzI0gM0dcGzWXBfs8/c3VIXR4=" crossorigin="anonymous" defer></script>
+<script data-precache src="/assets/viewer/bundle.min.44f880800e276b38818d7a3492c9f6cc185201fe3f2f95470972318a6d8ee2ff.js" integrity="sha256-RPiAgA4naziBjXo0ksn2zBhSAf4/L5VHCXIxim2O4v8=" crossorigin="anonymous" defer></script>
+<script src="/js/sw-register.js" defer></script>
+<script src="https://giscus.app/client.js"
+    data-repo="https://github.com/ticodevv"
+    data-repo-id="R_kgDOHJi95g"
+    data-category="General"
+    data-category-id="DIC_kwDOHJi95s4CTy6q"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    defer>
+</script>
+
+
+  </body>
+</html>

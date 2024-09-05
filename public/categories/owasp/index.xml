@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>OWASP on </title>
+    <link>//localhost:1313/categories/owasp/</link>
+    <description>Recent content in OWASP on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>
+</copyright>
+    <lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/categories/owasp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Juice Shop</title>
+      <link>//localhost:1313/news/2024/03/juice-shop/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/news/2024/03/juice-shop/</guid>
+      <description><![CDATA[Introduction C&rsquo;est quoi Juice Shop ?
+Juice Shop est une application web vulnérable pour l&rsquo;entraînement des testeurs de sécurité. Il est inspiré par les applications modernes qui utilisent des technologies JavaScript lourdes, telles que Angular et Node.js. Juice Shop est conçu pour être utilisé dans des ateliers de formation, des cours de sécurité informatique, des tests de pénétration ou des compétitions de capture du drapeau (CTF).
+Prerequisites Spécifications minimales du système RAM: 256 MO CPU: 200 millicpu Espace disque libre: 300 Mo Spécifications système recommandées RAM: 384 MO CPU: 400 millicpu Espace disque disponible: 800 Mo Logiciels requis Docker Installation Pour l&rsquo;instalation de Juice Shop on va utiliser Docker.]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

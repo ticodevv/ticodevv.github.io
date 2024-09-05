@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>News on </title>
+    <link>//localhost:1313/news/</link>
+    <description>Recent content in News on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>
+</copyright>
+    <lastBuildDate>Tue, 20 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>M5stack Cardputer</title>
+      <link>//localhost:1313/news/2024/08/m5stack-cardputer/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/news/2024/08/m5stack-cardputer/</guid>
+      <description><![CDATA[<p><picture><img class="img-fluid " alt="M5stack Cardputer" src="/news/2024/08/m5stack-cardputer/cardputer.png" loading="lazy" width="800" height="800" />
+</picture>
+
+</p>
+<p>Je fais ce post car il n’y a pas longtemps, j’ai découvert un projet qui m’a beaucoup plu, et je me suis dit que je devais le partager avec vous. Ce projet est le <a href="https://github.com/7h30th3r0n3/Evil-M5Core2" target="_blank" rel="noopener noreferrer">Evil-M5Core2<i class="fas fa-external-link-square-alt ms-1"></i></a>.</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Probe Attack</title>
+      <link>//localhost:1313/news/2024/08/probe-attack/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/news/2024/08/probe-attack/</guid>
+      <description><![CDATA[<p><picture><img class="img-fluid " alt="M5stack Cardputer" src="/news/2024/08/probe-attack/image-1.png" loading="lazy" width="652" height="340" />
+</picture>
+
+</p>
+<p>Je fais ce post suite à la découverte d&rsquo;un projet qui m&rsquo;a beaucoup plus : l&rsquo;EVIL-M5Core2. Dans ce projet, il y a une attaque que je ne connaissais pas et qui m&rsquo;a beaucoup intéressé : la Probe Attack. Comme je ne connaissais pas cette attaque, je me suis dit que je devais la partager avec vous.</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Rubber Ducky (ATtiny85)</title>
+      <link>//localhost:1313/news/2024/04/rubber-ducky-attiny85/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/news/2024/04/rubber-ducky-attiny85/</guid>
+      <description><![CDATA[<p><picture><img class="img-fluid " alt="Rubber Ducky" src="https://imgs.search.brave.com/9V6kScEq11YMGutHRdeaug98Avg2WsIok10zE9pf_jA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mci5z/aG9wcGluZy5yYWt1/dGVuLmNvbS9waG90/by8yMDczNTg4Mzk1/X0xfTk9QQUQuanBn" loading="lazy" />
+</picture>
+
+</p>
+<p>L&rsquo;USB Rubber Ducky est un dispositif génial pour les tests de pénétration et les méfaits en général. Alors qu&rsquo;il semble s&rsquo;agir d&rsquo;une clé USB inoffensive, lorsqu&rsquo;il est branché sur un ordinateur, il s&rsquo;enregistre comme un clavier USB sur le système et envoie une charge utile de frappe à la vitesse de l&rsquo;éclair. Nous allons utiliser cette <a href="https://fr.aliexpress.com/item/1005006582625544.html?srcSns=sns_Copy&amp;spreadType=socialShare&amp;bizType=ProductDetail&amp;social_params=60553864134&amp;aff_fcid=b6a0ce50b73b4cb5a1e1620edd0cc5a0-1711615295699-00282-_EIIDtO5&amp;tt=MG&amp;aff_fsk=_EIIDtO5&amp;aff_platform=default&amp;sk=_EIIDtO5&amp;aff_trace_key=b6a0ce50b73b4cb5a1e1620edd0cc5a0-1711615295699-00282-_EIIDtO5&amp;shareId=60553864134&amp;businessType=ProductDetail&amp;platform=AE&amp;terminal_id=f9420e9465bb43d28dd91811ba6f3755&amp;afSmartRedirect=y" target="_blank" rel="noopener noreferrer">rubber ducky<i class="fas fa-external-link-square-alt ms-1"></i></a> achetée sur AliExpress pour 2€</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Headless</title>
+      <link>//localhost:1313/news/2024/03/headless/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/news/2024/03/headless/</guid>
+      <description><![CDATA[<p><picture><img class="img-fluid " alt="Headless" src="/news/2024/03/headless/image_htbHeadless.webp" loading="lazy" width="615" height="339" />
+</picture>
+
+</p>
+<p>Bonjour à tous ! Aujourd&rsquo;hui, je vous présente la machine Headless classée dans la catégorie easy sur HackTheBox. Nous y aborderons des concepts de base dans le domaine du web. 🙃</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Juice Shop</title>
+      <link>//localhost:1313/news/2024/03/juice-shop/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/news/2024/03/juice-shop/</guid>
+      <description><![CDATA[<p><picture><img class="img-fluid " alt="Juice Shop" src="/news/2024/03/juice-shop/JuiceShop_logo.webp" loading="lazy" width="400" height="480" />
+</picture>
+
+</p>
+<p><strong>C&rsquo;est quoi Juice Shop ?</strong></p>
+<p>Juice Shop est une application web vulnérable pour l&rsquo;entraînement des testeurs de sécurité. Il est inspiré par les applications modernes qui utilisent des technologies JavaScript lourdes, telles que Angular et Node.js. Juice Shop est conçu pour être utilisé dans des ateliers de formation, des cours de sécurité informatique, des tests de pénétration ou des compétitions de capture du drapeau (CTF).</p>]]></description>
+    </item>
+    
+    <item>
+      <title>VulnNet Roasted</title>
+      <link>//localhost:1313/news/2024/03/vulnnet-roasted/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/news/2024/03/vulnnet-roasted/</guid>
+      <description><![CDATA[<p><picture><img class="img-fluid " alt="VulnNet Roasted" src="/news/2024/03/vulnnet-roasted/img.png" loading="lazy" width="512" height="512" />
+</picture>
+
+</p>
+<p><strong>VulnNet Entertainment</strong> a rapidement déployé une nouvelle instance de gestion sur leur réseau très étendu…</p>
+<p>VulnNet Entertainment vient de déployer une nouvelle instance sur leur réseau avec les administrateurs systèmes récemment embauchés. En tant qu&rsquo;entreprise soucieuse de la sécurité, ils vous ont, comme toujours, engagé pour réaliser un test de pénétration et voir comment les administrateurs systèmes se débrouillent.</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

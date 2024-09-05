@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Active Directory on </title>
+    <link>//localhost:1313/tags/active-directory/</link>
+    <description>Recent content in Active Directory on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>
+</copyright>
+    <lastBuildDate>Tue, 26 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VulnNet Roasted</title>
+      <link>//localhost:1313/news/2024/03/vulnnet-roasted/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/news/2024/03/vulnnet-roasted/</guid>
+      <description><![CDATA[<p><picture><img class="img-fluid " alt="VulnNet Roasted" src="/news/2024/03/vulnnet-roasted/img.png" loading="lazy" width="512" height="512" />
+</picture>
+
+</p>
+<p><strong>VulnNet Entertainment</strong> a rapidement déployé une nouvelle instance de gestion sur leur réseau très étendu…</p>
+<p>VulnNet Entertainment vient de déployer une nouvelle instance sur leur réseau avec les administrateurs systèmes récemment embauchés. En tant qu&rsquo;entreprise soucieuse de la sécurité, ils vous ont, comme toujours, engagé pour réaliser un test de pénétration et voir comment les administrateurs systèmes se débrouillent.</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

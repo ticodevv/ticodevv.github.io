@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cardputer on </title>
+    <link>//localhost:1313/tags/cardputer/</link>
+    <description>Recent content in Cardputer on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>
+</copyright>
+    <lastBuildDate>Tue, 20 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/cardputer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Probe Attack</title>
+      <link>//localhost:1313/news/2024/08/probe-attack/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/news/2024/08/probe-attack/</guid>
+      <description><![CDATA[<h2 id="pourquoi-ce-post-" data-numberify>Pourquoi ce post ?<a class="anchor ms-1" href="#pourquoi-ce-post-"></a></h2>
+<p>Je fais ce post suite à la découverte d&rsquo;un projet qui m&rsquo;a beaucoup plu : l&rsquo;EVIL-M5Core2. Dans ce projet, il y a une attaque que je ne connaissais pas et qui m&rsquo;a beaucoup intéressé : la Probe Attack. Comme je ne connaissais pas cette attaque, je me suis dit que je devais la partager avec vous.</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+
