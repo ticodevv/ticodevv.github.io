@@ -15,7 +15,6 @@ Cela me permet d'explorer ma passion et me conforte dans l'idée de poursuivre d
 
 J'aime aussi beaucoup faire des CTF, en particulier sur  [Hack The Box](https://app.hackthebox.com/users/1412590), [TryHackMe](https://tryhackme.com/p/tabogalukas) et [Root Me](https://www.root-me.org/d0nald).
 
-En termes de certifications, j'ai actuellement j'ai pour projet de passer `OSCP` `CRTP` `CRTE` `CRTO`
 
 **TryHackMe**:
 - [CompTIA Pentest+ Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547234526/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y) 
@@ -25,6 +24,8 @@ En termes de certifications, j'ai actuellement j'ai pour projet de passer `OSCP`
 - [Jr Penetration Tester Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547231681/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y) 
 - [Pre Security Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547230783/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y) 
 - [Introduction to Cyber Security Learning Path](https://www.linkedin.com/in/lukas-taboga-5a8040237/details/certifications/1635547232696/single-media-viewer/?profileId=ACoAADrqd1ABtPE9HFswSOM1xi1FgqiuyZRu22Y)
+
+En termes de certifications, j'ai actuellement j'ai pour projet de passer `OSCP` `CRTP` `CRTE` `CRTO`
 
 N'hésitez pas à laisser des commentaires sur mes articles. Vous pouvez donner votre avis, compléter mes informations, me critiquer (`constructivement, j'espère !`), ou encore corriger mes erreurs.
 
