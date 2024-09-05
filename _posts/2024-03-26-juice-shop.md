@@ -8,9 +8,7 @@ disqus_identifier: 0000-0000-0000-0005
 cover: assets/uploads/2024/2024-juice-shop/JuiceShop_logo.webp
 description: "Explorez le Juice Shop, une application web vulnérable pour des exercices de sécurité et de développement avec Docker."
 tags:
-  - "Juice Shop"
   - "Web"
-  - "Docker"
 ---
 
 
