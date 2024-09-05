@@ -8,9 +8,7 @@ disqus_identifier: 0000-0000-0000-0002
 cover: assets/uploads/2024/2024-doc-rubber_ducky/attiny.webp
 description: "Exploration de la Rubber Ducky utilisant l'ATtiny85 pour des projets Arduino."
 tags:
-  - "Rubber Ducky"
-  - "Attiny85"
-  - "Arduino"
+  - "Hardware"
 ---
 
 L'USB Rubber Ducky est un dispositif génial pour les tests de pénétration et les méfaits en général. Alors qu'il semble s'agir d'une clé USB inoffensive, lorsqu'il est branché sur un ordinateur, il s'enregistre comme un clavier USB sur le système et envoie une charge utile de frappe à la vitesse de l'éclair. Nous allons utiliser cette [rubber ducky](https://fr.aliexpress.com/item/1005006582625544.html?srcSns=sns_Copy&spreadType=socialShare&bizType=ProductDetail&social_params=60553864134&aff_fcid=b6a0ce50b73b4cb5a1e1620edd0cc5a0-1711615295699-00282-_EIIDtO5&tt=MG&aff_fsk=_EIIDtO5&aff_platform=default&sk=_EIIDtO5&aff_trace_key=b6a0ce50b73b4cb5a1e1620edd0cc5a0-1711615295699-00282-_EIIDtO5&shareId=60553864134&businessType=ProductDetail&platform=AE&terminal_id=f9420e9465bb43d28dd91811ba6f3755&afSmartRedirect=y) achetée sur AliExpress pour 2€ 
