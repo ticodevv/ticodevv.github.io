@@ -9,8 +9,6 @@ cover: assets/uploads/2024/2024-htb-headless/image_htbHeadless.webp
 description: "Un aperçu détaillé sur le concept de systèmes headless."
 tags:
   - "HackTheBox"
-  - "Web"
-  - "XSS"
 ---
 
 Bonjour à tous ! Aujourd'hui, je vous présente la machine Headless classée dans la catégorie easy sur HackTheBox. Nous y aborderons des concepts de base dans le domaine du web. 🙃
