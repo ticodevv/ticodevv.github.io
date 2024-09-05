@@ -8,9 +8,7 @@ disqus_identifier: 0000-0000-0000-0001
 cover: assets/uploads/2024/2024-thm-Roasted/img.png
 description: "Analyse approfondie de la vulnérabilité VulnNet Roasted dans Active Directory."
 tags:
-  - "Active Directory"
-  - "Kerberos"
-  - "AS-REP Roasting"
+  - "TryHackMe"
 ---
 
 
