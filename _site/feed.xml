@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lukas</title>
+    <description>Un blog sur la sécurité, CTF writeups, des recherches et plus encore.</description>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 11 Jul 2024 11:06:33 +0200</pubDate>
+    <lastBuildDate>Thu, 11 Jul 2024 11:06:33 +0200</lastBuildDate>
+    <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>PCA et PRA</title>
+        <description>&lt;p&gt;La sécurité et la sûreté sont deux concepts qui sont souvent confondus. Dans cet article, nous allons voir la différence entre ces deux termes.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;les-notion&quot;&gt;Les notion&lt;/h2&gt;
+&lt;h3 id=&quot;sécurité&quot;&gt;Sécurité&lt;/h3&gt;
+
+&lt;p&gt;La sécurité est un concept qui se rapporte à la protection des biens et des personnes contre les menaces. Elle vise à prévenir les risques et à protéger les biens et les personnes contre les dangers. La sécurité peut être assurée par des mesures de prévention, de protection et de réaction.&lt;/p&gt;
+
+&lt;p&gt;La sécurité peut être de plusieurs types, tels que la sécurité informatique, la sécurité des personnes, la sécurité des biens, la sécurité des données, etc.&lt;/p&gt;
+
+&lt;p&gt;Dans le cadres de l’informatique, la sécurité informatique vise à protéger les systèmes informatiques.
+dans la securité il y a les données, les personnes, les biens, les systèmes, les réseaux, les applications, etc.
+en 2018 il parut la fameuse lois RDPG qui est une loi sur la protection des données personnelles.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;La CNIL doit etre informée 72 heures apres la decouverte de tout leaks de données personnelles.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sûreté&quot;&gt;Sûreté&lt;/h3&gt;
+
+&lt;p&gt;La sûreté est un concept qui se rapporte à la protection des biens et des personnes contre les actes de malveillance. Elle vise à prévenir les actes de malveillance et à protéger les biens et les personnes contre les attaques.&lt;/p&gt;
+
+&lt;p&gt;On va voir le principe de PCA et PRA.&lt;/p&gt;
+
+&lt;h2 id=&quot;pca-et-pra&quot;&gt;PCA et PRA&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/uploads/2024/02/image.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Prenon l’exemple de vacances au ski.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Planification&lt;/strong&gt; : On planifie les vacances, on choisit la station, on réserve l’hébergement, on prépare les affaires, etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt; : On part en vacances, on skie, on se repose, on profite, etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Controle&lt;/strong&gt; : On vérifie que tout se passe bien, que tout est en ordre, que tout est conforme, etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Amélioration&lt;/strong&gt; : On améliore l’organisation, on corrige les erreurs, on ajuste les processus, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Le PCA et le PRA sont des document ecrit il y a 3 grand point.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Procédure&lt;/strong&gt; : Comment faire pour rétablir les activités après un sinistre.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Matériel&lt;/strong&gt; : Quels sont les équipements nécessaires pour rétablir les activités après un sinistre.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;RH&lt;/strong&gt; : Quels sont les ressources humaines nécessaires pour rétablir les activités après un sinistre.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;pra&quot;&gt;PRA&lt;/h3&gt;
+
+&lt;p&gt;Le Plan de Reprise d’Activité (PRA) est un plan qui permet de rétablir les activités de l’entreprise après un sinistre. Il vise à minimiser les pertes et à rétablir les activités le plus rapidement possible.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;P = Plan&lt;/li&gt;
+  &lt;li&gt;R = Reprise&lt;/li&gt;
+  &lt;li&gt;A = Activité&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Le R correspond à la reprise des activités après un sinistre. Il s’agit de rétablir les activités de l’entreprise le plus rapidement possible pour minimiser les pertes. donc ca veux dire et a l’arrêt.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Le PRA c’est qu’il n’y a plus rien qui marche et il faut tout remettre en place.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pca&quot;&gt;PCA&lt;/h3&gt;
+
+&lt;p&gt;Le Plan de Continuité d’Activité (PCA) est un plan qui permet de maintenir les activités de l’entreprise en cas de sinistre. Il vise à assurer la continuité des activités et à minimiser les pertes.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;P = Plan&lt;/li&gt;
+  &lt;li&gt;C = Continuité&lt;/li&gt;
+  &lt;li&gt;A = Activité&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Le C correspond à la continuité des activités en cas de sinistre. Il s’agit de maintenir les activités de l’entreprise malgré le sinistre pour minimiser les pertes. donc ca veux dire et en marche mais avec des pertes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Le PCA  c’est qu’il y a un sinistre mais il faut continuer a travailler.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;En bref, le PCA (Plan de Continuité d’Activité) et le PRA (Plan de Reprise d’Activité) sont super importants pour que les entreprises restent solides face aux crises. Le PCA assure que les activités essentielles continuent même en cas de gros pépin, tandis que le PRA explique comment remettre tout en marche après une interruption. J’ai trouvé ça vraiment intéressant parce que ça montre comment les entreprises peuvent se préparer et continuer à fonctionner en situation de crise, ce qui renforce leur durabilité et leur robustesse.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 16 Oct 2023 02:00:00 +0200</pubDate>
+        <link>http://localhost:4000//PCA et PRA/</link>
+        <guid isPermaLink="true">http://localhost:4000//PCA et PRA/</guid>
+        
+        <category>sécurité</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Comment dump les secrets de lsass</title>
+        <description>&lt;p&gt;Le but de dumper la mémoire du processus LSASS est d’extraire des informations d’authentification, comme les mots de passe, pour compromettre un système. Les attaquants utilisent des outils comme Mimikatz pour cette tâche. Cibler LSASS permet l’élévation de privilèges et le mouvement latéral dans le réseau.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Le processus &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lsass.exe&lt;/code&gt; est un processus système de Windows qui est responsable de la sécurité des informations d’identification de l’utilisateur. Il stocke les mots de passe en mémoire et les utilise pour les authentifications. C’est pourquoi il est intéressant de le dump pour récupérer les mots de passe en clair ou les hash.&lt;/p&gt;
+
+&lt;h2 id=&quot;cest-quoi-le-lsass-&quot;&gt;C’est quoi le LSASS ?&lt;/h2&gt;
+
+&lt;p&gt;Le processus lsass.exe (Local Security Authority Subsystem Service) est crucial pour la gestion de la sécurité des informations d’identification des utilisateurs sous Windows. Il stocke les mots de passe en mémoire et gère l’authentification des utilisateurs, qu’ils soient locaux ou membres d’un domaine. Le fichier lsass.exe se trouve normalement dans le répertoire C:\Windows\System32. S’il est ailleurs, il pourrait s’agir d’un virus. Ce processus est présent dans toutes les versions de Windows, de Windows XP à Windows 10.&lt;/p&gt;
+
+&lt;p&gt;Le service LSASS peut stocker les informations d’identification sous des formes multiples, dont notamment :&lt;/p&gt;
+
+&lt;h3 id=&quot;texte-en-clair-chiffré-réversible&quot;&gt;Texte en clair chiffré réversible&lt;/h3&gt;
+
+&lt;p&gt;Exemple concret : Une application d’entreprise interne qui nécessite la récupération de mot de passe pour se connecter automatiquement à d’autres services.&lt;/p&gt;
+
+&lt;p&gt;Exemple de contenu : Le mot de passe “Password123” pourrait être stocké de manière chiffrée en réversible, tel que “aGVsbG8xMjMh”.&lt;/p&gt;
+
+&lt;h3 id=&quot;tickets-kerberos-tickets-doctroi-de-tickets-tgt-tickets-de-service&quot;&gt;Tickets Kerberos (tickets d’octroi de tickets (TGT), tickets de service)&lt;/h3&gt;
+
+&lt;p&gt;Exemple concret : Lorsqu’un utilisateur se connecte à un domaine Active Directory pour accéder à des ressources réseau, comme un partage de fichiers ou une imprimante.&lt;/p&gt;
+
+&lt;p&gt;Exemple de ticket : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;krbtgt/MyDomain@MYDOMAIN.COM&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hachage-nt&quot;&gt;Hachage NT&lt;/h3&gt;
+
+&lt;p&gt;Exemple concret : Lorsqu’un utilisateur se connecte à son compte Windows, le mot de passe est transformé en un hachage NT pour la vérification.&lt;/p&gt;
+
+&lt;p&gt;Exemple de hachage : Le mot de passe “Password123” pourrait être haché en NTLM comme &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8846f7eaee8fb117ad06bdd830b7586c&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;hachage-lm-lan-manager&quot;&gt;Hachage LM (LAN Manager)&lt;/h3&gt;
+
+&lt;p&gt;Exemple concret : Une ancienne machine sous Windows XP configurée pour rétrocompatibilité stockant les mots de passe en hachages LM.&lt;/p&gt;
+
+&lt;p&gt;Exemple de hachage : Le même mot de passe “Password123” haché en LM pourrait ressembler à &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;E52CAC67419A9A224A3B108F3FA6CB6D&lt;/code&gt;. Notez que les hachages LM sont cassés en deux morceaux, et ce hachage est souvent plus facile à casser.&lt;/p&gt;
+
+&lt;h2 id=&quot;outils&quot;&gt;Outils&lt;/h2&gt;
+
+&lt;p&gt;Il existe plusieurs outils pour dump la mémoire de lsass. Voici quelques exemples :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gentilkiwi/mimikatz/wiki/module-~-sekurlsa&quot;&gt;Mimikatz&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/skelsec/pypykatz/wiki/lsa-minidump-command&quot;&gt;pypykatz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mimikatz&quot;&gt;Mimikatz&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gentilkiwi/mimikatz/wiki&quot;&gt;Mimikatz&lt;/a&gt; est un boite a outils qui permet de récupérer des informations sensibles de Windows. Il est souvent utilisé pour récupérer des mots de passe en clair, des hachages de mots de passe, des tickets Kerberos, des clés de chiffrement, etc. Mimikatz est un outil très puissant et polyvalent qui peut être utilisé pour effectuer diverses tâches de sécurité.&lt;/p&gt;
+
+&lt;p&gt;OK, maintenant on va voir comment dump les secrets de lsass avec Mimikatz.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/uploads/2024/01/mimikatz.png&quot; alt=&quot;Mimikatz&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;etape-1&quot;&gt;Etape 1:&lt;/h3&gt;
+
+&lt;p&gt;On lance Mimikatz en tant qu’administrateur.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.&lt;span class=&quot;se&quot;&gt;\m&lt;/span&gt;imikatz.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;etape-2&quot;&gt;Etape 2:&lt;/h3&gt;
+
+&lt;p&gt;s’assurer que la sortie est « Privilege “20” ok » - Cela garantit que vous exécutez mimikatz en tant qu’administrateur ; si vous n’exécutez pas mimikatz en tant qu’administrateur, mimikatz ne s’exécutera pas correctement.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;privilege::debug
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;etape-3&quot;&gt;Etape 3:&lt;/h3&gt;
+
+&lt;p&gt;Dump des hash de la base lsass.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sekurlsa::logonpasswords
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Apres il nous reste plus qu’a cracker les hash.&lt;/p&gt;
+
+&lt;h2 id=&quot;pypykatz&quot;&gt;Pypykatz&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/skelsec/pypykatz/wiki/lsa-minidump-command&quot;&gt;pypykatz&lt;/a&gt; est un outil qui permet d’extraire les mots de passe, les clés et les tickets Kerberos à partir de la mémoire système. Il est écrit en Python et est compatible avec Windows, Linux et MacOS. il nous sufit de dump la mémoire de lsass et de l’analyser avec pypykatz.&lt;/p&gt;
+
+&lt;h3 id=&quot;etape-1-1&quot;&gt;Etape 1:&lt;/h3&gt;
+
+&lt;p&gt;Dump de la mémoire de lsass.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/uploads/2024/01/dump-task-file.png&quot; alt=&quot;dump task file&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;etape-2-1&quot;&gt;Etape 2:&lt;/h3&gt;
+
+&lt;p&gt;regarder si le dump est bien fait.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/uploads/2024/01/show-dump-file.png&quot; alt=&quot;show dump file&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;etape-3-1&quot;&gt;Etape 3:&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/uploads/2024/01/dump-via-pyp.png&quot; alt=&quot;dump via pyp&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Le LSASS est un élément clé de la sécurité Windows, gérant la connexion des utilisateurs. Les attaquants peuvent utiliser des outils comme Mimikatz pour voler des identifiants stockés dans le LSASS. Cela permet le vol de données, l’escalade de privilèges et des attaques par déni de service. Restez vigilant en mettant à jour Windows, utilisant une authentification forte et en surveillant les processus. Merci d’avoir lu cet article, j’espère qu’il vous a été utile.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 16 Oct 2023 02:00:00 +0200</pubDate>
+        <link>http://localhost:4000//lsass/</link>
+        <guid isPermaLink="true">http://localhost:4000//lsass/</guid>
+        
+        <category>Windows</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

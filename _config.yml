@@ -1,0 +1,44 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve' or `bundle exec jekyll serve`. If you change this file, please restart the server process.
+
+# Site settings
+title: Lukas  # titre site title
+email: lukastaboga@gmail.com
+description: Un blog sur la sécurité, CTF writeups, des recherches et plus encore.
+tagline: out of the box
+baseurl: "/" # the subpath of your site, e.g. /blog
+root: /
+url: "/" # the base hostname & protocol for your site
+author: Lukas
+twitter_username: lukastaboga
+github_username:  ticodevv
+logo: "/assets/icones/avatar.png"
+social:
+    name: Lukas
+    links:
+        - https://github.com/ticodevv
+        - https://x.com/i/flow/login?redirect_after_login=%2Flukastaboga
+        - https://www.root-me.org/Lukat?lang=fr#65642ffc29d8012facf589b1ceefb97f
+lang: fr_FR
+
+# Build settings
+markdown: kramdown
+
+paginate: 8
+paginate_path: "page/:num"
+github:
+  repo:
+    "https://github.com/ticodevv/web_site_pixis"
+version: 1.1.0
+plugins:
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+excerpt_separator: <!--more-->

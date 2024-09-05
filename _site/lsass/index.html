@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="fr-fr" class="no-js">
+
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile" hreflang="fr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+    <meta name="google-site-verification" content="JeRPv2CEcpONAy8C7dMr1nzjlpZxlxYCtt2PnuQ78g8" />
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  
+    <title>
+      
+        Comment dump les secrets de lsass - Lukas
+      
+    </title>
+
+	<link rel="stylesheet" href="/assets/css/style.css?v=1.13"> <!-- Resource style -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Signika:600"> <!-- Logo font -->
+    <script src="/assets/js/modernizr.js"></script> <!-- Modernizr -->
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icones/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icones/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icones/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icones/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icones/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icones/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icones/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icones/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icones/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icones/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icones/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icones/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icones/favicon/favicon-16x16.png">
+    
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/icones/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  	
+	<!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Lukas" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@lukastaboga" />
+    <meta name="twitter:creator" content="@lukastaboga" />
+    <meta name="twitter:title" content="Comment dump les secrets de lsass" />
+    <meta name="twitter:description" content="Dans cet article, nous allons voir comment dump les secrets de lsass." />
+    
+    <meta name="twitter:image" content="http://localhost:4000/assets/uploads/2024/01/img-garde.png" />
+    
+
+    
+      
+    
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNP6NC70FV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DNP6NC70FV');
+</script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Comment dump les secrets de lsass" />
+<meta name="author" content="Lukas" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="description" content="Dans cet article, nous allons voir comment dump les secrets de lsass." />
+<meta property="og:description" content="Dans cet article, nous allons voir comment dump les secrets de lsass." />
+<link rel="canonical" href="http://localhost:4000/lsass/" />
+<meta property="og:url" content="http://localhost:4000/lsass/" />
+<meta property="og:site_name" content="Lukas" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-16T02:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Comment dump les secrets de lsass" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lukas"},"dateModified":"2023-10-16T02:00:00+02:00","datePublished":"2023-10-16T02:00:00+02:00","description":"Dans cet article, nous allons voir comment dump les secrets de lsass.","headline":"Comment dump les secrets de lsass","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/lsass/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icones/avatar.png"},"name":"Lukas"},"url":"http://localhost:4000/lsass/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+    <header class="cd-main-header">
+    <a href="/" class="cd-logo"><img src="/assets/icones/logo.png" alt="hackndo logo" /> <span class="cd-logo-title">hello</span></a>
+		
+    <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+</header> <!-- .cd-main-header -->
+    <main class="cd-main-content">
+		<nav class="cd-side-nav">
+            <div class="sidebar-about">
+    <h1>
+        <img id="site-logo" src="/assets/icones/avatar.png" alt="hackndo logo" title="logo" />
+        <a class="sidebar-title" href="/">
+        Lukas
+        </a>
+    </h1>
+    <p class="lead">out of the box</p>
+</div>
+
+<ul>
+    <li class="cd-label">Blog</li>
+    <li class="">
+        <a href="/">Home</a>
+    </li>
+    
+    
+        
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/about/">À propos</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/archives/">Archives</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/contact/">Me contacter</a>
+                </li>
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/disclaimer/">Disclaimer</a>
+                </li>
+            
+        
+    
+        
+    
+        
+            
+        
+    
+        
+            
+                <li class="">
+                    <a href="/projects/">Projets</a>
+                </li>
+            
+        
+    
+        
+    
+        
+            
+                <li class="">
+                    <a href="/trophies/">Trophées/Certifications</a>
+                </li>
+            
+        
+    
+        
+    
+</ul>
+<div class="sidebar-social">
+<ul>
+  <li><a href="https://x.com/lukastaboga" title="Twitter" target="_blank"><img alt="Twitter" title="Twitter" src="/assets/icones/social/twitter.png" /></a></li>
+  <li><a href="https://github.com/ticodevv" title="Github" target="_blank"><img title="Github" alt="Github" src="/assets/icones/social/github.png" /></a></li>
+  <li><a href="https://www.linkedin.com/in/lukas-taboga-5a8040237/" title="LinkedIn" target="_blank"><img title="LinkedIn" alt="LinkedIn" src="/assets/icones/social/linkedin.png" /></a></li>
+</ul>
+</div>
+<p class="sidebar-copyright">&copy; 2024. Tous droits réservés.</p>
+
+        </nav>
+
+        <div class="content-wrapper">
+            
+              
+                
+              
+                
+                  
+                
+              
+            
+            <div class="post">
+  
+  <div class="post-cover">
+    <img src="/assets/uploads/2024/01/img-garde.png" alt="Comment dump les secrets de lsass" title="Comment dump les secrets de lsass" />
+  </div>
+  
+  <h1 class="post-title">Comment dump les secrets de lsass</h1>
+  <div class="post-info">
+    
+    <p class="alignleft">16 Oct 2023 · 5 min</p>
+    <p class="alignright">Auteur : <strong><a href="https://twitter.com/HackAndDo">Lukas</a></strong></p>
+      <div class="keywords">
+        <span class="post-tags"><a href="/archives/#windows"><i class="fas fa-tags"></i> Windows</a></span>
+      </div>
+</div>
+
+  <article>
+  <p>Le but de dumper la mémoire du processus LSASS est d’extraire des informations d’authentification, comme les mots de passe, pour compromettre un système. Les attaquants utilisent des outils comme Mimikatz pour cette tâche. Cibler LSASS permet l’élévation de privilèges et le mouvement latéral dans le réseau.</p>
+
+<!--more-->
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Le processus <code class="language-plaintext highlighter-rouge">lsass.exe</code> est un processus système de Windows qui est responsable de la sécurité des informations d’identification de l’utilisateur. Il stocke les mots de passe en mémoire et les utilise pour les authentifications. C’est pourquoi il est intéressant de le dump pour récupérer les mots de passe en clair ou les hash.</p>
+
+<h2 id="cest-quoi-le-lsass-">C’est quoi le LSASS ?</h2>
+
+<p>Le processus lsass.exe (Local Security Authority Subsystem Service) est crucial pour la gestion de la sécurité des informations d’identification des utilisateurs sous Windows. Il stocke les mots de passe en mémoire et gère l’authentification des utilisateurs, qu’ils soient locaux ou membres d’un domaine. Le fichier lsass.exe se trouve normalement dans le répertoire C:\Windows\System32. S’il est ailleurs, il pourrait s’agir d’un virus. Ce processus est présent dans toutes les versions de Windows, de Windows XP à Windows 10.</p>
+
+<p>Le service LSASS peut stocker les informations d’identification sous des formes multiples, dont notamment :</p>
+
+<h3 id="texte-en-clair-chiffré-réversible">Texte en clair chiffré réversible</h3>
+
+<p>Exemple concret : Une application d’entreprise interne qui nécessite la récupération de mot de passe pour se connecter automatiquement à d’autres services.</p>
+
+<p>Exemple de contenu : Le mot de passe “Password123” pourrait être stocké de manière chiffrée en réversible, tel que “aGVsbG8xMjMh”.</p>
+
+<h3 id="tickets-kerberos-tickets-doctroi-de-tickets-tgt-tickets-de-service">Tickets Kerberos (tickets d’octroi de tickets (TGT), tickets de service)</h3>
+
+<p>Exemple concret : Lorsqu’un utilisateur se connecte à un domaine Active Directory pour accéder à des ressources réseau, comme un partage de fichiers ou une imprimante.</p>
+
+<p>Exemple de ticket : <code class="language-plaintext highlighter-rouge">krbtgt/MyDomain@MYDOMAIN.COM</code></p>
+
+<h3 id="hachage-nt">Hachage NT</h3>
+
+<p>Exemple concret : Lorsqu’un utilisateur se connecte à son compte Windows, le mot de passe est transformé en un hachage NT pour la vérification.</p>
+
+<p>Exemple de hachage : Le mot de passe “Password123” pourrait être haché en NTLM comme <code class="language-plaintext highlighter-rouge">8846f7eaee8fb117ad06bdd830b7586c</code>.</p>
+
+<h3 id="hachage-lm-lan-manager">Hachage LM (LAN Manager)</h3>
+
+<p>Exemple concret : Une ancienne machine sous Windows XP configurée pour rétrocompatibilité stockant les mots de passe en hachages LM.</p>
+
+<p>Exemple de hachage : Le même mot de passe “Password123” haché en LM pourrait ressembler à <code class="language-plaintext highlighter-rouge">E52CAC67419A9A224A3B108F3FA6CB6D</code>. Notez que les hachages LM sont cassés en deux morceaux, et ce hachage est souvent plus facile à casser.</p>
+
+<h2 id="outils">Outils</h2>
+
+<p>Il existe plusieurs outils pour dump la mémoire de lsass. Voici quelques exemples :</p>
+
+<ul>
+  <li><a href="https://github.com/gentilkiwi/mimikatz/wiki/module-~-sekurlsa">Mimikatz</a></li>
+  <li><a href="https://github.com/skelsec/pypykatz/wiki/lsa-minidump-command">pypykatz</a></li>
+</ul>
+
+<h2 id="mimikatz">Mimikatz</h2>
+
+<p><a href="https://github.com/gentilkiwi/mimikatz/wiki">Mimikatz</a> est un boite a outils qui permet de récupérer des informations sensibles de Windows. Il est souvent utilisé pour récupérer des mots de passe en clair, des hachages de mots de passe, des tickets Kerberos, des clés de chiffrement, etc. Mimikatz est un outil très puissant et polyvalent qui peut être utilisé pour effectuer diverses tâches de sécurité.</p>
+
+<p>OK, maintenant on va voir comment dump les secrets de lsass avec Mimikatz.</p>
+
+<p><img src="../assets/uploads/2024/01/mimikatz.png" alt="Mimikatz" /></p>
+
+<h3 id="etape-1">Etape 1:</h3>
+
+<p>On lance Mimikatz en tant qu’administrateur.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.<span class="se">\m</span>imikatz.exe
+</code></pre></div></div>
+
+<h3 id="etape-2">Etape 2:</h3>
+
+<p>s’assurer que la sortie est « Privilege “20” ok » - Cela garantit que vous exécutez mimikatz en tant qu’administrateur ; si vous n’exécutez pas mimikatz en tant qu’administrateur, mimikatz ne s’exécutera pas correctement.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>privilege::debug
+</code></pre></div></div>
+
+<h3 id="etape-3">Etape 3:</h3>
+
+<p>Dump des hash de la base lsass.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sekurlsa::logonpasswords
+</code></pre></div></div>
+
+<p>Apres il nous reste plus qu’a cracker les hash.</p>
+
+<h2 id="pypykatz">Pypykatz</h2>
+
+<p><a href="https://github.com/skelsec/pypykatz/wiki/lsa-minidump-command">pypykatz</a> est un outil qui permet d’extraire les mots de passe, les clés et les tickets Kerberos à partir de la mémoire système. Il est écrit en Python et est compatible avec Windows, Linux et MacOS. il nous sufit de dump la mémoire de lsass et de l’analyser avec pypykatz.</p>
+
+<h3 id="etape-1-1">Etape 1:</h3>
+
+<p>Dump de la mémoire de lsass.</p>
+
+<p><img src="../assets/uploads/2024/01/dump-task-file.png" alt="dump task file" /></p>
+
+<h3 id="etape-2-1">Etape 2:</h3>
+
+<p>regarder si le dump est bien fait.</p>
+
+<p><img src="../assets/uploads/2024/01/show-dump-file.png" alt="show dump file" /></p>
+
+<h3 id="etape-3-1">Etape 3:</h3>
+
+<p><img src="../assets/uploads/2024/01/dump-via-pyp.png" alt="dump via pyp" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Le LSASS est un élément clé de la sécurité Windows, gérant la connexion des utilisateurs. Les attaquants peuvent utiliser des outils comme Mimikatz pour voler des identifiants stockés dans le LSASS. Cela permet le vol de données, l’escalade de privilèges et des attaques par déni de service. Restez vigilant en mettant à jour Windows, utilisant une authentification forte et en surveillant les processus. Merci d’avoir lu cet article, j’espère qu’il vous a été utile.</p>
+
+  </article>
+</div>
+<div class="keywords">
+    <span class="post-tags"><a href="/archives/#windows"><i class="fas fa-tags"></i> Windows</a></span>
+  </div>
+
+
+
+<div class="related">
+  <h2>Articles similaires</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/PCA et PRA/">
+            PCA et PRA
+            <small>16 Oct 2023</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    var disqus_config = function () {
+        this.page.url = 'http://localhost:4000/lsass/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '0000-0000-0000-00b9';
+    };
+    
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//hackndo.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        </div>
+    </main>
+    <script src="/assets/js/jquery-2.1.4.js"></script>
+    <script src="/assets/js/jquery.menu-aim.js"></script>
+    <script src="/assets/js/anchor.min.js"></script>
+    <script src="/assets/js/main.js"></script> <!-- Resource jQuery -->
+  </body>
+</html>
