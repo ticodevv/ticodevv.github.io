@@ -13,7 +13,6 @@ tags:
   - "AS-REP Roasting"
 ---
 
-![VulnNet Roasted](img.png)
 
 **VulnNet Entertainment** a rapidement déployé une nouvelle instance de gestion sur leur réseau très étendu…
 
