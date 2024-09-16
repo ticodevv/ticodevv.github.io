@@ -5,8 +5,8 @@
     <description>Un blog sur la sécurité, CTF writeups, des recherches et plus encore.</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Sep 2024 17:07:49 +0200</pubDate>
-    <lastBuildDate>Thu, 05 Sep 2024 17:07:49 +0200</lastBuildDate>
+    <pubDate>Mon, 16 Sep 2024 21:50:53 +0200</pubDate>
+    <lastBuildDate>Mon, 16 Sep 2024 21:50:53 +0200</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
     
       <item>
@@ -43,9 +43,7 @@
 
 &lt;h3 id=&quot;schéma-illustratif&quot;&gt;Schéma illustratif&lt;/h3&gt;
 
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Appareil émet une Probe Request]  --&amp;gt;  [Sniffer capture la Probe Request]  --&amp;gt;  [Extraction des données]  --&amp;gt;  [Analyse]  --&amp;gt;  [Exploitation des données]
-      (Adresse MAC, SSID, etc.)         (Adresse MAC, SSID, etc.)            (Localisation, Habitudes)       (Surveillance, Marketing, Attaques)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.synetis.com/wp-content/uploads/2020/02/ProbeRequest.png&quot; alt=&quot;Probe Sniffing&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;la-probe-attack&quot;&gt;La Probe Attack&lt;/h2&gt;
 
@@ -66,9 +64,7 @@
 
 &lt;h3 id=&quot;schéma-illustratif-1&quot;&gt;Schéma illustratif&lt;/h3&gt;
 
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Appareil émet une Probe Request]  --&amp;gt;  [Attaquant capture la Probe Request]  --&amp;gt;  [Attaquant exploite les données]  --&amp;gt;  [Émission d&apos;une fausse réponse]  --&amp;gt;  [Appareil se connecte à un faux réseau]
-      (Adresse MAC, SSID, etc.)            (Adresse MAC, SSID, etc.)              (Création d&apos;un faux réseau Wi-Fi)      (Attaque de type Man-in-the-Middle)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.synetis.com/wp-content/uploads/2020/02/RogueAP.png&quot; alt=&quot;Probe Attack&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -109,12 +105,6 @@
         <guid isPermaLink="true">http://localhost:4000//probe-attack/</guid>
         
         <category>WiFi</category>
-        
-        <category>ESP32</category>
-        
-        <category>Probe Attack</category>
-        
-        <category>Probe Sniffing</category>
         
         
       </item>
@@ -321,13 +311,7 @@ Simuler des attaques BadUSB en émulant les entrées clavier/souris pour exécut
         <link>http://localhost:4000//m5stack-cardputer/</link>
         <guid isPermaLink="true">http://localhost:4000//m5stack-cardputer/</guid>
         
-        <category>Documentation</category>
-        
         <category>Hardware</category>
-        
-        <category>ESP32</category>
-        
-        <category>M5stack</category>
         
         
       </item>
@@ -468,11 +452,7 @@ Mettre en place des mesures de sécurité adéquates : Protéger vos systèmes c
         <link>http://localhost:4000//rubber-ducky-attiny85/</link>
         <guid isPermaLink="true">http://localhost:4000//rubber-ducky-attiny85/</guid>
         
-        <category>Rubber Ducky</category>
-        
-        <category>Attiny85</category>
-        
-        <category>Arduino</category>
+        <category>Hardware</category>
         
         
       </item>
@@ -1142,11 +1122,7 @@ THM&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;16f45e3934293a57645f8d7bf71d8d4
         <link>http://localhost:4000//vulnnet-roasted/</link>
         <guid isPermaLink="true">http://localhost:4000//vulnnet-roasted/</guid>
         
-        <category>Active Directory</category>
-        
-        <category>Kerberos</category>
-        
-        <category>AS-REP Roasting</category>
+        <category>TryHackMe</category>
         
         
       </item>
@@ -1222,11 +1198,7 @@ THM&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;16f45e3934293a57645f8d7bf71d8d4
         <link>http://localhost:4000//juice-shop/</link>
         <guid isPermaLink="true">http://localhost:4000//juice-shop/</guid>
         
-        <category>Juice Shop</category>
-        
         <category>Web</category>
-        
-        <category>Docker</category>
         
         
       </item>
@@ -1474,10 +1446,6 @@ User dvir may run the following commands on headless:
         <guid isPermaLink="true">http://localhost:4000//headless/</guid>
         
         <category>HackTheBox</category>
-        
-        <category>Web</category>
-        
-        <category>XSS</category>
         
         
       </item>
