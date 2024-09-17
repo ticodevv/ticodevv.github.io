@@ -201,7 +201,7 @@
   <h1 class="post-title">Probe Attack</h1>
   <div class="post-info">
     
-    <p class="alignleft">20 Aug 2024 · 5 min</p>
+    <p class="alignleft">20 Aug 2024 · 6 min</p>
     <p class="alignright">Auteur : <strong><a href="https://twitter.com/HackAndDo">Lukas</a></strong></p>
       <div class="keywords">
         <span class="post-tags"><a href="/archives/#wifi"><i class="fas fa-tags"></i> WiFi</a></span>
@@ -277,16 +277,22 @@
   </li>
   <li>
     <p><strong>Attaque de type Karma</strong></p>
-
-    <p>Dans une attaque de type Karma, l’attaquant configure un point d’accès WiFi pour répondre automatiquement à toute Probe Request qu’il reçoit, prétendant être n’importe quel réseau recherché par les appareils. Voici comment cela fonctionne :</p>
-
-    <ul>
-      <li><strong>Réponse aux Probe Requests</strong> : Lorsque les appareils envoient des Probe Requests, le point d’accès de l’attaquant répond en se faisant passer pour le réseau recherché.</li>
-      <li><strong>Connexion automatique des appareils</strong> : Si un appareil reconnaît le SSID annoncé par l’attaquant, il peut se connecter automatiquement au réseau de l’attaquant, croyant qu’il s’agit du réseau légitime.</li>
-    </ul>
-
-    <p>Une fois connecté, l’attaquant peut alors réaliser des actions similaires à celles de l’attaque Evil Twin, telles que l’interception du trafic ou l’accès à des données sensibles.</p>
   </li>
+</ol>
+
+<p><img src="https://cdn.discordapp.com/attachments/1249677154816495647/1275737535334584382/image0.gif?ex=66e9ea6a&amp;is=66e898ea&amp;hm=4c775fd7261ac8ad1caf1edd5b01a6aeed8f57c5f48a6482a4d3804bb770f0e6&amp;" alt="Karma Attack" /></p>
+
+<p><strong>Explications</strong> : Quand tu as plusieurs box avec le même SSID dans un environnement, ton pc ne détecte qu’un seul et même réseau wifi, cependant si tu te déplace dans l’environnement ton pc va switcher de box en box, le maillage représente l’ensemble des box qui émettent le même réseau wifi,  si tu configures avec le evil un réseau qui a le même SSID et le même password, tu fais partie du maillage, et donc malgré le fait que tu sois le moins intéressant car pas internet, si tu te mets hors de portée des box d’origine, disons sur le parking un peu loin, les machines connecté au réseau d’origine vont ce prendre une karma et ce reconnecter automatiquement au evil car le seul intéressant
+   Dans une attaque de type Karma, l’attaquant configure un point d’accès WiFi pour répondre automatiquement à toute Probe Request qu’il reçoit, prétendant être n’importe quel réseau recherché par les appareils. Voici comment cela fonctionne :</p>
+
+<ul>
+  <li><strong>Réponse aux Probe Requests</strong> : Lorsque les appareils envoient des Probe Requests, le point d’accès de l’attaquant répond en se faisant passer pour le réseau recherché.</li>
+  <li><strong>Connexion automatique des appareils</strong> : Si un appareil reconnaît le SSID annoncé par l’attaquant, il peut se connecter automatiquement au réseau de l’attaquant, croyant qu’il s’agit du réseau légitime.</li>
+</ul>
+
+<p>Une fois connecté, l’attaquant peut alors réaliser des actions similaires à celles de l’attaque Evil Twin, telles que l’interception du trafic ou l’accès à des données sensibles.</p>
+
+<ol>
   <li>
     <p><strong>Attaque par usurpation d’identité</strong></p>
 
@@ -297,6 +303,14 @@
     </ul>
   </li>
 </ol>
+
+<h2 id="source">Source</h2>
+
+<ul>
+  <li><a href="https://www.synetis.com/illustrations-dattaques-sur-le-wifi/">Synetis</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Probe_request">Wikipedia</a></li>
+</ul>
+
 
   </article>
 </div>
