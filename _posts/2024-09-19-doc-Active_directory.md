@@ -23,7 +23,7 @@ Tout d'abord on va commencer par la base des bases, c'est quoi l'Active Director
 
 - Développé par **Microsoft**
 - Système d'exploitation **Windows Server**
-- Environnement **X86, x86-64 et IA-64**
+- Architecture **X86, x86-64 et IA-64**
 - Type 	**Annuaire**
 - Première apparition	**1996**
 - Première utilisation	**Windows 2000 Server Édition** 
@@ -45,7 +45,7 @@ Donc en gros l'Active Directory c'est un service qui permet de stocker des infor
 
 ![Active Directory](/assets/uploads/2024/2024-doc-active_directory/structur_ad.png)
 
-**BON** C'est un beau merdier tout ça, mais en gros on a :
+**BON** C'est un beau bordel tout ça, mais en gros on a :
 
 - **Forest** : C'est l'ensemble des domaines et des arbres qui partagent une relation de confiance.
 - **Tree** : C'est un ensemble de domaines qui partagent une relation de confiance.
