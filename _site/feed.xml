@@ -5,9 +5,111 @@
     <description>Un blog sur la sécurité, CTF writeups, des recherches et plus encore.</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 Sep 2024 10:48:56 +0200</pubDate>
-    <lastBuildDate>Tue, 17 Sep 2024 10:48:56 +0200</lastBuildDate>
+    <pubDate>Fri, 20 Sep 2024 09:19:18 +0200</pubDate>
+    <lastBuildDate>Fri, 20 Sep 2024 09:19:18 +0200</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>Active Directory les bases</title>
+        <description>&lt;p&gt;Bonjour à tous, dans cet article, nous allons voir les bases de l’Active Directory.
+Le terme Active Directory est souvent utilisé dans le monde de l’informatique, mais qu’est-ce que c’est exactement ? Comment fonctionne-t-il ? Quels sont ses avantages et ses inconvénients ? Nous allons répondre à toutes ces questions dans cet article.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Tout d’abord on va commencer par la base des bases, c’est quoi l’Active Directory ?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Développé par &lt;strong&gt;Microsoft&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Système d’exploitation &lt;strong&gt;Windows Server&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Environnement &lt;strong&gt;X86, x86-64 et IA-64&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Type 	&lt;strong&gt;Annuaire&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Première apparition	&lt;strong&gt;1996&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Première utilisation	&lt;strong&gt;Windows 2000 Server Édition&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Dernière version stable	&lt;strong&gt;Windows Server 2019&lt;/strong&gt; (à l’heure ou j’écris cet article)&lt;/li&gt;
+  &lt;li&gt;Derrière version annoncée	&lt;strong&gt;Windows Server 2025&lt;/strong&gt; (à l’heure ou j’écris cet article)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;em&gt;Wikipedia:&lt;/em&gt;&lt;/strong&gt; Active Directory (AD) est la mise en œuvre par Microsoft des services d’annuaire LDAP pour les systèmes d’exploitation Windows.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;OK cool mais c’est quoi un annuaire LDAP ?&lt;/p&gt;
+
+&lt;p&gt;Un annuaire LDAP c’est un service qui permet de stocker des informations sur des utilisateurs, des groupes, des ordinateurs, des imprimantes, etc. Ces informations sont organisées en arborescence et peuvent être consultées et modifiées par des applications ou des utilisateurs autorisés.&lt;/p&gt;
+
+&lt;p&gt;Donc en gros l’Active Directory c’est un service qui permet de stocker des informations sur les utilisateurs.&lt;/p&gt;
+
+&lt;h2 id=&quot;structure-de-lactive-directory&quot;&gt;Structure de l’Active Directory&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/uploads/2024/2024-doc-active_directory/structur_ad.png&quot; alt=&quot;Active Directory&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BON&lt;/strong&gt; C’est un beau merdier tout ça, mais en gros on a :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Forest&lt;/strong&gt; : C’est l’ensemble des domaines et des arbres qui partagent une relation de confiance.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tree&lt;/strong&gt; : C’est un ensemble de domaines qui partagent une relation de confiance.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Domains&lt;/strong&gt; : C’est une unité d’organisation qui regroupe des objets (utilisateurs, groupes, ordinateurs, etc.) et qui partage une base de données Active Directory.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Organizational Unit (OU)&lt;/strong&gt; : C’est une unité d’organisation qui permet de regrouper des objets (utilisateurs, groupes, ordinateurs, etc.) dans un domaine.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pour être plus clair:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Forest&lt;/strong&gt; : On peut le voir comme un continent.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tree&lt;/strong&gt; : On peut le voir comme un pays.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Domains&lt;/strong&gt; : On peut le voir comme une ville.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Organizational Unit (OU)&lt;/strong&gt; : On peut le voir comme un quartier.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On peut aussi avoir des &lt;strong&gt;Trust&lt;/strong&gt; entre les domaines, c’est à dire que les domaines peuvent partager des ressources entre eux. comme si on avait un pont entre deux villes.&lt;/p&gt;
+
+&lt;h2 id=&quot;avantages-de-lactive-directory&quot;&gt;Avantages de l’Active Directory&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Centralisation des informations&lt;/strong&gt; : Toutes les informations sur les utilisateurs, les groupes, les ordinateurs, etc. sont stockées dans (un seul endroit) il est préférable d’avoir une redondance des données pour éviter les pertes de données en cas de panne.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Gestion centralisée des utilisateurs&lt;/strong&gt; : Les administrateurs peuvent gérer les utilisateurs, les groupes, les ordinateurs, etc. à partir d’une seule console.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sécurité&lt;/strong&gt; : L’Active Directory permet de définir des politiques de sécurité pour les utilisateurs, les groupes, les ordinateurs, etc. Attention au misconfigurations !&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;inconvénients-de-lactive-directory&quot;&gt;Inconvénients de l’Active Directory&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Complexité&lt;/strong&gt; : L’Active Directory est un système complexe qui nécessite une expertise pour être correctement configuré et géré.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Coût&lt;/strong&gt; : L’Active Directory est un produit payant qui nécessite l’achat de licences pour être utilisé.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dépendance à Microsoft&lt;/strong&gt; : L’Active Directory est un produit de Microsoft qui nécessite l’utilisation de systèmes d’exploitation Windows Server.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;L’Active Directory est un service d’annuaire LDAP développé par Microsoft pour les systèmes d’exploitation Windows. Il permet de stocker des informations sur les utilisateurs, les groupes, les ordinateurs, etc. de manière centralisée. L’Active Directory offre de nombreux avantages, tels que la centralisation des informations, la gestion centralisée des utilisateurs et la sécurité. Cependant, il présente également des inconvénients, tels que sa complexité, son coût et sa dépendance à Microsoft. En conclusion, l’Active Directory est un outil puissant qui peut simplifier la gestion des ressources informatiques dans une entreprise, mais qui nécessite une expertise pour être correctement configuré et géré.&lt;/p&gt;
+
+&lt;h2 id=&quot;sources&quot;&gt;sources&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://fr.wikipedia.org/wiki/Active_Directory&quot;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview&quot;&gt;Microsoft&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://securdi.com/authentication/introduction-to-active-directory/&quot;&gt;securdi&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 17 Sep 2024 02:00:00 +0200</pubDate>
+        <link>http://localhost:4000//Active-Directory/</link>
+        <guid isPermaLink="true">http://localhost:4000//Active-Directory/</guid>
+        
+        <category>Active Directory</category>
+        
+        
+      </item>
     
       <item>
         <title>L&apos;effet Dunning-Kruger</title>
@@ -1726,6 +1828,8 @@ en 2018 il parut la fameuse lois RDPG qui est une loi sur la protection des donn
         <guid isPermaLink="true">http://localhost:4000//lsass/</guid>
         
         <category>Windows</category>
+        
+        <category>Active Directory</category>
         
         
       </item>
